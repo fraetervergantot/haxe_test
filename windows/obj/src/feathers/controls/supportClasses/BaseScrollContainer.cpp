@@ -1,0 +1,5166 @@
+#include <hxcpp.h>
+
+#ifndef INCLUDED_95f339a1d026d52c
+#define INCLUDED_95f339a1d026d52c
+#include "hxMath.h"
+#endif
+#ifndef INCLUDED_Std
+#include <Std.h>
+#endif
+#ifndef INCLUDED_Type
+#include <Type.h>
+#endif
+#ifndef INCLUDED_feathers_controls_HScrollBar
+#include <feathers/controls/HScrollBar.h>
+#endif
+#ifndef INCLUDED_feathers_controls_IRange
+#include <feathers/controls/IRange.h>
+#endif
+#ifndef INCLUDED_feathers_controls_IScrollBar
+#include <feathers/controls/IScrollBar.h>
+#endif
+#ifndef INCLUDED_feathers_controls_ScrollMode
+#include <feathers/controls/ScrollMode.h>
+#endif
+#ifndef INCLUDED_feathers_controls_ScrollPolicy
+#include <feathers/controls/ScrollPolicy.h>
+#endif
+#ifndef INCLUDED_feathers_controls_VScrollBar
+#include <feathers/controls/VScrollBar.h>
+#endif
+#ifndef INCLUDED_feathers_controls_supportClasses_BaseScrollBar
+#include <feathers/controls/supportClasses/BaseScrollBar.h>
+#endif
+#ifndef INCLUDED_feathers_controls_supportClasses_BaseScrollContainer
+#include <feathers/controls/supportClasses/BaseScrollContainer.h>
+#endif
+#ifndef INCLUDED_feathers_controls_supportClasses_IViewPort
+#include <feathers/controls/supportClasses/IViewPort.h>
+#endif
+#ifndef INCLUDED_feathers_core_FeathersControl
+#include <feathers/core/FeathersControl.h>
+#endif
+#ifndef INCLUDED_feathers_core_IDisplayObject
+#include <feathers/core/IDisplayObject.h>
+#endif
+#ifndef INCLUDED_feathers_core_IFocusManagerAware
+#include <feathers/core/IFocusManagerAware.h>
+#endif
+#ifndef INCLUDED_feathers_core_IFocusObject
+#include <feathers/core/IFocusObject.h>
+#endif
+#ifndef INCLUDED_feathers_core_IMeasureObject
+#include <feathers/core/IMeasureObject.h>
+#endif
+#ifndef INCLUDED_feathers_core_IStateObserver
+#include <feathers/core/IStateObserver.h>
+#endif
+#ifndef INCLUDED_feathers_core_IUIControl
+#include <feathers/core/IUIControl.h>
+#endif
+#ifndef INCLUDED_feathers_core_IValidating
+#include <feathers/core/IValidating.h>
+#endif
+#ifndef INCLUDED_feathers_core_InvalidationFlag
+#include <feathers/core/InvalidationFlag.h>
+#endif
+#ifndef INCLUDED_feathers_core_MeasureSprite
+#include <feathers/core/MeasureSprite.h>
+#endif
+#ifndef INCLUDED_feathers_core_ValidatingSprite
+#include <feathers/core/ValidatingSprite.h>
+#endif
+#ifndef INCLUDED_feathers_events_ScrollEvent
+#include <feathers/events/ScrollEvent.h>
+#endif
+#ifndef INCLUDED_feathers_graphics_FillStyle
+#include <feathers/graphics/FillStyle.h>
+#endif
+#ifndef INCLUDED_feathers_graphics_LineStyle
+#include <feathers/graphics/LineStyle.h>
+#endif
+#ifndef INCLUDED_feathers_layout_ILayoutObject
+#include <feathers/layout/ILayoutObject.h>
+#endif
+#ifndef INCLUDED_feathers_layout_Measurements
+#include <feathers/layout/Measurements.h>
+#endif
+#ifndef INCLUDED_feathers_layout_RelativePosition
+#include <feathers/layout/RelativePosition.h>
+#endif
+#ifndef INCLUDED_feathers_skins_BaseGraphicsPathSkin
+#include <feathers/skins/BaseGraphicsPathSkin.h>
+#endif
+#ifndef INCLUDED_feathers_skins_IProgrammaticSkin
+#include <feathers/skins/IProgrammaticSkin.h>
+#endif
+#ifndef INCLUDED_feathers_skins_ProgrammaticSkin
+#include <feathers/skins/ProgrammaticSkin.h>
+#endif
+#ifndef INCLUDED_feathers_skins_RectangleSkin
+#include <feathers/skins/RectangleSkin.h>
+#endif
+#ifndef INCLUDED_feathers_style_IStyleObject
+#include <feathers/style/IStyleObject.h>
+#endif
+#ifndef INCLUDED_feathers_style_IVariantStyleObject
+#include <feathers/style/IVariantStyleObject.h>
+#endif
+#ifndef INCLUDED_feathers_utils_DisplayObjectFactory
+#include <feathers/utils/DisplayObjectFactory.h>
+#endif
+#ifndef INCLUDED_feathers_utils_DisplayUtil
+#include <feathers/utils/DisplayUtil.h>
+#endif
+#ifndef INCLUDED_feathers_utils_ExclusivePointer
+#include <feathers/utils/ExclusivePointer.h>
+#endif
+#ifndef INCLUDED_feathers_utils_MathUtil
+#include <feathers/utils/MathUtil.h>
+#endif
+#ifndef INCLUDED_feathers_utils_MeasurementsUtil
+#include <feathers/utils/MeasurementsUtil.h>
+#endif
+#ifndef INCLUDED_feathers_utils_Scroller
+#include <feathers/utils/Scroller.h>
+#endif
+#ifndef INCLUDED_haxe_Exception
+#include <haxe/Exception.h>
+#endif
+#ifndef INCLUDED_lime_app_IModule
+#include <lime/app/IModule.h>
+#endif
+#ifndef INCLUDED_motion_Actuate
+#include <motion/Actuate.h>
+#endif
+#ifndef INCLUDED_motion_actuators_GenericActuator
+#include <motion/actuators/GenericActuator.h>
+#endif
+#ifndef INCLUDED_motion_actuators_IGenericActuator
+#include <motion/actuators/IGenericActuator.h>
+#endif
+#ifndef INCLUDED_motion_actuators_SimpleActuator
+#include <motion/actuators/SimpleActuator.h>
+#endif
+#ifndef INCLUDED_motion_easing_IEasing
+#include <motion/easing/IEasing.h>
+#endif
+#ifndef INCLUDED_motion_easing_Quart
+#include <motion/easing/Quart.h>
+#endif
+#ifndef INCLUDED_openfl_Lib
+#include <openfl/Lib.h>
+#endif
+#ifndef INCLUDED_openfl_display_DisplayObject
+#include <openfl/display/DisplayObject.h>
+#endif
+#ifndef INCLUDED_openfl_display_DisplayObjectContainer
+#include <openfl/display/DisplayObjectContainer.h>
+#endif
+#ifndef INCLUDED_openfl_display_IBitmapDrawable
+#include <openfl/display/IBitmapDrawable.h>
+#endif
+#ifndef INCLUDED_openfl_display_InteractiveObject
+#include <openfl/display/InteractiveObject.h>
+#endif
+#ifndef INCLUDED_openfl_display_Sprite
+#include <openfl/display/Sprite.h>
+#endif
+#ifndef INCLUDED_openfl_display_Stage
+#include <openfl/display/Stage.h>
+#endif
+#ifndef INCLUDED_openfl_errors_ArgumentError
+#include <openfl/errors/ArgumentError.h>
+#endif
+#ifndef INCLUDED_openfl_errors_Error
+#include <openfl/errors/Error.h>
+#endif
+#ifndef INCLUDED_openfl_errors_IllegalOperationError
+#include <openfl/errors/IllegalOperationError.h>
+#endif
+#ifndef INCLUDED_openfl_events_Event
+#include <openfl/events/Event.h>
+#endif
+#ifndef INCLUDED_openfl_events_EventDispatcher
+#include <openfl/events/EventDispatcher.h>
+#endif
+#ifndef INCLUDED_openfl_events_IEventDispatcher
+#include <openfl/events/IEventDispatcher.h>
+#endif
+#ifndef INCLUDED_openfl_events_KeyboardEvent
+#include <openfl/events/KeyboardEvent.h>
+#endif
+#ifndef INCLUDED_openfl_events_MouseEvent
+#include <openfl/events/MouseEvent.h>
+#endif
+#ifndef INCLUDED_openfl_events_TouchEvent
+#include <openfl/events/TouchEvent.h>
+#endif
+#ifndef INCLUDED_openfl_geom_Rectangle
+#include <openfl/geom/Rectangle.h>
+#endif
+
+HX_DEFINE_STACK_FRAME(_hx_pos_4200ed2106c74172_63_new,"feathers.controls.supportClasses.BaseScrollContainer","new",0xb89dbd18,"feathers.controls.supportClasses.BaseScrollContainer.new","feathers/controls/supportClasses/BaseScrollContainer.hx",63,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_94_get_viewPort,"feathers.controls.supportClasses.BaseScrollContainer","get_viewPort",0x8f36e8d7,"feathers.controls.supportClasses.BaseScrollContainer.get_viewPort","feathers/controls/supportClasses/BaseScrollContainer.hx",94,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_97_set_viewPort,"feathers.controls.supportClasses.BaseScrollContainer","set_viewPort",0xa4300c4b,"feathers.controls.supportClasses.BaseScrollContainer.set_viewPort","feathers/controls/supportClasses/BaseScrollContainer.hx",97,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_142_get_tabEnabled,"feathers.controls.supportClasses.BaseScrollContainer","get_tabEnabled",0xfafadd3d,"feathers.controls.supportClasses.BaseScrollContainer.get_tabEnabled","feathers/controls/supportClasses/BaseScrollContainer.hx",142,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_389_get_scrollBarXFactory,"feathers.controls.supportClasses.BaseScrollContainer","get_scrollBarXFactory",0x972c8aa7,"feathers.controls.supportClasses.BaseScrollContainer.get_scrollBarXFactory","feathers/controls/supportClasses/BaseScrollContainer.hx",389,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_392_set_scrollBarXFactory,"feathers.controls.supportClasses.BaseScrollContainer","set_scrollBarXFactory",0xeb3558b3,"feathers.controls.supportClasses.BaseScrollContainer.set_scrollBarXFactory","feathers/controls/supportClasses/BaseScrollContainer.hx",392,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_427_get_scrollBarYFactory,"feathers.controls.supportClasses.BaseScrollContainer","get_scrollBarYFactory",0xd05efcc6,"feathers.controls.supportClasses.BaseScrollContainer.get_scrollBarYFactory","feathers/controls/supportClasses/BaseScrollContainer.hx",427,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_430_set_scrollBarYFactory,"feathers.controls.supportClasses.BaseScrollContainer","set_scrollBarYFactory",0x2467cad2,"feathers.controls.supportClasses.BaseScrollContainer.set_scrollBarYFactory","feathers/controls/supportClasses/BaseScrollContainer.hx",430,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_462_get_scrollerFactory,"feathers.controls.supportClasses.BaseScrollContainer","get_scrollerFactory",0x76126dff,"feathers.controls.supportClasses.BaseScrollContainer.get_scrollerFactory","feathers/controls/supportClasses/BaseScrollContainer.hx",462,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_465_set_scrollerFactory,"feathers.controls.supportClasses.BaseScrollContainer","set_scrollerFactory",0xb2af610b,"feathers.controls.supportClasses.BaseScrollContainer.set_scrollerFactory","feathers/controls/supportClasses/BaseScrollContainer.hx",465,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_505_get_scrollX,"feathers.controls.supportClasses.BaseScrollContainer","get_scrollX",0x8a6bf87a,"feathers.controls.supportClasses.BaseScrollContainer.get_scrollX","feathers/controls/supportClasses/BaseScrollContainer.hx",505,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_518_set_scrollX,"feathers.controls.supportClasses.BaseScrollContainer","set_scrollX",0x94d8ff86,"feathers.controls.supportClasses.BaseScrollContainer.set_scrollX","feathers/controls/supportClasses/BaseScrollContainer.hx",518,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_540_get_restrictedScrollX,"feathers.controls.supportClasses.BaseScrollContainer","get_restrictedScrollX",0x4589c7df,"feathers.controls.supportClasses.BaseScrollContainer.get_restrictedScrollX","feathers/controls/supportClasses/BaseScrollContainer.hx",540,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_547_set_restrictedScrollX,"feathers.controls.supportClasses.BaseScrollContainer","set_restrictedScrollX",0x999295eb,"feathers.controls.supportClasses.BaseScrollContainer.set_restrictedScrollX","feathers/controls/supportClasses/BaseScrollContainer.hx",547,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_584_get_scrollY,"feathers.controls.supportClasses.BaseScrollContainer","get_scrollY",0x8a6bf87b,"feathers.controls.supportClasses.BaseScrollContainer.get_scrollY","feathers/controls/supportClasses/BaseScrollContainer.hx",584,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_597_set_scrollY,"feathers.controls.supportClasses.BaseScrollContainer","set_scrollY",0x94d8ff87,"feathers.controls.supportClasses.BaseScrollContainer.set_scrollY","feathers/controls/supportClasses/BaseScrollContainer.hx",597,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_618_get_restrictedScrollY,"feathers.controls.supportClasses.BaseScrollContainer","get_restrictedScrollY",0x4589c7e0,"feathers.controls.supportClasses.BaseScrollContainer.get_restrictedScrollY","feathers/controls/supportClasses/BaseScrollContainer.hx",618,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_625_set_restrictedScrollY,"feathers.controls.supportClasses.BaseScrollContainer","set_restrictedScrollY",0x999295ec,"feathers.controls.supportClasses.BaseScrollContainer.set_restrictedScrollY","feathers/controls/supportClasses/BaseScrollContainer.hx",625,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_653_get_minScrollX,"feathers.controls.supportClasses.BaseScrollContainer","get_minScrollX",0xb18166ca,"feathers.controls.supportClasses.BaseScrollContainer.get_minScrollX","feathers/controls/supportClasses/BaseScrollContainer.hx",653,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_677_get_minScrollY,"feathers.controls.supportClasses.BaseScrollContainer","get_minScrollY",0xb18166cb,"feathers.controls.supportClasses.BaseScrollContainer.get_minScrollY","feathers/controls/supportClasses/BaseScrollContainer.hx",677,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_701_get_maxScrollX,"feathers.controls.supportClasses.BaseScrollContainer","get_maxScrollX",0x55ee93f8,"feathers.controls.supportClasses.BaseScrollContainer.get_maxScrollX","feathers/controls/supportClasses/BaseScrollContainer.hx",701,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_725_get_maxScrollY,"feathers.controls.supportClasses.BaseScrollContainer","get_maxScrollY",0x55ee93f9,"feathers.controls.supportClasses.BaseScrollContainer.get_maxScrollY","feathers/controls/supportClasses/BaseScrollContainer.hx",725,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_750_get_scrollStepX,"feathers.controls.supportClasses.BaseScrollContainer","get_scrollStepX",0xa6a39c8e,"feathers.controls.supportClasses.BaseScrollContainer.get_scrollStepX","feathers/controls/supportClasses/BaseScrollContainer.hx",750,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_753_set_scrollStepX,"feathers.controls.supportClasses.BaseScrollContainer","set_scrollStepX",0xa26f199a,"feathers.controls.supportClasses.BaseScrollContainer.set_scrollStepX","feathers/controls/supportClasses/BaseScrollContainer.hx",753,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_780_get_scrollStepY,"feathers.controls.supportClasses.BaseScrollContainer","get_scrollStepY",0xa6a39c8f,"feathers.controls.supportClasses.BaseScrollContainer.get_scrollStepY","feathers/controls/supportClasses/BaseScrollContainer.hx",780,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_783_set_scrollStepY,"feathers.controls.supportClasses.BaseScrollContainer","set_scrollStepY",0xa26f199b,"feathers.controls.supportClasses.BaseScrollContainer.set_scrollStepY","feathers/controls/supportClasses/BaseScrollContainer.hx",783,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_811_get_scrollPolicyX,"feathers.controls.supportClasses.BaseScrollContainer","get_scrollPolicyX",0xd2db7da8,"feathers.controls.supportClasses.BaseScrollContainer.get_scrollPolicyX","feathers/controls/supportClasses/BaseScrollContainer.hx",811,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_814_set_scrollPolicyX,"feathers.controls.supportClasses.BaseScrollContainer","set_scrollPolicyX",0xf64955b4,"feathers.controls.supportClasses.BaseScrollContainer.set_scrollPolicyX","feathers/controls/supportClasses/BaseScrollContainer.hx",814,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_842_get_scrollPolicyY,"feathers.controls.supportClasses.BaseScrollContainer","get_scrollPolicyY",0xd2db7da9,"feathers.controls.supportClasses.BaseScrollContainer.get_scrollPolicyY","feathers/controls/supportClasses/BaseScrollContainer.hx",842,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_845_set_scrollPolicyY,"feathers.controls.supportClasses.BaseScrollContainer","set_scrollPolicyY",0xf64955b5,"feathers.controls.supportClasses.BaseScrollContainer.set_scrollPolicyY","feathers/controls/supportClasses/BaseScrollContainer.hx",845,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_980_get_measureViewPort,"feathers.controls.supportClasses.BaseScrollContainer","get_measureViewPort",0x5fdd69d3,"feathers.controls.supportClasses.BaseScrollContainer.get_measureViewPort","feathers/controls/supportClasses/BaseScrollContainer.hx",980,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_999_get_scrollMode,"feathers.controls.supportClasses.BaseScrollContainer","get_scrollMode",0xc11248a1,"feathers.controls.supportClasses.BaseScrollContainer.get_scrollMode","feathers/controls/supportClasses/BaseScrollContainer.hx",999,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1002_set_scrollMode,"feathers.controls.supportClasses.BaseScrollContainer","set_scrollMode",0xe1323115,"feathers.controls.supportClasses.BaseScrollContainer.set_scrollMode","feathers/controls/supportClasses/BaseScrollContainer.hx",1002,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1021_setPadding,"feathers.controls.supportClasses.BaseScrollContainer","setPadding",0x93aa1897,"feathers.controls.supportClasses.BaseScrollContainer.setPadding","feathers/controls/supportClasses/BaseScrollContainer.hx",1021,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1034_getViewPortVisibleBounds,"feathers.controls.supportClasses.BaseScrollContainer","getViewPortVisibleBounds",0xb5101bf3,"feathers.controls.supportClasses.BaseScrollContainer.getViewPortVisibleBounds","feathers/controls/supportClasses/BaseScrollContainer.hx",1034,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1045_update,"feathers.controls.supportClasses.BaseScrollContainer","update",0xda565c51,"feathers.controls.supportClasses.BaseScrollContainer.update","feathers/controls/supportClasses/BaseScrollContainer.hx",1045,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1086_applyTemporaryScrollPositions,"feathers.controls.supportClasses.BaseScrollContainer","applyTemporaryScrollPositions",0xdee00992,"feathers.controls.supportClasses.BaseScrollContainer.applyTemporaryScrollPositions","feathers/controls/supportClasses/BaseScrollContainer.hx",1086,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1104_needsMeasurement,"feathers.controls.supportClasses.BaseScrollContainer","needsMeasurement",0xfd493be7,"feathers.controls.supportClasses.BaseScrollContainer.needsMeasurement","feathers/controls/supportClasses/BaseScrollContainer.hx",1104,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1114_needsScrollMeasurement,"feathers.controls.supportClasses.BaseScrollContainer","needsScrollMeasurement",0xda7acf1a,"feathers.controls.supportClasses.BaseScrollContainer.needsScrollMeasurement","feathers/controls/supportClasses/BaseScrollContainer.hx",1114,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1117_createScroller,"feathers.controls.supportClasses.BaseScrollContainer","createScroller",0x238beb1e,"feathers.controls.supportClasses.BaseScrollContainer.createScroller","feathers/controls/supportClasses/BaseScrollContainer.hx",1117,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1136_createScrollBars,"feathers.controls.supportClasses.BaseScrollContainer","createScrollBars",0xf7847451,"feathers.controls.supportClasses.BaseScrollContainer.createScrollBars","feathers/controls/supportClasses/BaseScrollContainer.hx",1136,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1190_refreshEnabled,"feathers.controls.supportClasses.BaseScrollContainer","refreshEnabled",0x3842722e,"feathers.controls.supportClasses.BaseScrollContainer.refreshEnabled","feathers/controls/supportClasses/BaseScrollContainer.hx",1190,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1200_restrictScrollAfterRefreshViewPort,"feathers.controls.supportClasses.BaseScrollContainer","restrictScrollAfterRefreshViewPort",0xe01c9816,"feathers.controls.supportClasses.BaseScrollContainer.restrictScrollAfterRefreshViewPort","feathers/controls/supportClasses/BaseScrollContainer.hx",1200,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1218_refreshViewPort,"feathers.controls.supportClasses.BaseScrollContainer","refreshViewPort",0x9cad0239,"feathers.controls.supportClasses.BaseScrollContainer.refreshViewPort","feathers/controls/supportClasses/BaseScrollContainer.hx",1218,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1292_resetViewPortOffsets,"feathers.controls.supportClasses.BaseScrollContainer","resetViewPortOffsets",0xa2edd8d3,"feathers.controls.supportClasses.BaseScrollContainer.resetViewPortOffsets","feathers/controls/supportClasses/BaseScrollContainer.hx",1292,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1305_calculateViewPortOffsets,"feathers.controls.supportClasses.BaseScrollContainer","calculateViewPortOffsets",0xe84bf31c,"feathers.controls.supportClasses.BaseScrollContainer.calculateViewPortOffsets","feathers/controls/supportClasses/BaseScrollContainer.hx",1305,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1320_calculateViewPortOffsetsForFixedScrollBarX,"feathers.controls.supportClasses.BaseScrollContainer","calculateViewPortOffsetsForFixedScrollBarX",0xd639ed99,"feathers.controls.supportClasses.BaseScrollContainer.calculateViewPortOffsetsForFixedScrollBarX","feathers/controls/supportClasses/BaseScrollContainer.hx",1320,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1368_calculateViewPortOffsetsForFixedScrollBarY,"feathers.controls.supportClasses.BaseScrollContainer","calculateViewPortOffsetsForFixedScrollBarY",0xd639ed9a,"feathers.controls.supportClasses.BaseScrollContainer.calculateViewPortOffsetsForFixedScrollBarY","feathers/controls/supportClasses/BaseScrollContainer.hx",1368,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1416_refreshViewPortBoundsForMeasurement,"feathers.controls.supportClasses.BaseScrollContainer","refreshViewPortBoundsForMeasurement",0x4c5f31a1,"feathers.controls.supportClasses.BaseScrollContainer.refreshViewPortBoundsForMeasurement","feathers/controls/supportClasses/BaseScrollContainer.hx",1416,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1508_refreshViewPortBoundsForLayout,"feathers.controls.supportClasses.BaseScrollContainer","refreshViewPortBoundsForLayout",0xa0532725,"feathers.controls.supportClasses.BaseScrollContainer.refreshViewPortBoundsForLayout","feathers/controls/supportClasses/BaseScrollContainer.hx",1508,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1569_refreshScrollerValues,"feathers.controls.supportClasses.BaseScrollContainer","refreshScrollerValues",0x87bddf2f,"feathers.controls.supportClasses.BaseScrollContainer.refreshScrollerValues","feathers/controls/supportClasses/BaseScrollContainer.hx",1569,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1577_refreshScrollBarValues,"feathers.controls.supportClasses.BaseScrollContainer","refreshScrollBarValues",0x66274af5,"feathers.controls.supportClasses.BaseScrollContainer.refreshScrollBarValues","feathers/controls/supportClasses/BaseScrollContainer.hx",1577,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1618_measure,"feathers.controls.supportClasses.BaseScrollContainer","measure",0xd054a416,"feathers.controls.supportClasses.BaseScrollContainer.measure","feathers/controls/supportClasses/BaseScrollContainer.hx",1618,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1742_refreshBackgroundSkin,"feathers.controls.supportClasses.BaseScrollContainer","refreshBackgroundSkin",0x5c2cb77e,"feathers.controls.supportClasses.BaseScrollContainer.refreshBackgroundSkin","feathers/controls/supportClasses/BaseScrollContainer.hx",1742,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1752_getCurrentBackgroundSkin,"feathers.controls.supportClasses.BaseScrollContainer","getCurrentBackgroundSkin",0x5fc87376,"feathers.controls.supportClasses.BaseScrollContainer.getCurrentBackgroundSkin","feathers/controls/supportClasses/BaseScrollContainer.hx",1752,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1759_addCurrentBackgroundSkin,"feathers.controls.supportClasses.BaseScrollContainer","addCurrentBackgroundSkin",0x9143c40b,"feathers.controls.supportClasses.BaseScrollContainer.addCurrentBackgroundSkin","feathers/controls/supportClasses/BaseScrollContainer.hx",1759,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1778_removeCurrentBackgroundSkin,"feathers.controls.supportClasses.BaseScrollContainer","removeCurrentBackgroundSkin",0x55515178,"feathers.controls.supportClasses.BaseScrollContainer.removeCurrentBackgroundSkin","feathers/controls/supportClasses/BaseScrollContainer.hx",1778,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1793_refreshMaskSkin,"feathers.controls.supportClasses.BaseScrollContainer","refreshMaskSkin",0xff63f33c,"feathers.controls.supportClasses.BaseScrollContainer.refreshMaskSkin","feathers/controls/supportClasses/BaseScrollContainer.hx",1793,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1804_getCurrentMaskSkin,"feathers.controls.supportClasses.BaseScrollContainer","getCurrentMaskSkin",0x03a9e534,"feathers.controls.supportClasses.BaseScrollContainer.getCurrentMaskSkin","feathers/controls/supportClasses/BaseScrollContainer.hx",1804,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1807_addCurrentMaskSkin,"feathers.controls.supportClasses.BaseScrollContainer","addCurrentMaskSkin",0x9f5be809,"feathers.controls.supportClasses.BaseScrollContainer.addCurrentMaskSkin","feathers/controls/supportClasses/BaseScrollContainer.hx",1807,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1821_removeCurrentMaskSkin,"feathers.controls.supportClasses.BaseScrollContainer","removeCurrentMaskSkin",0xe40075b6,"feathers.controls.supportClasses.BaseScrollContainer.removeCurrentMaskSkin","feathers/controls/supportClasses/BaseScrollContainer.hx",1821,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1834_refreshViewPortMaskSkin,"feathers.controls.supportClasses.BaseScrollContainer","refreshViewPortMaskSkin",0x302688e2,"feathers.controls.supportClasses.BaseScrollContainer.refreshViewPortMaskSkin","feathers/controls/supportClasses/BaseScrollContainer.hx",1834,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1844_getCurrentViewPortMaskSkin,"feathers.controls.supportClasses.BaseScrollContainer","getCurrentViewPortMaskSkin",0x1f2332da,"feathers.controls.supportClasses.BaseScrollContainer.getCurrentViewPortMaskSkin","feathers/controls/supportClasses/BaseScrollContainer.hx",1844,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1857_addCurrentViewPortMaskSkin,"feathers.controls.supportClasses.BaseScrollContainer","addCurrentViewPortMaskSkin",0x228392af,"feathers.controls.supportClasses.BaseScrollContainer.addCurrentViewPortMaskSkin","feathers/controls/supportClasses/BaseScrollContainer.hx",1857,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1871_removeCurrentViewPortMaskSkin,"feathers.controls.supportClasses.BaseScrollContainer","removeCurrentViewPortMaskSkin",0x2f21155c,"feathers.controls.supportClasses.BaseScrollContainer.removeCurrentViewPortMaskSkin","feathers/controls/supportClasses/BaseScrollContainer.hx",1871,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1884_layoutChildren,"feathers.controls.supportClasses.BaseScrollContainer","layoutChildren",0x897e9c51,"feathers.controls.supportClasses.BaseScrollContainer.layoutChildren","feathers/controls/supportClasses/BaseScrollContainer.hx",1884,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1891_layoutBackgroundSkin,"feathers.controls.supportClasses.BaseScrollContainer","layoutBackgroundSkin",0xa8ca821d,"feathers.controls.supportClasses.BaseScrollContainer.layoutBackgroundSkin","feathers/controls/supportClasses/BaseScrollContainer.hx",1891,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1912_layoutMaskSkin,"feathers.controls.supportClasses.BaseScrollContainer","layoutMaskSkin",0x0349ec9b,"feathers.controls.supportClasses.BaseScrollContainer.layoutMaskSkin","feathers/controls/supportClasses/BaseScrollContainer.hx",1912,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1926_layoutViewPortMaskSkin,"feathers.controls.supportClasses.BaseScrollContainer","layoutViewPortMaskSkin",0x37c37941,"feathers.controls.supportClasses.BaseScrollContainer.layoutViewPortMaskSkin","feathers/controls/supportClasses/BaseScrollContainer.hx",1926,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_1940_layoutScrollBars,"feathers.controls.supportClasses.BaseScrollContainer","layoutScrollBars",0xe859617f,"feathers.controls.supportClasses.BaseScrollContainer.layoutScrollBars","feathers/controls/supportClasses/BaseScrollContainer.hx",1940,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2005_refreshScrollRect,"feathers.controls.supportClasses.BaseScrollContainer","refreshScrollRect",0xae917844,"feathers.controls.supportClasses.BaseScrollContainer.refreshScrollRect","feathers/controls/supportClasses/BaseScrollContainer.hx",2005,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2044_revealScrollBarX,"feathers.controls.supportClasses.BaseScrollContainer","revealScrollBarX",0xbbf40b87,"feathers.controls.supportClasses.BaseScrollContainer.revealScrollBarX","feathers/controls/supportClasses/BaseScrollContainer.hx",2044,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2055_revealScrollBarY,"feathers.controls.supportClasses.BaseScrollContainer","revealScrollBarY",0xbbf40b88,"feathers.controls.supportClasses.BaseScrollContainer.revealScrollBarY","feathers/controls/supportClasses/BaseScrollContainer.hx",2055,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2078_hideScrollBarX,"feathers.controls.supportClasses.BaseScrollContainer","hideScrollBarX",0x7362537c,"feathers.controls.supportClasses.BaseScrollContainer.hideScrollBarX","feathers/controls/supportClasses/BaseScrollContainer.hx",2078,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2066_hideScrollBarX,"feathers.controls.supportClasses.BaseScrollContainer","hideScrollBarX",0x7362537c,"feathers.controls.supportClasses.BaseScrollContainer.hideScrollBarX","feathers/controls/supportClasses/BaseScrollContainer.hx",2066,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2103_hideScrollBarY,"feathers.controls.supportClasses.BaseScrollContainer","hideScrollBarY",0x7362537d,"feathers.controls.supportClasses.BaseScrollContainer.hideScrollBarY","feathers/controls/supportClasses/BaseScrollContainer.hx",2103,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2091_hideScrollBarY,"feathers.controls.supportClasses.BaseScrollContainer","hideScrollBarY",0x7362537d,"feathers.controls.supportClasses.BaseScrollContainer.hideScrollBarY","feathers/controls/supportClasses/BaseScrollContainer.hx",2091,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2116_checkForRevealScrollBars,"feathers.controls.supportClasses.BaseScrollContainer","checkForRevealScrollBars",0x243914e3,"feathers.controls.supportClasses.BaseScrollContainer.checkForRevealScrollBars","feathers/controls/supportClasses/BaseScrollContainer.hx",2116,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2127_scrollWithKeyboard,"feathers.controls.supportClasses.BaseScrollContainer","scrollWithKeyboard",0x9d610ac2,"feathers.controls.supportClasses.BaseScrollContainer.scrollWithKeyboard","feathers/controls/supportClasses/BaseScrollContainer.hx",2127,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2190_baseScrollContainer_addedToStageHandler,"feathers.controls.supportClasses.BaseScrollContainer","baseScrollContainer_addedToStageHandler",0xc3f2c943,"feathers.controls.supportClasses.BaseScrollContainer.baseScrollContainer_addedToStageHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2190,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2194_baseScrollContainer_removedFromStageHandler,"feathers.controls.supportClasses.BaseScrollContainer","baseScrollContainer_removedFromStageHandler",0xbb6bb492,"feathers.controls.supportClasses.BaseScrollContainer.baseScrollContainer_removedFromStageHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2194,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2199_baseScrollContainer_keyDownHandler,"feathers.controls.supportClasses.BaseScrollContainer","baseScrollContainer_keyDownHandler",0x56a7080d,"feathers.controls.supportClasses.BaseScrollContainer.baseScrollContainer_keyDownHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2199,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2207_baseScrollContainer_scroller_scrollStartHandler,"feathers.controls.supportClasses.BaseScrollContainer","baseScrollContainer_scroller_scrollStartHandler",0x014ff776,"feathers.controls.supportClasses.BaseScrollContainer.baseScrollContainer_scroller_scrollStartHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2207,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2232_baseScrollContainer_scroller_scrollHandler,"feathers.controls.supportClasses.BaseScrollContainer","baseScrollContainer_scroller_scrollHandler",0xdc3dd29c,"feathers.controls.supportClasses.BaseScrollContainer.baseScrollContainer_scroller_scrollHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2232,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2258_baseScrollContainer_scroller_scrollCompleteHandler,"feathers.controls.supportClasses.BaseScrollContainer","baseScrollContainer_scroller_scrollCompleteHandler",0x4a3594e3,"feathers.controls.supportClasses.BaseScrollContainer.baseScrollContainer_scroller_scrollCompleteHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2258,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2272_reclaimMouse,"feathers.controls.supportClasses.BaseScrollContainer","reclaimMouse",0xbb2652c4,"feathers.controls.supportClasses.BaseScrollContainer.reclaimMouse","feathers/controls/supportClasses/BaseScrollContainer.hx",2272,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2284_reclaimTouch,"feathers.controls.supportClasses.BaseScrollContainer","reclaimTouch",0xc2f4545e,"feathers.controls.supportClasses.BaseScrollContainer.reclaimTouch","feathers/controls/supportClasses/BaseScrollContainer.hx",2284,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2297_baseScrollContainer_viewPort_mouseDownHandler,"feathers.controls.supportClasses.BaseScrollContainer","baseScrollContainer_viewPort_mouseDownHandler",0x2d45f718,"feathers.controls.supportClasses.BaseScrollContainer.baseScrollContainer_viewPort_mouseDownHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2297,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2301_baseScrollContainer_viewPort_touchBeginHandler,"feathers.controls.supportClasses.BaseScrollContainer","baseScrollContainer_viewPort_touchBeginHandler",0xf379abab,"feathers.controls.supportClasses.BaseScrollContainer.baseScrollContainer_viewPort_touchBeginHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2301,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2304_scrollBarX_changeHandler,"feathers.controls.supportClasses.BaseScrollContainer","scrollBarX_changeHandler",0x28248e15,"feathers.controls.supportClasses.BaseScrollContainer.scrollBarX_changeHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2304,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2311_scrollBarY_changeHandler,"feathers.controls.supportClasses.BaseScrollContainer","scrollBarY_changeHandler",0xbd202dd6,"feathers.controls.supportClasses.BaseScrollContainer.scrollBarY_changeHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2311,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2318_scrollBarX_rollOverHandler,"feathers.controls.supportClasses.BaseScrollContainer","scrollBarX_rollOverHandler",0x96de92f4,"feathers.controls.supportClasses.BaseScrollContainer.scrollBarX_rollOverHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2318,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2323_scrollBarX_rollOutHandler,"feathers.controls.supportClasses.BaseScrollContainer","scrollBarX_rollOutHandler",0x9107f87e,"feathers.controls.supportClasses.BaseScrollContainer.scrollBarX_rollOutHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2323,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2333_scrollBarY_rollOverHandler,"feathers.controls.supportClasses.BaseScrollContainer","scrollBarY_rollOverHandler",0x19d264f5,"feathers.controls.supportClasses.BaseScrollContainer.scrollBarY_rollOverHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2333,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2338_scrollBarY_rollOutHandler,"feathers.controls.supportClasses.BaseScrollContainer","scrollBarY_rollOutHandler",0x5838219d,"feathers.controls.supportClasses.BaseScrollContainer.scrollBarY_rollOutHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2338,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2348_scrollBarX_scrollStartHandler,"feathers.controls.supportClasses.BaseScrollContainer","scrollBarX_scrollStartHandler",0x0da2437a,"feathers.controls.supportClasses.BaseScrollContainer.scrollBarX_scrollStartHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2348,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2354_scrollBarX_scrollCompleteHandler,"feathers.controls.supportClasses.BaseScrollContainer","scrollBarX_scrollCompleteHandler",0x7bffa35f,"feathers.controls.supportClasses.BaseScrollContainer.scrollBarX_scrollCompleteHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2354,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2362_scrollBarY_scrollStartHandler,"feathers.controls.supportClasses.BaseScrollContainer","scrollBarY_scrollStartHandler",0x7406e819,"feathers.controls.supportClasses.BaseScrollContainer.scrollBarY_scrollStartHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2362,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2368_scrollBarY_scrollCompleteHandler,"feathers.controls.supportClasses.BaseScrollContainer","scrollBarY_scrollCompleteHandler",0xfc326c20,"feathers.controls.supportClasses.BaseScrollContainer.scrollBarY_scrollCompleteHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2368,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2377_hideScrollBarX_onComplete,"feathers.controls.supportClasses.BaseScrollContainer","hideScrollBarX_onComplete",0x7d2a481b,"feathers.controls.supportClasses.BaseScrollContainer.hideScrollBarX_onComplete","feathers/controls/supportClasses/BaseScrollContainer.hx",2377,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2381_hideScrollBarY_onComplete,"feathers.controls.supportClasses.BaseScrollContainer","hideScrollBarY_onComplete",0xbee9b5ba,"feathers.controls.supportClasses.BaseScrollContainer.hideScrollBarY_onComplete","feathers/controls/supportClasses/BaseScrollContainer.hx",2381,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_2384_viewPort_resizeHandler,"feathers.controls.supportClasses.BaseScrollContainer","viewPort_resizeHandler",0x1c2551c5,"feathers.controls.supportClasses.BaseScrollContainer.viewPort_resizeHandler","feathers/controls/supportClasses/BaseScrollContainer.hx",2384,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_85_get_paddingTop,"feathers.controls.supportClasses.BaseScrollContainer","get_paddingTop",0xf4f7e3d5,"feathers.controls.supportClasses.BaseScrollContainer.get_paddingTop","feathers/macros/StyleMacro.hx",85,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_99_set_paddingTop,"feathers.controls.supportClasses.BaseScrollContainer","set_paddingTop",0x1517cc49,"feathers.controls.supportClasses.BaseScrollContainer.set_paddingTop","feathers/macros/StyleMacro.hx",99,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_125_clearStyle_paddingTop,"feathers.controls.supportClasses.BaseScrollContainer","clearStyle_paddingTop",0x61ccb337,"feathers.controls.supportClasses.BaseScrollContainer.clearStyle_paddingTop","feathers/macros/StyleMacro.hx",125,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_85_get_paddingRight,"feathers.controls.supportClasses.BaseScrollContainer","get_paddingRight",0xe2cd591c,"feathers.controls.supportClasses.BaseScrollContainer.get_paddingRight","feathers/macros/StyleMacro.hx",85,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_99_set_paddingRight,"feathers.controls.supportClasses.BaseScrollContainer","set_paddingRight",0x390f4690,"feathers.controls.supportClasses.BaseScrollContainer.set_paddingRight","feathers/macros/StyleMacro.hx",99,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_125_clearStyle_paddingRight,"feathers.controls.supportClasses.BaseScrollContainer","clearStyle_paddingRight",0xc9fe44fe,"feathers.controls.supportClasses.BaseScrollContainer.clearStyle_paddingRight","feathers/macros/StyleMacro.hx",125,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_85_get_paddingBottom,"feathers.controls.supportClasses.BaseScrollContainer","get_paddingBottom",0xa83331ab,"feathers.controls.supportClasses.BaseScrollContainer.get_paddingBottom","feathers/macros/StyleMacro.hx",85,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_99_set_paddingBottom,"feathers.controls.supportClasses.BaseScrollContainer","set_paddingBottom",0xcba109b7,"feathers.controls.supportClasses.BaseScrollContainer.set_paddingBottom","feathers/macros/StyleMacro.hx",99,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_125_clearStyle_paddingBottom,"feathers.controls.supportClasses.BaseScrollContainer","clearStyle_paddingBottom",0x0bd0ab89,"feathers.controls.supportClasses.BaseScrollContainer.clearStyle_paddingBottom","feathers/macros/StyleMacro.hx",125,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_85_get_paddingLeft,"feathers.controls.supportClasses.BaseScrollContainer","get_paddingLeft",0x5e9e22c7,"feathers.controls.supportClasses.BaseScrollContainer.get_paddingLeft","feathers/macros/StyleMacro.hx",85,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_99_set_paddingLeft,"feathers.controls.supportClasses.BaseScrollContainer","set_paddingLeft",0x5a699fd3,"feathers.controls.supportClasses.BaseScrollContainer.set_paddingLeft","feathers/macros/StyleMacro.hx",99,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_125_clearStyle_paddingLeft,"feathers.controls.supportClasses.BaseScrollContainer","clearStyle_paddingLeft",0x2bfec925,"feathers.controls.supportClasses.BaseScrollContainer.clearStyle_paddingLeft","feathers/macros/StyleMacro.hx",125,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_85_get_backgroundSkin,"feathers.controls.supportClasses.BaseScrollContainer","get_backgroundSkin",0x4e66689c,"feathers.controls.supportClasses.BaseScrollContainer.get_backgroundSkin","feathers/macros/StyleMacro.hx",85,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_99_set_backgroundSkin,"feathers.controls.supportClasses.BaseScrollContainer","set_backgroundSkin",0x2b159b10,"feathers.controls.supportClasses.BaseScrollContainer.set_backgroundSkin","feathers/macros/StyleMacro.hx",99,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_125_clearStyle_backgroundSkin,"feathers.controls.supportClasses.BaseScrollContainer","clearStyle_backgroundSkin",0x149390fe,"feathers.controls.supportClasses.BaseScrollContainer.clearStyle_backgroundSkin","feathers/macros/StyleMacro.hx",125,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_85_get_disabledBackgroundSkin,"feathers.controls.supportClasses.BaseScrollContainer","get_disabledBackgroundSkin",0x26745838,"feathers.controls.supportClasses.BaseScrollContainer.get_disabledBackgroundSkin","feathers/macros/StyleMacro.hx",85,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_99_set_disabledBackgroundSkin,"feathers.controls.supportClasses.BaseScrollContainer","set_disabledBackgroundSkin",0x86091eac,"feathers.controls.supportClasses.BaseScrollContainer.set_disabledBackgroundSkin","feathers/macros/StyleMacro.hx",99,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_125_clearStyle_disabledBackgroundSkin,"feathers.controls.supportClasses.BaseScrollContainer","clearStyle_disabledBackgroundSkin",0xda73b29a,"feathers.controls.supportClasses.BaseScrollContainer.clearStyle_disabledBackgroundSkin","feathers/macros/StyleMacro.hx",125,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_85_get_maskSkin,"feathers.controls.supportClasses.BaseScrollContainer","get_maskSkin",0xf1edd9da,"feathers.controls.supportClasses.BaseScrollContainer.get_maskSkin","feathers/macros/StyleMacro.hx",85,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_99_set_maskSkin,"feathers.controls.supportClasses.BaseScrollContainer","set_maskSkin",0x06e6fd4e,"feathers.controls.supportClasses.BaseScrollContainer.set_maskSkin","feathers/macros/StyleMacro.hx",99,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_125_clearStyle_maskSkin,"feathers.controls.supportClasses.BaseScrollContainer","clearStyle_maskSkin",0xeabeacbc,"feathers.controls.supportClasses.BaseScrollContainer.clearStyle_maskSkin","feathers/macros/StyleMacro.hx",125,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_85_get_viewPortMaskSkin,"feathers.controls.supportClasses.BaseScrollContainer","get_viewPortMaskSkin",0x69053d80,"feathers.controls.supportClasses.BaseScrollContainer.get_viewPortMaskSkin","feathers/macros/StyleMacro.hx",85,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_99_set_viewPortMaskSkin,"feathers.controls.supportClasses.BaseScrollContainer","set_viewPortMaskSkin",0x35bcf4f4,"feathers.controls.supportClasses.BaseScrollContainer.set_viewPortMaskSkin","feathers/macros/StyleMacro.hx",99,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_125_clearStyle_viewPortMaskSkin,"feathers.controls.supportClasses.BaseScrollContainer","clearStyle_viewPortMaskSkin",0xf316c262,"feathers.controls.supportClasses.BaseScrollContainer.clearStyle_viewPortMaskSkin","feathers/macros/StyleMacro.hx",125,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_85_get_fixedScrollBars,"feathers.controls.supportClasses.BaseScrollContainer","get_fixedScrollBars",0x2ea8f850,"feathers.controls.supportClasses.BaseScrollContainer.get_fixedScrollBars","feathers/macros/StyleMacro.hx",85,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_99_set_fixedScrollBars,"feathers.controls.supportClasses.BaseScrollContainer","set_fixedScrollBars",0x6b45eb5c,"feathers.controls.supportClasses.BaseScrollContainer.set_fixedScrollBars","feathers/macros/StyleMacro.hx",99,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_125_clearStyle_fixedScrollBars,"feathers.controls.supportClasses.BaseScrollContainer","clearStyle_fixedScrollBars",0xcfff25ae,"feathers.controls.supportClasses.BaseScrollContainer.clearStyle_fixedScrollBars","feathers/macros/StyleMacro.hx",125,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_85_get_showScrollBars,"feathers.controls.supportClasses.BaseScrollContainer","get_showScrollBars",0x56ec505b,"feathers.controls.supportClasses.BaseScrollContainer.get_showScrollBars","feathers/macros/StyleMacro.hx",85,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_99_set_showScrollBars,"feathers.controls.supportClasses.BaseScrollContainer","set_showScrollBars",0x339b82cf,"feathers.controls.supportClasses.BaseScrollContainer.set_showScrollBars","feathers/macros/StyleMacro.hx",99,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_125_clearStyle_showScrollBars,"feathers.controls.supportClasses.BaseScrollContainer","clearStyle_showScrollBars",0x1d1978bd,"feathers.controls.supportClasses.BaseScrollContainer.clearStyle_showScrollBars","feathers/macros/StyleMacro.hx",125,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_85_get_autoHideScrollBars,"feathers.controls.supportClasses.BaseScrollContainer","get_autoHideScrollBars",0x77f94caf,"feathers.controls.supportClasses.BaseScrollContainer.get_autoHideScrollBars","feathers/macros/StyleMacro.hx",85,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_99_set_autoHideScrollBars,"feathers.controls.supportClasses.BaseScrollContainer","set_autoHideScrollBars",0xaba4c923,"feathers.controls.supportClasses.BaseScrollContainer.set_autoHideScrollBars","feathers/macros/StyleMacro.hx",99,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_125_clearStyle_autoHideScrollBars,"feathers.controls.supportClasses.BaseScrollContainer","clearStyle_autoHideScrollBars",0xcd1f4e11,"feathers.controls.supportClasses.BaseScrollContainer.clearStyle_autoHideScrollBars","feathers/macros/StyleMacro.hx",125,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_85_get_scrollBarXPosition,"feathers.controls.supportClasses.BaseScrollContainer","get_scrollBarXPosition",0x4586542c,"feathers.controls.supportClasses.BaseScrollContainer.get_scrollBarXPosition","feathers/macros/StyleMacro.hx",85,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_99_set_scrollBarXPosition,"feathers.controls.supportClasses.BaseScrollContainer","set_scrollBarXPosition",0x7931d0a0,"feathers.controls.supportClasses.BaseScrollContainer.set_scrollBarXPosition","feathers/macros/StyleMacro.hx",99,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_125_clearStyle_scrollBarXPosition,"feathers.controls.supportClasses.BaseScrollContainer","clearStyle_scrollBarXPosition",0x9aac558e,"feathers.controls.supportClasses.BaseScrollContainer.clearStyle_scrollBarXPosition","feathers/macros/StyleMacro.hx",125,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_85_get_scrollBarYPosition,"feathers.controls.supportClasses.BaseScrollContainer","get_scrollBarYPosition",0x1877bd2d,"feathers.controls.supportClasses.BaseScrollContainer.get_scrollBarYPosition","feathers/macros/StyleMacro.hx",85,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_99_set_scrollBarYPosition,"feathers.controls.supportClasses.BaseScrollContainer","set_scrollBarYPosition",0x4c2339a1,"feathers.controls.supportClasses.BaseScrollContainer.set_scrollBarYPosition","feathers/macros/StyleMacro.hx",99,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_125_clearStyle_scrollBarYPosition,"feathers.controls.supportClasses.BaseScrollContainer","clearStyle_scrollBarYPosition",0x6d9dbe8f,"feathers.controls.supportClasses.BaseScrollContainer.clearStyle_scrollBarYPosition","feathers/macros/StyleMacro.hx",125,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_85_get_showScrollBarMinimumDuration,"feathers.controls.supportClasses.BaseScrollContainer","get_showScrollBarMinimumDuration",0xdf076d0a,"feathers.controls.supportClasses.BaseScrollContainer.get_showScrollBarMinimumDuration","feathers/macros/StyleMacro.hx",85,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_99_set_showScrollBarMinimumDuration,"feathers.controls.supportClasses.BaseScrollContainer","set_showScrollBarMinimumDuration",0x972e827e,"feathers.controls.supportClasses.BaseScrollContainer.set_showScrollBarMinimumDuration","feathers/macros/StyleMacro.hx",99,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_125_clearStyle_showScrollBarMinimumDuration,"feathers.controls.supportClasses.BaseScrollContainer","clearStyle_showScrollBarMinimumDuration",0x933dbcec,"feathers.controls.supportClasses.BaseScrollContainer.clearStyle_showScrollBarMinimumDuration","feathers/macros/StyleMacro.hx",125,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_85_get_hideScrollBarDuration,"feathers.controls.supportClasses.BaseScrollContainer","get_hideScrollBarDuration",0xb5335b27,"feathers.controls.supportClasses.BaseScrollContainer.get_hideScrollBarDuration","feathers/macros/StyleMacro.hx",85,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_99_set_hideScrollBarDuration,"feathers.controls.supportClasses.BaseScrollContainer","set_hideScrollBarDuration",0x218a1f33,"feathers.controls.supportClasses.BaseScrollContainer.set_hideScrollBarDuration","feathers/macros/StyleMacro.hx",99,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_125_clearStyle_hideScrollBarDuration,"feathers.controls.supportClasses.BaseScrollContainer","clearStyle_hideScrollBarDuration",0x85cae305,"feathers.controls.supportClasses.BaseScrollContainer.clearStyle_hideScrollBarDuration","feathers/macros/StyleMacro.hx",125,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_85_get_hideScrollBarEase,"feathers.controls.supportClasses.BaseScrollContainer","get_hideScrollBarEase",0xd364b241,"feathers.controls.supportClasses.BaseScrollContainer.get_hideScrollBarEase","feathers/macros/StyleMacro.hx",85,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_99_set_hideScrollBarEase,"feathers.controls.supportClasses.BaseScrollContainer","set_hideScrollBarEase",0x276d804d,"feathers.controls.supportClasses.BaseScrollContainer.set_hideScrollBarEase","feathers/macros/StyleMacro.hx",99,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_125_clearStyle_hideScrollBarEase,"feathers.controls.supportClasses.BaseScrollContainer","clearStyle_hideScrollBarEase",0x18a7731f,"feathers.controls.supportClasses.BaseScrollContainer.clearStyle_hideScrollBarEase","feathers/macros/StyleMacro.hx",125,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_85_get_scrollPixelSnapping,"feathers.controls.supportClasses.BaseScrollContainer","get_scrollPixelSnapping",0xbca2a164,"feathers.controls.supportClasses.BaseScrollContainer.get_scrollPixelSnapping","feathers/macros/StyleMacro.hx",85,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_99_set_scrollPixelSnapping,"feathers.controls.supportClasses.BaseScrollContainer","set_scrollPixelSnapping",0xbf040a70,"feathers.controls.supportClasses.BaseScrollContainer.set_scrollPixelSnapping","feathers/macros/StyleMacro.hx",99,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_c57e7e519d634598_125_clearStyle_scrollPixelSnapping,"feathers.controls.supportClasses.BaseScrollContainer","clearStyle_scrollPixelSnapping",0xe8bdd5c2,"feathers.controls.supportClasses.BaseScrollContainer.clearStyle_scrollPixelSnapping","feathers/macros/StyleMacro.hx",125,0x3426f2ba)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_64_boot,"feathers.controls.supportClasses.BaseScrollContainer","boot",0xc980b87a,"feathers.controls.supportClasses.BaseScrollContainer.boot","feathers/controls/supportClasses/BaseScrollContainer.hx",64,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_65_boot,"feathers.controls.supportClasses.BaseScrollContainer","boot",0xc980b87a,"feathers.controls.supportClasses.BaseScrollContainer.boot","feathers/controls/supportClasses/BaseScrollContainer.hx",65,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_67_boot,"feathers.controls.supportClasses.BaseScrollContainer","boot",0xc980b87a,"feathers.controls.supportClasses.BaseScrollContainer.boot","feathers/controls/supportClasses/BaseScrollContainer.hx",67,0xfb74b239)
+HX_LOCAL_STACK_FRAME(_hx_pos_4200ed2106c74172_68_boot,"feathers.controls.supportClasses.BaseScrollContainer","boot",0xc980b87a,"feathers.controls.supportClasses.BaseScrollContainer.boot","feathers/controls/supportClasses/BaseScrollContainer.hx",68,0xfb74b239)
+namespace feathers{
+namespace controls{
+namespace supportClasses{
+
+void BaseScrollContainer_obj::__construct(){
+            	HX_GC_STACKFRAME(&_hx_pos_4200ed2106c74172_63_new)
+HXLINE( 959)		this->_hx___scrollPixelSnapping = false;
+HXLINE( 944)		this->_hx___hideScrollBarEase = ::motion::easing::Quart_obj::easeOut;
+HXLINE( 929)		this->_hx___hideScrollBarDuration = ((Float)0.2);
+HXLINE( 908)		this->_hx___showScrollBarMinimumDuration = ((Float)0.5);
+HXLINE( 890)		this->_hx___scrollBarYPosition = ::feathers::layout::RelativePosition_obj::RIGHT_dyn();
+HXLINE( 871)		this->_hx___scrollBarXPosition = ::feathers::layout::RelativePosition_obj::BOTTOM_dyn();
+HXLINE( 358)		this->_hx___autoHideScrollBars = true;
+HXLINE( 338)		this->_hx___showScrollBars = true;
+HXLINE( 324)		this->_hx___fixedScrollBars = false;
+HXLINE( 300)		this->_hx___viewPortMaskSkin = null();
+HXLINE( 274)		this->_hx___maskSkin = null();
+HXLINE( 245)		this->_hx___disabledBackgroundSkin = null();
+HXLINE( 226)		this->_hx___backgroundSkin = null();
+HXLINE( 207)		this->_hx___paddingLeft = ((Float)0.0);
+HXLINE( 191)		this->_hx___paddingBottom = ((Float)0.0);
+HXLINE( 175)		this->_hx___paddingRight = ((Float)0.0);
+HXLINE( 159)		this->_hx___paddingTop = ((Float)0.0);
+HXLINE( 983)		this->_scrollMode = ::feathers::controls::ScrollMode_obj::MASK_dyn();
+HXLINE( 975)		this->_previousViewPortHeight = ((Float)0.0);
+HXLINE( 974)		this->_previousViewPortWidth = ((Float)0.0);
+HXLINE( 973)		this->_ignoreViewPortResizing = false;
+HXLINE( 972)		this->_viewPortBoundsChanged = false;
+HXLINE( 971)		this->_settingScrollerDimensions = false;
+HXLINE( 970)		this->_ignoreScrollerChanges = false;
+HXLINE( 968)		this->_scrollRect2 =  ::openfl::geom::Rectangle_obj::__alloc( HX_CTX ,null(),null(),null(),null());
+HXLINE( 967)		this->_scrollRect1 =  ::openfl::geom::Rectangle_obj::__alloc( HX_CTX ,null(),null(),null(),null());
+HXLINE( 964)		this->_prevMaxScrollY = ((Float)0.0);
+HXLINE( 963)		this->_prevMinScrollY = ((Float)0.0);
+HXLINE( 962)		this->_prevMaxScrollX = ((Float)0.0);
+HXLINE( 961)		this->_prevMinScrollX = ((Float)0.0);
+HXLINE( 913)		this->_hideScrollBarY = null();
+HXLINE( 912)		this->_hideScrollBarX = null();
+HXLINE( 823)		this->_scrollPolicyY = ::feathers::controls::ScrollPolicy_obj::AUTO_dyn();
+HXLINE( 792)		this->_scrollPolicyX = ::feathers::controls::ScrollPolicy_obj::AUTO_dyn();
+HXLINE( 762)		this->_scrollStepY = ((Float)0.0);
+HXLINE( 732)		this->_scrollStepX = ((Float)0.0);
+HXLINE( 559)		this->_temporaryRestrictedScrollY = null();
+HXLINE( 558)		this->_temporaryScrollY = null();
+HXLINE( 475)		this->_temporaryRestrictedScrollX = null();
+HXLINE( 474)		this->_temporaryScrollX = null();
+HXLINE( 361)		this->showScrollBarY = false;
+HXLINE( 360)		this->showScrollBarX = false;
+HXLINE( 306)		this->_ignoreScrollBarYChange = false;
+HXLINE( 305)		this->_ignoreScrollBarXChange = false;
+HXLINE( 138)		this->chromeMeasuredMaxHeight = ::hx::DivByZero(((Float)1.0));
+HXLINE( 137)		this->chromeMeasuredMinHeight = ((Float)0.0);
+HXLINE( 136)		this->chromeMeasuredHeight = ((Float)0.0);
+HXLINE( 135)		this->chromeMeasuredMaxWidth = ::hx::DivByZero(((Float)1.0));
+HXLINE( 134)		this->chromeMeasuredMinWidth = ((Float)0.0);
+HXLINE( 133)		this->chromeMeasuredWidth = ((Float)0.0);
+HXLINE( 132)		this->leftViewPortOffset = ((Float)0.0);
+HXLINE( 131)		this->bottomViewPortOffset = ((Float)0.0);
+HXLINE( 130)		this->rightViewPortOffset = ((Float)0.0);
+HXLINE( 129)		this->topViewPortOffset = ((Float)0.0);
+HXLINE( 127)		this->_fallbackViewPortMaskSkin = null();
+HXLINE( 126)		this->_currentViewPortMaskSkin = null();
+HXLINE( 125)		this->_currentMaskSkin = null();
+HXLINE( 123)		this->_backgroundSkinMeasurements = null();
+HXLINE( 122)		this->_currentBackgroundSkin = null();
+HXLINE( 120)		this->_scrollBarYHover = false;
+HXLINE( 119)		this->_scrollBarXHover = false;
+HXLINE( 118)		this->_scrollerDraggingY = false;
+HXLINE( 117)		this->_scrollerDraggingX = false;
+HXLINE(  71)		super::__construct();
+HXLINE(  73)		this->set_tabEnabled(true);
+HXLINE(  74)		this->set_tabChildren(true);
+HXLINE(  75)		this->focusRect = null();
+HXLINE(  77)		this->addEventListener(HX_("keyDown",a1,69,47,9c),this->baseScrollContainer_keyDownHandler_dyn(),null(),null(),null());
+HXLINE(  78)		this->addEventListener(HX_("addedToStage",63,22,55,0c),this->baseScrollContainer_addedToStageHandler_dyn(),null(),null(),null());
+HXLINE(  79)		this->addEventListener(HX_("removedFromStage",34,21,76,ba),this->baseScrollContainer_removedFromStageHandler_dyn(),null(),null(),null());
+            	}
+
+Dynamic BaseScrollContainer_obj::__CreateEmpty() { return new BaseScrollContainer_obj; }
+
+void *BaseScrollContainer_obj::_hx_vtable = 0;
+
+Dynamic BaseScrollContainer_obj::__Create(::hx::DynamicArray inArgs)
+{
+	::hx::ObjectPtr< BaseScrollContainer_obj > _hx_result = new BaseScrollContainer_obj();
+	_hx_result->__construct();
+	return _hx_result;
+}
+
+bool BaseScrollContainer_obj::_hx_isInstanceOf(int inClassId) {
+	if (inClassId<=(int)0x1f4df417) {
+		if (inClassId<=(int)0x093ab78b) {
+			if (inClassId<=(int)0x0498edf2) {
+				if (inClassId<=(int)0x0330636f) {
+					return inClassId==(int)0x00000001 || inClassId==(int)0x0330636f;
+				} else {
+					return inClassId==(int)0x0498edf2;
+				}
+			} else {
+				return inClassId==(int)0x093ab78b;
+			}
+		} else {
+			return inClassId==(int)0x0c89e854 || inClassId==(int)0x1f4df417;
+		}
+	} else {
+		if (inClassId<=(int)0x58123034) {
+			if (inClassId<=(int)0x4af7dd8e) {
+				return inClassId==(int)0x4033f4be || inClassId==(int)0x4af7dd8e;
+			} else {
+				return inClassId==(int)0x58123034;
+			}
+		} else {
+			return inClassId==(int)0x6b353933;
+		}
+	}
+}
+
+static ::openfl::events::IEventDispatcher_obj _hx_feathers_controls_supportClasses_BaseScrollContainer__hx_openfl_events_IEventDispatcher= {
+	( void (::hx::Object::*)(::String, ::Dynamic,::hx::Null< bool > ,::hx::Null< int > ,::hx::Null< bool > ))&::feathers::controls::supportClasses::BaseScrollContainer_obj::addEventListener,
+	( bool (::hx::Object::*)( ::openfl::events::Event))&::feathers::controls::supportClasses::BaseScrollContainer_obj::dispatchEvent,
+	( bool (::hx::Object::*)(::String))&::feathers::controls::supportClasses::BaseScrollContainer_obj::hasEventListener,
+	( void (::hx::Object::*)(::String, ::Dynamic,::hx::Null< bool > ))&::feathers::controls::supportClasses::BaseScrollContainer_obj::removeEventListener,
+	( bool (::hx::Object::*)(::String))&::feathers::controls::supportClasses::BaseScrollContainer_obj::willTrigger,
+};
+
+static ::feathers::core::IFocusObject_obj _hx_feathers_controls_supportClasses_BaseScrollContainer__hx_feathers_core_IFocusObject= {
+	( void (::hx::Object::*)(::String, ::Dynamic,::hx::Null< bool > ,::hx::Null< int > ,::hx::Null< bool > ))&::feathers::controls::supportClasses::BaseScrollContainer_obj::addEventListener,
+	( bool (::hx::Object::*)( ::openfl::events::Event))&::feathers::controls::supportClasses::BaseScrollContainer_obj::dispatchEvent,
+	( bool (::hx::Object::*)(::String))&::feathers::controls::supportClasses::BaseScrollContainer_obj::hasEventListener,
+	( void (::hx::Object::*)(::String, ::Dynamic,::hx::Null< bool > ))&::feathers::controls::supportClasses::BaseScrollContainer_obj::removeEventListener,
+	( bool (::hx::Object::*)(::String))&::feathers::controls::supportClasses::BaseScrollContainer_obj::willTrigger,
+	( Float (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_x,
+	( Float (::hx::Object::*)(Float))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_x,
+	( Float (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_y,
+	( Float (::hx::Object::*)(Float))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_y,
+	( Float (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_width,
+	( Float (::hx::Object::*)(Float))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_width,
+	( Float (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_height,
+	( Float (::hx::Object::*)(Float))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_height,
+	( Float (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_scaleX,
+	( Float (::hx::Object::*)(Float))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_scaleX,
+	( Float (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_scaleY,
+	( Float (::hx::Object::*)(Float))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_scaleY,
+	( Float (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_alpha,
+	( Float (::hx::Object::*)(Float))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_alpha,
+	( bool (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_visible,
+	( bool (::hx::Object::*)(bool))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_visible,
+	( bool (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_focusEnabled,
+	( bool (::hx::Object::*)(bool))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_focusEnabled,
+	( ::Dynamic (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_focusOwner,
+	( ::Dynamic (::hx::Object::*)(::Dynamic))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_focusOwner,
+	( void (::hx::Object::*)(bool))&::feathers::controls::supportClasses::BaseScrollContainer_obj::showFocus,
+};
+
+static ::feathers::core::IFocusManagerAware_obj _hx_feathers_controls_supportClasses_BaseScrollContainer__hx_feathers_core_IFocusManagerAware= {
+	( ::Dynamic (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_focusManager,
+	( ::Dynamic (::hx::Object::*)(::Dynamic))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_focusManager,
+};
+
+static ::feathers::core::IDisplayObject_obj _hx_feathers_controls_supportClasses_BaseScrollContainer__hx_feathers_core_IDisplayObject= {
+	( void (::hx::Object::*)(::String, ::Dynamic,::hx::Null< bool > ,::hx::Null< int > ,::hx::Null< bool > ))&::feathers::controls::supportClasses::BaseScrollContainer_obj::addEventListener,
+	( bool (::hx::Object::*)( ::openfl::events::Event))&::feathers::controls::supportClasses::BaseScrollContainer_obj::dispatchEvent,
+	( bool (::hx::Object::*)(::String))&::feathers::controls::supportClasses::BaseScrollContainer_obj::hasEventListener,
+	( void (::hx::Object::*)(::String, ::Dynamic,::hx::Null< bool > ))&::feathers::controls::supportClasses::BaseScrollContainer_obj::removeEventListener,
+	( bool (::hx::Object::*)(::String))&::feathers::controls::supportClasses::BaseScrollContainer_obj::willTrigger,
+	( Float (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_x,
+	( Float (::hx::Object::*)(Float))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_x,
+	( Float (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_y,
+	( Float (::hx::Object::*)(Float))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_y,
+	( Float (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_width,
+	( Float (::hx::Object::*)(Float))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_width,
+	( Float (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_height,
+	( Float (::hx::Object::*)(Float))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_height,
+	( Float (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_scaleX,
+	( Float (::hx::Object::*)(Float))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_scaleX,
+	( Float (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_scaleY,
+	( Float (::hx::Object::*)(Float))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_scaleY,
+	( Float (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_alpha,
+	( Float (::hx::Object::*)(Float))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_alpha,
+	( bool (::hx::Object::*)())&::feathers::controls::supportClasses::BaseScrollContainer_obj::get_visible,
+	( bool (::hx::Object::*)(bool))&::feathers::controls::supportClasses::BaseScrollContainer_obj::set_visible,
+};
+
+void *BaseScrollContainer_obj::_hx_getInterface(int inHash) {
+	switch(inHash) {
+		case (int)0x87530281: return &_hx_feathers_controls_supportClasses_BaseScrollContainer__hx_openfl_events_IEventDispatcher;
+		case (int)0x701686fd: return &_hx_feathers_controls_supportClasses_BaseScrollContainer__hx_feathers_core_IFocusObject;
+		case (int)0x7031642f: return &_hx_feathers_controls_supportClasses_BaseScrollContainer__hx_feathers_core_IFocusManagerAware;
+		case (int)0x3a979a67: return &_hx_feathers_controls_supportClasses_BaseScrollContainer__hx_feathers_core_IDisplayObject;
+	}
+	return super::_hx_getInterface(inHash);
+}
+
+::Dynamic BaseScrollContainer_obj::get_viewPort(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_94_get_viewPort)
+HXDLIN(  94)		return this->_viewPort;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_viewPort,return )
+
+::Dynamic BaseScrollContainer_obj::set_viewPort(::Dynamic value){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_97_set_viewPort)
+HXLINE(  98)		if (::hx::IsInstanceEq( this->_viewPort,value )) {
+HXLINE(  99)			return this->_viewPort;
+            		}
+HXLINE( 101)		if (::hx::IsNotNull( this->_viewPort )) {
+HXLINE( 102)			::openfl::events::IEventDispatcher_obj::removeEventListener(this->_viewPort,HX_("resize",f4,59,7b,08),this->viewPort_resizeHandler_dyn(),null());
+            		}
+HXLINE( 104)		if (::hx::IsNotNull( this->scroller )) {
+HXLINE( 105)			this->scroller->set_target(null());
+            		}
+HXLINE( 107)		this->_viewPort = value;
+HXLINE( 108)		if (::hx::IsNotNull( this->_viewPort )) {
+HXLINE( 109)			::openfl::events::IEventDispatcher_obj::addEventListener(this->_viewPort,HX_("resize",f4,59,7b,08),this->viewPort_resizeHandler_dyn(),null(),null(),null());
+            		}
+HXLINE( 111)		this->setInvalid(::feathers::core::InvalidationFlag_obj::SCROLL_dyn());
+HXLINE( 112)		return this->_viewPort;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_viewPort,return )
+
+bool BaseScrollContainer_obj::get_tabEnabled(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_142_get_tabEnabled)
+HXDLIN( 142)		bool _hx_tmp;
+HXDLIN( 142)		Float _hx_tmp1 = this->get_maxScrollY();
+HXDLIN( 142)		if ((_hx_tmp1 == this->get_minScrollY())) {
+HXDLIN( 142)			Float _hx_tmp1 = this->get_maxScrollX();
+HXDLIN( 142)			_hx_tmp = (_hx_tmp1 != this->get_minScrollX());
+            		}
+            		else {
+HXDLIN( 142)			_hx_tmp = true;
+            		}
+HXDLIN( 142)		if (_hx_tmp) {
+HXDLIN( 142)			return this->get_rawTabEnabled();
+            		}
+            		else {
+HXDLIN( 142)			return false;
+            		}
+HXDLIN( 142)		return false;
+            	}
+
+
+ ::feathers::utils::DisplayObjectFactory BaseScrollContainer_obj::get_scrollBarXFactory(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_389_get_scrollBarXFactory)
+HXDLIN( 389)		return this->_scrollBarXFactory;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_scrollBarXFactory,return )
+
+ ::feathers::utils::DisplayObjectFactory BaseScrollContainer_obj::set_scrollBarXFactory( ::feathers::utils::DisplayObjectFactory value){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_392_set_scrollBarXFactory)
+HXLINE( 393)		if (::hx::IsInstanceEq( this->_scrollBarXFactory,value )) {
+HXLINE( 394)			return this->_scrollBarXFactory;
+            		}
+HXLINE( 396)		this->_scrollBarXFactory = value;
+HXLINE( 397)		this->setInvalid(::feathers::controls::supportClasses::BaseScrollContainer_obj::INVALIDATION_FLAG_SCROLL_BAR_FACTORY);
+HXLINE( 398)		return this->_scrollBarXFactory;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_scrollBarXFactory,return )
+
+ ::feathers::utils::DisplayObjectFactory BaseScrollContainer_obj::get_scrollBarYFactory(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_427_get_scrollBarYFactory)
+HXDLIN( 427)		return this->_scrollBarYFactory;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_scrollBarYFactory,return )
+
+ ::feathers::utils::DisplayObjectFactory BaseScrollContainer_obj::set_scrollBarYFactory( ::feathers::utils::DisplayObjectFactory value){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_430_set_scrollBarYFactory)
+HXLINE( 431)		if (::hx::IsInstanceEq( this->_scrollBarYFactory,value )) {
+HXLINE( 432)			return this->_scrollBarYFactory;
+            		}
+HXLINE( 434)		this->_scrollBarYFactory = value;
+HXLINE( 435)		this->setInvalid(::feathers::controls::supportClasses::BaseScrollContainer_obj::INVALIDATION_FLAG_SCROLL_BAR_FACTORY);
+HXLINE( 436)		return this->_scrollBarYFactory;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_scrollBarYFactory,return )
+
+ ::Dynamic BaseScrollContainer_obj::get_scrollerFactory(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_462_get_scrollerFactory)
+HXDLIN( 462)		return this->_scrollerFactory;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_scrollerFactory,return )
+
+ ::Dynamic BaseScrollContainer_obj::set_scrollerFactory( ::Dynamic value){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_465_set_scrollerFactory)
+HXLINE( 466)		if (::hx::IsEq( this->_scrollerFactory,value )) {
+HXLINE( 467)			return this->_scrollerFactory;
+            		}
+HXLINE( 469)		this->_scrollerFactory = value;
+HXLINE( 470)		this->setInvalid(::feathers::controls::supportClasses::BaseScrollContainer_obj::INVALIDATION_FLAG_SCROLLER_FACTORY);
+HXLINE( 471)		return this->_scrollerFactory;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_scrollerFactory,return )
+
+Float BaseScrollContainer_obj::get_scrollX(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_505_get_scrollX)
+HXLINE( 506)		if (::hx::IsNull( this->scroller )) {
+HXLINE( 507)			if (::hx::IsNotNull( this->_temporaryRestrictedScrollX )) {
+HXLINE( 508)				return ( (Float)(this->_temporaryRestrictedScrollX) );
+            			}
+HXLINE( 510)			if (::hx::IsNotNull( this->_temporaryScrollX )) {
+HXLINE( 511)				return ( (Float)(this->_temporaryScrollX) );
+            			}
+HXLINE( 513)			return ((Float)0.0);
+            		}
+HXLINE( 515)		return this->scroller->get_scrollX();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_scrollX,return )
+
+Float BaseScrollContainer_obj::set_scrollX(Float value){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_518_set_scrollX)
+HXLINE( 519)		if (::hx::IsNull( this->scroller )) {
+HXLINE( 520)			this->_temporaryScrollX = value;
+HXLINE( 521)			this->_temporaryRestrictedScrollX = null();
+HXLINE( 522)			::feathers::events::ScrollEvent_obj::dispatch(::hx::ObjectPtr<OBJ_>(this),HX_("scroll",0d,d8,64,47),null(),null());
+HXLINE( 523)			return ( (Float)(this->_temporaryScrollX) );
+            		}
+HXLINE( 525)		this->scroller->set_scrollX(value);
+HXLINE( 526)		return this->scroller->get_scrollX();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_scrollX,return )
+
+Float BaseScrollContainer_obj::get_restrictedScrollX(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_540_get_restrictedScrollX)
+HXLINE( 541)		if (::hx::IsNull( this->scroller )) {
+HXLINE( 542)			return this->get_scrollX();
+            		}
+HXLINE( 544)		return this->scroller->get_restrictedScrollX();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_restrictedScrollX,return )
+
+Float BaseScrollContainer_obj::set_restrictedScrollX(Float value){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_547_set_restrictedScrollX)
+HXLINE( 548)		if (::hx::IsNull( this->scroller )) {
+HXLINE( 549)			this->_temporaryRestrictedScrollX = value;
+HXLINE( 550)			this->_temporaryScrollX = null();
+HXLINE( 551)			::feathers::events::ScrollEvent_obj::dispatch(::hx::ObjectPtr<OBJ_>(this),HX_("scroll",0d,d8,64,47),null(),null());
+HXLINE( 552)			return ( (Float)(this->_temporaryRestrictedScrollX) );
+            		}
+HXLINE( 554)		this->scroller->set_restrictedScrollX(value);
+HXLINE( 555)		return this->scroller->get_restrictedScrollX();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_restrictedScrollX,return )
+
+Float BaseScrollContainer_obj::get_scrollY(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_584_get_scrollY)
+HXLINE( 585)		if (::hx::IsNull( this->scroller )) {
+HXLINE( 586)			if (::hx::IsNotNull( this->_temporaryRestrictedScrollY )) {
+HXLINE( 587)				return ( (Float)(this->_temporaryRestrictedScrollY) );
+            			}
+HXLINE( 589)			if (::hx::IsNotNull( this->_temporaryScrollY )) {
+HXLINE( 590)				return ( (Float)(this->_temporaryScrollY) );
+            			}
+HXLINE( 592)			return ((Float)0.0);
+            		}
+HXLINE( 594)		return this->scroller->get_scrollY();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_scrollY,return )
+
+Float BaseScrollContainer_obj::set_scrollY(Float value){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_597_set_scrollY)
+HXLINE( 598)		if (::hx::IsNull( this->scroller )) {
+HXLINE( 599)			this->_temporaryScrollY = value;
+HXLINE( 600)			this->_temporaryRestrictedScrollY = null();
+HXLINE( 601)			::feathers::events::ScrollEvent_obj::dispatch(::hx::ObjectPtr<OBJ_>(this),HX_("scroll",0d,d8,64,47),null(),null());
+HXLINE( 602)			return ( (Float)(this->_temporaryScrollY) );
+            		}
+HXLINE( 604)		this->scroller->set_scrollY(value);
+HXLINE( 605)		return this->scroller->get_scrollY();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_scrollY,return )
+
+Float BaseScrollContainer_obj::get_restrictedScrollY(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_618_get_restrictedScrollY)
+HXLINE( 619)		if (::hx::IsNull( this->scroller )) {
+HXLINE( 620)			this->get_scrollY();
+            		}
+HXLINE( 622)		return this->scroller->get_restrictedScrollY();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_restrictedScrollY,return )
+
+Float BaseScrollContainer_obj::set_restrictedScrollY(Float value){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_625_set_restrictedScrollY)
+HXLINE( 626)		if (::hx::IsNull( this->scroller )) {
+HXLINE( 627)			this->_temporaryRestrictedScrollY = value;
+HXLINE( 628)			this->_temporaryScrollY = null();
+HXLINE( 629)			::feathers::events::ScrollEvent_obj::dispatch(::hx::ObjectPtr<OBJ_>(this),HX_("scroll",0d,d8,64,47),null(),null());
+HXLINE( 630)			return ( (Float)(this->_temporaryRestrictedScrollY) );
+            		}
+HXLINE( 632)		this->scroller->set_restrictedScrollY(value);
+HXLINE( 633)		return this->scroller->get_restrictedScrollY();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_restrictedScrollY,return )
+
+Float BaseScrollContainer_obj::get_minScrollX(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_653_get_minScrollX)
+HXLINE( 654)		if (::hx::IsNull( this->scroller )) {
+HXLINE( 655)			return ((Float)0.0);
+            		}
+HXLINE( 657)		return this->scroller->get_minScrollX();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_minScrollX,return )
+
+Float BaseScrollContainer_obj::get_minScrollY(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_677_get_minScrollY)
+HXLINE( 678)		if (::hx::IsNull( this->scroller )) {
+HXLINE( 679)			return ((Float)0.0);
+            		}
+HXLINE( 681)		return this->scroller->get_minScrollY();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_minScrollY,return )
+
+Float BaseScrollContainer_obj::get_maxScrollX(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_701_get_maxScrollX)
+HXLINE( 702)		if (::hx::IsNull( this->scroller )) {
+HXLINE( 703)			return ((Float)0.0);
+            		}
+HXLINE( 705)		return this->scroller->get_maxScrollX();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_maxScrollX,return )
+
+Float BaseScrollContainer_obj::get_maxScrollY(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_725_get_maxScrollY)
+HXLINE( 726)		if (::hx::IsNull( this->scroller )) {
+HXLINE( 727)			return ((Float)0.0);
+            		}
+HXLINE( 729)		return this->scroller->get_maxScrollY();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_maxScrollY,return )
+
+Float BaseScrollContainer_obj::get_scrollStepX(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_750_get_scrollStepX)
+HXDLIN( 750)		return this->_scrollStepX;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_scrollStepX,return )
+
+Float BaseScrollContainer_obj::set_scrollStepX(Float value){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_753_set_scrollStepX)
+HXLINE( 754)		if ((this->_scrollStepX == value)) {
+HXLINE( 755)			return this->_scrollStepX;
+            		}
+HXLINE( 757)		this->_scrollStepX = value;
+HXLINE( 758)		this->setInvalid(::feathers::core::InvalidationFlag_obj::SCROLL_dyn());
+HXLINE( 759)		return this->_scrollStepX;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_scrollStepX,return )
+
+Float BaseScrollContainer_obj::get_scrollStepY(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_780_get_scrollStepY)
+HXDLIN( 780)		return this->_scrollStepY;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_scrollStepY,return )
+
+Float BaseScrollContainer_obj::set_scrollStepY(Float value){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_783_set_scrollStepY)
+HXLINE( 784)		if ((this->_scrollStepY == value)) {
+HXLINE( 785)			return this->_scrollStepY;
+            		}
+HXLINE( 787)		this->_scrollStepY = value;
+HXLINE( 788)		this->setInvalid(::feathers::core::InvalidationFlag_obj::SCROLL_dyn());
+HXLINE( 789)		return this->_scrollStepY;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_scrollStepY,return )
+
+ ::feathers::controls::ScrollPolicy BaseScrollContainer_obj::get_scrollPolicyX(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_811_get_scrollPolicyX)
+HXDLIN( 811)		return this->_scrollPolicyX;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_scrollPolicyX,return )
+
+ ::feathers::controls::ScrollPolicy BaseScrollContainer_obj::set_scrollPolicyX( ::feathers::controls::ScrollPolicy value){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_814_set_scrollPolicyX)
+HXLINE( 815)		if (::hx::IsPointerEq( this->_scrollPolicyX,value )) {
+HXLINE( 816)			return this->_scrollPolicyX;
+            		}
+HXLINE( 818)		this->_scrollPolicyX = value;
+HXLINE( 819)		this->setInvalid(::feathers::core::InvalidationFlag_obj::SCROLL_dyn());
+HXLINE( 820)		return this->_scrollPolicyX;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_scrollPolicyX,return )
+
+ ::feathers::controls::ScrollPolicy BaseScrollContainer_obj::get_scrollPolicyY(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_842_get_scrollPolicyY)
+HXDLIN( 842)		return this->_scrollPolicyY;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_scrollPolicyY,return )
+
+ ::feathers::controls::ScrollPolicy BaseScrollContainer_obj::set_scrollPolicyY( ::feathers::controls::ScrollPolicy value){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_845_set_scrollPolicyY)
+HXLINE( 846)		if (::hx::IsPointerEq( this->_scrollPolicyY,value )) {
+HXLINE( 847)			return this->_scrollPolicyY;
+            		}
+HXLINE( 849)		this->_scrollPolicyY = value;
+HXLINE( 850)		this->setInvalid(::feathers::core::InvalidationFlag_obj::SCROLL_dyn());
+HXLINE( 851)		return this->_scrollPolicyY;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_scrollPolicyY,return )
+
+bool BaseScrollContainer_obj::get_measureViewPort(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_980_get_measureViewPort)
+HXDLIN( 980)		return true;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_measureViewPort,return )
+
+ ::feathers::controls::ScrollMode BaseScrollContainer_obj::get_scrollMode(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_999_get_scrollMode)
+HXDLIN( 999)		return this->_scrollMode;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_scrollMode,return )
+
+ ::feathers::controls::ScrollMode BaseScrollContainer_obj::set_scrollMode( ::feathers::controls::ScrollMode value){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1002_set_scrollMode)
+HXLINE(1003)		if (::hx::IsPointerEq( this->_scrollMode,value )) {
+HXLINE(1004)			return this->_scrollMode;
+            		}
+HXLINE(1006)		this->_scrollMode = value;
+HXLINE(1007)		this->setInvalid(::feathers::core::InvalidationFlag_obj::LAYOUT_dyn());
+HXLINE(1008)		return this->_scrollMode;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_scrollMode,return )
+
+void BaseScrollContainer_obj::setPadding(Float value){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1021_setPadding)
+HXLINE(1022)		this->set_paddingTop(value);
+HXLINE(1023)		this->set_paddingRight(value);
+HXLINE(1024)		this->set_paddingBottom(value);
+HXLINE(1025)		this->set_paddingLeft(value);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,setPadding,(void))
+
+ ::openfl::geom::Rectangle BaseScrollContainer_obj::getViewPortVisibleBounds( ::openfl::geom::Rectangle result){
+            	HX_GC_STACKFRAME(&_hx_pos_4200ed2106c74172_1034_getViewPortVisibleBounds)
+HXLINE(1035)		Float viewPortX = this->leftViewPortOffset;
+HXDLIN(1035)		Float viewPortX1 = (viewPortX + this->get_paddingLeft());
+HXLINE(1036)		Float viewPortY = this->topViewPortOffset;
+HXDLIN(1036)		Float viewPortY1 = (viewPortY + this->get_paddingTop());
+HXLINE(1037)		if (::hx::IsNull( result )) {
+HXLINE(1038)			 ::Dynamic result1 = ::feathers::controls::supportClasses::IViewPort_obj::get_visibleWidth(this->_viewPort);
+HXDLIN(1038)			result =  ::openfl::geom::Rectangle_obj::__alloc( HX_CTX ,viewPortX1,viewPortY1,result1,::feathers::controls::supportClasses::IViewPort_obj::get_visibleHeight(this->_viewPort));
+            		}
+            		else {
+HXLINE(1040)			 ::Dynamic _hx_tmp = ::feathers::controls::supportClasses::IViewPort_obj::get_visibleWidth(this->_viewPort);
+HXDLIN(1040)			result->setTo(viewPortX1,viewPortY1,( (Float)(_hx_tmp) ),( (Float)(::feathers::controls::supportClasses::IViewPort_obj::get_visibleHeight(this->_viewPort)) ));
+            		}
+HXLINE(1042)		return result;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,getViewPortVisibleBounds,return )
+
+void BaseScrollContainer_obj::update(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1045_update)
+HXLINE(1046)		bool stylesInvalid = this->isInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+HXLINE(1047)		bool sizeInvalid = this->isInvalid(::feathers::core::InvalidationFlag_obj::SIZE_dyn());
+HXLINE(1048)		bool stateInvalid = this->isInvalid(::feathers::core::InvalidationFlag_obj::STATE_dyn());
+HXLINE(1049)		bool scrollerInvalid = this->isInvalid(::feathers::controls::supportClasses::BaseScrollContainer_obj::INVALIDATION_FLAG_SCROLLER_FACTORY);
+HXLINE(1050)		bool scrollBarFactoryInvalid = this->isInvalid(::feathers::controls::supportClasses::BaseScrollContainer_obj::INVALIDATION_FLAG_SCROLL_BAR_FACTORY);
+HXLINE(1052)		bool oldIgnoreScrollerChanges = this->_ignoreScrollerChanges;
+HXLINE(1053)		this->_ignoreScrollerChanges = true;
+HXLINE(1055)		if (scrollerInvalid) {
+HXLINE(1056)			this->createScroller();
+            		}
+HXLINE(1059)		bool _hx_tmp;
+HXDLIN(1059)		if (!(stylesInvalid)) {
+HXLINE(1059)			_hx_tmp = stateInvalid;
+            		}
+            		else {
+HXLINE(1059)			_hx_tmp = true;
+            		}
+HXDLIN(1059)		if (_hx_tmp) {
+HXLINE(1060)			this->refreshBackgroundSkin();
+            		}
+HXLINE(1063)		if (stylesInvalid) {
+HXLINE(1064)			this->refreshMaskSkin();
+HXLINE(1065)			this->refreshViewPortMaskSkin();
+            		}
+HXLINE(1068)		if (scrollBarFactoryInvalid) {
+HXLINE(1069)			this->createScrollBars();
+            		}
+HXLINE(1072)		this->refreshEnabled();
+HXLINE(1073)		this->refreshScrollerValues();
+HXLINE(1075)		this->refreshViewPort();
+HXLINE(1077)		this->applyTemporaryScrollPositions();
+HXLINE(1079)		this->refreshScrollRect();
+HXLINE(1080)		this->refreshScrollBarValues();
+HXLINE(1081)		this->layoutChildren();
+HXLINE(1083)		this->_ignoreScrollerChanges = oldIgnoreScrollerChanges;
+            	}
+
+
+void BaseScrollContainer_obj::applyTemporaryScrollPositions(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1086_applyTemporaryScrollPositions)
+HXLINE(1087)		if (::hx::IsNotNull( this->_temporaryScrollX )) {
+HXLINE(1088)			this->scroller->set_scrollX(( (Float)(this->_temporaryScrollX) ));
+            		}
+            		else {
+HXLINE(1089)			if (::hx::IsNotNull( this->_temporaryRestrictedScrollX )) {
+HXLINE(1090)				this->scroller->set_restrictedScrollX(( (Float)(this->_temporaryRestrictedScrollX) ));
+            			}
+            		}
+HXLINE(1092)		if (::hx::IsNotNull( this->_temporaryScrollY )) {
+HXLINE(1093)			this->scroller->set_scrollY(( (Float)(this->_temporaryScrollY) ));
+            		}
+            		else {
+HXLINE(1094)			if (::hx::IsNotNull( this->_temporaryRestrictedScrollY )) {
+HXLINE(1095)				this->scroller->set_restrictedScrollY(( (Float)(this->_temporaryRestrictedScrollY) ));
+            			}
+            		}
+HXLINE(1097)		this->_temporaryScrollX = null();
+HXLINE(1098)		this->_temporaryScrollY = null();
+HXLINE(1099)		this->_temporaryRestrictedScrollX = null();
+HXLINE(1100)		this->_temporaryRestrictedScrollY = null();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,applyTemporaryScrollPositions,(void))
+
+bool BaseScrollContainer_obj::needsMeasurement(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1104_needsMeasurement)
+HXDLIN(1104)		bool _hx_tmp;
+HXDLIN(1104)		bool _hx_tmp1;
+HXDLIN(1104)		bool _hx_tmp2;
+HXDLIN(1104)		bool _hx_tmp3;
+HXDLIN(1104)		bool _hx_tmp4;
+HXDLIN(1104)		bool _hx_tmp5;
+HXDLIN(1104)		if (this->isInvalid(::feathers::core::InvalidationFlag_obj::SCROLL_dyn())) {
+HXDLIN(1104)			_hx_tmp5 = this->needsScrollMeasurement();
+            		}
+            		else {
+HXDLIN(1104)			_hx_tmp5 = false;
+            		}
+HXDLIN(1104)		if (!(_hx_tmp5)) {
+HXDLIN(1104)			_hx_tmp4 = this->isInvalid(::feathers::core::InvalidationFlag_obj::DATA_dyn());
+            		}
+            		else {
+HXDLIN(1104)			_hx_tmp4 = true;
+            		}
+HXDLIN(1104)		if (!(_hx_tmp4)) {
+HXDLIN(1104)			_hx_tmp3 = this->isInvalid(::feathers::core::InvalidationFlag_obj::SIZE_dyn());
+            		}
+            		else {
+HXDLIN(1104)			_hx_tmp3 = true;
+            		}
+HXDLIN(1104)		if (!(_hx_tmp3)) {
+HXDLIN(1104)			_hx_tmp2 = this->isInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+            		}
+            		else {
+HXDLIN(1104)			_hx_tmp2 = true;
+            		}
+HXDLIN(1104)		if (!(_hx_tmp2)) {
+HXDLIN(1104)			_hx_tmp1 = this->isInvalid(::feathers::controls::supportClasses::BaseScrollContainer_obj::INVALIDATION_FLAG_SCROLL_BAR_FACTORY);
+            		}
+            		else {
+HXDLIN(1104)			_hx_tmp1 = true;
+            		}
+HXDLIN(1104)		if (!(_hx_tmp1)) {
+HXDLIN(1104)			_hx_tmp = this->isInvalid(::feathers::core::InvalidationFlag_obj::STATE_dyn());
+            		}
+            		else {
+HXDLIN(1104)			_hx_tmp = true;
+            		}
+HXDLIN(1104)		if (!(_hx_tmp)) {
+HXLINE(1110)			return this->isInvalid(::feathers::core::InvalidationFlag_obj::LAYOUT_dyn());
+            		}
+            		else {
+HXDLIN(1104)			return true;
+            		}
+HXDLIN(1104)		return false;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,needsMeasurement,return )
+
+bool BaseScrollContainer_obj::needsScrollMeasurement(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1114_needsScrollMeasurement)
+HXDLIN(1114)		return false;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,needsScrollMeasurement,return )
+
+void BaseScrollContainer_obj::createScroller(){
+            	HX_GC_STACKFRAME(&_hx_pos_4200ed2106c74172_1117_createScroller)
+HXLINE(1118)		if (::hx::IsNotNull( this->scroller )) {
+HXLINE(1119)			this->_temporaryScrollX = this->scroller->get_scrollX();
+HXLINE(1120)			this->_temporaryScrollY = this->scroller->get_scrollY();
+HXLINE(1121)			this->_temporaryRestrictedScrollX = null();
+HXLINE(1122)			this->_temporaryRestrictedScrollY = null();
+HXLINE(1123)			this->scroller->set_target(null());
+HXLINE(1124)			this->scroller->removeEventListener(HX_("scroll",0d,d8,64,47),this->baseScrollContainer_scroller_scrollHandler_dyn(),null());
+HXLINE(1125)			this->scroller->removeEventListener(HX_("scrollStart",15,bd,e8,cd),this->baseScrollContainer_scroller_scrollStartHandler_dyn(),null());
+HXLINE(1126)			this->scroller->removeEventListener(HX_("scrollComplete",e6,e9,b8,0b),this->baseScrollContainer_scroller_scrollCompleteHandler_dyn(),null());
+HXLINE(1127)			this->scroller = null();
+            		}
+HXLINE(1130)		 ::feathers::utils::Scroller _hx_tmp;
+HXDLIN(1130)		if (::hx::IsNotNull( this->_scrollerFactory )) {
+HXLINE(1130)			_hx_tmp = ( ( ::feathers::utils::Scroller)(this->_scrollerFactory()) );
+            		}
+            		else {
+HXLINE(1130)			_hx_tmp =  ::feathers::utils::Scroller_obj::__alloc( HX_CTX ,null());
+            		}
+HXDLIN(1130)		this->scroller = _hx_tmp;
+HXLINE(1131)		this->scroller->addEventListener(HX_("scroll",0d,d8,64,47),this->baseScrollContainer_scroller_scrollHandler_dyn(),null(),null(),null());
+HXLINE(1132)		this->scroller->addEventListener(HX_("scrollStart",15,bd,e8,cd),this->baseScrollContainer_scroller_scrollStartHandler_dyn(),null(),null(),null());
+HXLINE(1133)		this->scroller->addEventListener(HX_("scrollComplete",e6,e9,b8,0b),this->baseScrollContainer_scroller_scrollCompleteHandler_dyn(),null(),null(),null());
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,createScroller,(void))
+
+void BaseScrollContainer_obj::createScrollBars(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1136_createScrollBars)
+HXLINE(1137)		if (::hx::IsNotNull( this->scrollBarX )) {
+HXLINE(1138)			::openfl::events::IEventDispatcher_obj::removeEventListener(this->scrollBarX,HX_("change",70,91,72,b7),this->scrollBarX_changeHandler_dyn(),null());
+HXLINE(1139)			::openfl::events::IEventDispatcher_obj::removeEventListener(this->scrollBarX,HX_("rollOver",71,ab,a8,12),this->scrollBarX_rollOverHandler_dyn(),null());
+HXLINE(1140)			::openfl::events::IEventDispatcher_obj::removeEventListener(this->scrollBarX,HX_("rollOut",11,f9,11,5d),this->scrollBarX_rollOutHandler_dyn(),null());
+HXLINE(1141)			::openfl::events::IEventDispatcher_obj::removeEventListener(this->scrollBarX,HX_("scrollStart",15,bd,e8,cd),this->scrollBarX_scrollStartHandler_dyn(),null());
+HXLINE(1142)			::openfl::events::IEventDispatcher_obj::removeEventListener(this->scrollBarX,HX_("scrollComplete",e6,e9,b8,0b),this->scrollBarX_scrollCompleteHandler_dyn(),null());
+HXLINE(1143)			this->removeChild(::hx::TCast<  ::openfl::display::DisplayObject >::cast(this->scrollBarX));
+HXLINE(1144)			if (::hx::IsNotNull( this->_oldScrollBarXFactory->destroy )) {
+HXLINE(1145)				this->_oldScrollBarXFactory->destroy(this->scrollBarX);
+            			}
+HXLINE(1147)			this->_oldScrollBarXFactory = null();
+HXLINE(1148)			this->scrollBarX = null();
+            		}
+HXLINE(1150)		if (::hx::IsNotNull( this->scrollBarY )) {
+HXLINE(1151)			::openfl::events::IEventDispatcher_obj::removeEventListener(this->scrollBarY,HX_("change",70,91,72,b7),this->scrollBarY_changeHandler_dyn(),null());
+HXLINE(1152)			::openfl::events::IEventDispatcher_obj::removeEventListener(this->scrollBarY,HX_("rollOver",71,ab,a8,12),this->scrollBarY_rollOverHandler_dyn(),null());
+HXLINE(1153)			::openfl::events::IEventDispatcher_obj::removeEventListener(this->scrollBarY,HX_("rollOut",11,f9,11,5d),this->scrollBarY_rollOutHandler_dyn(),null());
+HXLINE(1154)			::openfl::events::IEventDispatcher_obj::removeEventListener(this->scrollBarY,HX_("scrollStart",15,bd,e8,cd),this->scrollBarY_scrollStartHandler_dyn(),null());
+HXLINE(1155)			::openfl::events::IEventDispatcher_obj::removeEventListener(this->scrollBarY,HX_("scrollComplete",e6,e9,b8,0b),this->scrollBarY_scrollCompleteHandler_dyn(),null());
+HXLINE(1156)			this->removeChild(::hx::TCast<  ::openfl::display::DisplayObject >::cast(this->scrollBarY));
+HXLINE(1157)			if (::hx::IsNotNull( this->_oldScrollBarYFactory->destroy )) {
+HXLINE(1158)				this->_oldScrollBarYFactory->destroy(this->scrollBarY);
+            			}
+HXLINE(1160)			this->_oldScrollBarYFactory = null();
+HXLINE(1161)			this->scrollBarY = null();
+            		}
+HXLINE(1163)		 ::feathers::utils::DisplayObjectFactory factory;
+HXDLIN(1163)		if (::hx::IsNotNull( this->_scrollBarXFactory )) {
+HXLINE(1163)			factory = this->_scrollBarXFactory;
+            		}
+            		else {
+HXLINE(1163)			factory = ::feathers::controls::supportClasses::BaseScrollContainer_obj::defaultScrollBarXFactory;
+            		}
+HXLINE(1164)		this->_oldScrollBarXFactory = factory;
+HXLINE(1165)		this->scrollBarX = factory->create();
+HXLINE(1166)		if (this->get_autoHideScrollBars()) {
+HXLINE(1167)			::feathers::core::IDisplayObject_obj::set_alpha(this->scrollBarX,((Float)0.0));
+            		}
+HXLINE(1169)		::openfl::events::IEventDispatcher_obj::addEventListener(this->scrollBarX,HX_("change",70,91,72,b7),this->scrollBarX_changeHandler_dyn(),null(),null(),null());
+HXLINE(1170)		::openfl::events::IEventDispatcher_obj::addEventListener(this->scrollBarX,HX_("rollOver",71,ab,a8,12),this->scrollBarX_rollOverHandler_dyn(),null(),null(),null());
+HXLINE(1171)		::openfl::events::IEventDispatcher_obj::addEventListener(this->scrollBarX,HX_("rollOut",11,f9,11,5d),this->scrollBarX_rollOutHandler_dyn(),null(),null(),null());
+HXLINE(1172)		::openfl::events::IEventDispatcher_obj::addEventListener(this->scrollBarX,HX_("scrollStart",15,bd,e8,cd),this->scrollBarX_scrollStartHandler_dyn(),null(),null(),null());
+HXLINE(1173)		::openfl::events::IEventDispatcher_obj::addEventListener(this->scrollBarX,HX_("scrollComplete",e6,e9,b8,0b),this->scrollBarX_scrollCompleteHandler_dyn(),null(),null(),null());
+HXLINE(1174)		this->addChild(::hx::TCast<  ::openfl::display::DisplayObject >::cast(this->scrollBarX));
+HXLINE(1176)		 ::feathers::utils::DisplayObjectFactory factory1;
+HXDLIN(1176)		if (::hx::IsNotNull( this->_scrollBarYFactory )) {
+HXLINE(1176)			factory1 = this->_scrollBarYFactory;
+            		}
+            		else {
+HXLINE(1176)			factory1 = ::feathers::controls::supportClasses::BaseScrollContainer_obj::defaultScrollBarYFactory;
+            		}
+HXLINE(1177)		this->_oldScrollBarYFactory = factory1;
+HXLINE(1178)		this->scrollBarY = factory1->create();
+HXLINE(1179)		if (this->get_autoHideScrollBars()) {
+HXLINE(1180)			::feathers::core::IDisplayObject_obj::set_alpha(this->scrollBarY,((Float)0.0));
+            		}
+HXLINE(1182)		::openfl::events::IEventDispatcher_obj::addEventListener(this->scrollBarY,HX_("change",70,91,72,b7),this->scrollBarY_changeHandler_dyn(),null(),null(),null());
+HXLINE(1183)		::openfl::events::IEventDispatcher_obj::addEventListener(this->scrollBarY,HX_("rollOver",71,ab,a8,12),this->scrollBarY_rollOverHandler_dyn(),null(),null(),null());
+HXLINE(1184)		::openfl::events::IEventDispatcher_obj::addEventListener(this->scrollBarY,HX_("rollOut",11,f9,11,5d),this->scrollBarY_rollOutHandler_dyn(),null(),null(),null());
+HXLINE(1185)		::openfl::events::IEventDispatcher_obj::addEventListener(this->scrollBarY,HX_("scrollStart",15,bd,e8,cd),this->scrollBarY_scrollStartHandler_dyn(),null(),null(),null());
+HXLINE(1186)		::openfl::events::IEventDispatcher_obj::addEventListener(this->scrollBarY,HX_("scrollComplete",e6,e9,b8,0b),this->scrollBarY_scrollCompleteHandler_dyn(),null(),null(),null());
+HXLINE(1187)		this->addChild(::hx::TCast<  ::openfl::display::DisplayObject >::cast(this->scrollBarY));
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,createScrollBars,(void))
+
+void BaseScrollContainer_obj::refreshEnabled(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1190_refreshEnabled)
+HXLINE(1191)		::feathers::core::IUIControl_obj::set_enabled(this->_viewPort,this->_enabled);
+HXLINE(1192)		if (::hx::IsNotNull( this->scrollBarX )) {
+HXLINE(1193)			::feathers::core::IUIControl_obj::set_enabled(this->scrollBarX,this->_enabled);
+            		}
+HXLINE(1195)		if (::hx::IsNotNull( this->scrollBarY )) {
+HXLINE(1196)			::feathers::core::IUIControl_obj::set_enabled(this->scrollBarY,this->_enabled);
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,refreshEnabled,(void))
+
+void BaseScrollContainer_obj::restrictScrollAfterRefreshViewPort(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1200_restrictScrollAfterRefreshViewPort)
+HXLINE(1201)		if (this->scroller->get_scrolling()) {
+HXLINE(1202)			return;
+            		}
+HXLINE(1206)		bool _hx_tmp;
+HXDLIN(1206)		Float _hx_tmp1 = this->_prevMinScrollX;
+HXDLIN(1206)		if ((_hx_tmp1 != this->scroller->get_minScrollX())) {
+HXLINE(1206)			Float _hx_tmp1 = this->scroller->get_scrollX();
+HXDLIN(1206)			_hx_tmp = (_hx_tmp1 < this->scroller->get_minScrollX());
+            		}
+            		else {
+HXLINE(1206)			_hx_tmp = false;
+            		}
+HXDLIN(1206)		if (_hx_tmp) {
+HXLINE(1207)			 ::feathers::utils::Scroller _hx_tmp = this->scroller;
+HXDLIN(1207)			_hx_tmp->set_restrictedScrollX(this->scroller->get_scrollX());
+            		}
+            		else {
+HXLINE(1208)			bool _hx_tmp;
+HXDLIN(1208)			Float _hx_tmp1 = this->_prevMaxScrollX;
+HXDLIN(1208)			if ((_hx_tmp1 != this->scroller->get_maxScrollX())) {
+HXLINE(1208)				Float _hx_tmp1 = this->scroller->get_scrollX();
+HXDLIN(1208)				_hx_tmp = (_hx_tmp1 > this->scroller->get_maxScrollX());
+            			}
+            			else {
+HXLINE(1208)				_hx_tmp = false;
+            			}
+HXDLIN(1208)			if (_hx_tmp) {
+HXLINE(1209)				 ::feathers::utils::Scroller _hx_tmp = this->scroller;
+HXDLIN(1209)				_hx_tmp->set_restrictedScrollX(this->scroller->get_scrollX());
+            			}
+            		}
+HXLINE(1211)		bool _hx_tmp2;
+HXDLIN(1211)		Float _hx_tmp3 = this->_prevMinScrollY;
+HXDLIN(1211)		if ((_hx_tmp3 != this->scroller->get_minScrollY())) {
+HXLINE(1211)			Float _hx_tmp = this->scroller->get_scrollY();
+HXDLIN(1211)			_hx_tmp2 = (_hx_tmp < this->scroller->get_minScrollY());
+            		}
+            		else {
+HXLINE(1211)			_hx_tmp2 = false;
+            		}
+HXDLIN(1211)		if (_hx_tmp2) {
+HXLINE(1212)			 ::feathers::utils::Scroller _hx_tmp = this->scroller;
+HXDLIN(1212)			_hx_tmp->set_restrictedScrollY(this->scroller->get_scrollY());
+            		}
+            		else {
+HXLINE(1213)			bool _hx_tmp;
+HXDLIN(1213)			Float _hx_tmp1 = this->_prevMaxScrollY;
+HXDLIN(1213)			if ((_hx_tmp1 != this->scroller->get_maxScrollY())) {
+HXLINE(1213)				Float _hx_tmp1 = this->scroller->get_scrollY();
+HXDLIN(1213)				_hx_tmp = (_hx_tmp1 > this->scroller->get_maxScrollY());
+            			}
+            			else {
+HXLINE(1213)				_hx_tmp = false;
+            			}
+HXDLIN(1213)			if (_hx_tmp) {
+HXLINE(1214)				 ::feathers::utils::Scroller _hx_tmp = this->scroller;
+HXDLIN(1214)				_hx_tmp->set_restrictedScrollY(this->scroller->get_scrollY());
+            			}
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,restrictScrollAfterRefreshViewPort,(void))
+
+void BaseScrollContainer_obj::refreshViewPort(){
+            	HX_GC_STACKFRAME(&_hx_pos_4200ed2106c74172_1218_refreshViewPort)
+HXLINE(1219)		if (::Std_obj::isOfType(this->scrollBarX,::hx::ClassOf< ::feathers::core::IValidating >())) {
+HXLINE(1220)			::feathers::core::IValidating_obj::validateNow(this->scrollBarX);
+            		}
+HXLINE(1222)		if (::Std_obj::isOfType(this->scrollBarY,::hx::ClassOf< ::feathers::core::IValidating >())) {
+HXLINE(1223)			::feathers::core::IValidating_obj::validateNow(this->scrollBarY);
+            		}
+HXLINE(1226)		::Dynamic _hx_tmp = this->_viewPort;
+HXDLIN(1226)		::feathers::controls::supportClasses::IViewPort_obj::set_scrollX(_hx_tmp,this->get_scrollX());
+HXLINE(1227)		::Dynamic _hx_tmp1 = this->_viewPort;
+HXDLIN(1227)		::feathers::controls::supportClasses::IViewPort_obj::set_scrollY(_hx_tmp1,this->get_scrollY());
+HXLINE(1229)		this->_prevMinScrollX = this->scroller->get_minScrollX();
+HXLINE(1230)		this->_prevMaxScrollX = this->scroller->get_maxScrollX();
+HXLINE(1231)		this->_prevMinScrollY = this->scroller->get_minScrollY();
+HXLINE(1232)		this->_prevMaxScrollY = this->scroller->get_maxScrollY();
+HXLINE(1234)		if (!(this->needsMeasurement())) {
+HXLINE(1235)			::feathers::core::IValidating_obj::validateNow(this->_viewPort);
+HXLINE(1236)			bool oldSettingScrollerDimensions = this->_settingScrollerDimensions;
+HXLINE(1237)			this->_settingScrollerDimensions = true;
+HXLINE(1238)			 ::feathers::utils::Scroller _hx_tmp = this->scroller;
+HXDLIN(1238)			 ::Dynamic _hx_tmp1 = ::feathers::controls::supportClasses::IViewPort_obj::get_visibleWidth(this->_viewPort);
+HXDLIN(1238)			 ::Dynamic _hx_tmp2 = ::feathers::controls::supportClasses::IViewPort_obj::get_visibleHeight(this->_viewPort);
+HXDLIN(1238)			Float _hx_tmp3 = ::feathers::core::IDisplayObject_obj::get_width(this->_viewPort);
+HXDLIN(1238)			_hx_tmp->setDimensions(_hx_tmp1,_hx_tmp2,_hx_tmp3,::feathers::core::IDisplayObject_obj::get_height(this->_viewPort));
+HXLINE(1239)			this->_settingScrollerDimensions = oldSettingScrollerDimensions;
+HXLINE(1240)			this->restrictScrollAfterRefreshViewPort();
+HXLINE(1241)			return;
+            		}
+HXLINE(1251)		this->refreshViewPortBoundsForMeasurement();
+HXLINE(1252)		int loopCount = 0;
+HXLINE(1253)		while(true){
+HXLINE(1254)			this->_viewPortBoundsChanged = false;
+HXLINE(1257)			if (this->get_measureViewPort()) {
+HXLINE(1258)				this->resetViewPortOffsets();
+HXLINE(1259)				this->calculateViewPortOffsets(true,false);
+HXLINE(1260)				this->refreshViewPortBoundsForMeasurement();
+            			}
+HXLINE(1262)			this->resetViewPortOffsets();
+HXLINE(1263)			this->calculateViewPortOffsets(false,false);
+HXLINE(1265)			this->measure();
+HXLINE(1270)			this->resetViewPortOffsets();
+HXLINE(1271)			this->calculateViewPortOffsets(false,true);
+HXLINE(1273)			this->refreshViewPortBoundsForLayout();
+HXLINE(1275)			loopCount = (loopCount + 1);
+HXLINE(1276)			if ((loopCount >= 10)) {
+HXLINE(1281)				HX_STACK_DO_THROW( ::openfl::errors::IllegalOperationError_obj::__alloc( HX_CTX ,(::Type_obj::getClassName(::Type_obj::getClass(::hx::ObjectPtr<OBJ_>(this))) + HX_(" stuck in an infinite loop during measurement and validation. This may be an issue with the layout or children, such as custom item renderers.",a5,30,39,6d))));
+            			}
+HXLINE(1253)			if (!(this->_viewPortBoundsChanged)) {
+HXLINE(1253)				goto _hx_goto_43;
+            			}
+            		}
+            		_hx_goto_43:;
+HXLINE(1287)		this->_previousViewPortWidth = ::feathers::core::IDisplayObject_obj::get_width(this->_viewPort);
+HXLINE(1288)		this->_previousViewPortHeight = ::feathers::core::IDisplayObject_obj::get_height(this->_viewPort);
+HXLINE(1289)		this->restrictScrollAfterRefreshViewPort();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,refreshViewPort,(void))
+
+void BaseScrollContainer_obj::resetViewPortOffsets(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1292_resetViewPortOffsets)
+HXLINE(1293)		this->topViewPortOffset = ((Float)0.0);
+HXLINE(1294)		this->rightViewPortOffset = ((Float)0.0);
+HXLINE(1295)		this->bottomViewPortOffset = ((Float)0.0);
+HXLINE(1296)		this->leftViewPortOffset = ((Float)0.0);
+HXLINE(1297)		this->chromeMeasuredWidth = ((Float)0.0);
+HXLINE(1298)		this->chromeMeasuredMinWidth = ((Float)0.0);
+HXLINE(1299)		this->chromeMeasuredMaxWidth = ::hx::DivByZero(((Float)1.0));
+HXLINE(1300)		this->chromeMeasuredHeight = ((Float)0.0);
+HXLINE(1301)		this->chromeMeasuredMinHeight = ((Float)0.0);
+HXLINE(1302)		this->chromeMeasuredMaxHeight = ::hx::DivByZero(((Float)1.0));
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,resetViewPortOffsets,(void))
+
+void BaseScrollContainer_obj::calculateViewPortOffsets(bool forceScrollBars,bool useActualBounds){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1305_calculateViewPortOffsets)
+HXLINE(1309)		bool _hx_tmp;
+HXDLIN(1309)		bool _hx_tmp1;
+HXDLIN(1309)		if (forceScrollBars) {
+HXLINE(1309)			_hx_tmp1 = this->get_showScrollBars();
+            		}
+            		else {
+HXLINE(1309)			_hx_tmp1 = false;
+            		}
+HXDLIN(1309)		if (_hx_tmp1) {
+HXLINE(1309)			_hx_tmp = ::hx::IsPointerNotEq( this->get_scrollPolicyX(),::feathers::controls::ScrollPolicy_obj::OFF_dyn() );
+            		}
+            		else {
+HXLINE(1309)			_hx_tmp = false;
+            		}
+HXDLIN(1309)		this->calculateViewPortOffsetsForFixedScrollBarX(_hx_tmp,useActualBounds);
+HXLINE(1310)		bool _hx_tmp2;
+HXDLIN(1310)		bool _hx_tmp3;
+HXDLIN(1310)		if (forceScrollBars) {
+HXLINE(1310)			_hx_tmp3 = this->get_showScrollBars();
+            		}
+            		else {
+HXLINE(1310)			_hx_tmp3 = false;
+            		}
+HXDLIN(1310)		if (_hx_tmp3) {
+HXLINE(1310)			_hx_tmp2 = ::hx::IsPointerNotEq( this->get_scrollPolicyY(),::feathers::controls::ScrollPolicy_obj::OFF_dyn() );
+            		}
+            		else {
+HXLINE(1310)			_hx_tmp2 = false;
+            		}
+HXDLIN(1310)		this->calculateViewPortOffsetsForFixedScrollBarY(_hx_tmp2,useActualBounds);
+HXLINE(1314)		bool _hx_tmp4;
+HXDLIN(1314)		bool _hx_tmp5;
+HXDLIN(1314)		if (this->get_fixedScrollBars()) {
+HXLINE(1314)			_hx_tmp5 = this->showScrollBarY;
+            		}
+            		else {
+HXLINE(1314)			_hx_tmp5 = false;
+            		}
+HXDLIN(1314)		if (_hx_tmp5) {
+HXLINE(1314)			_hx_tmp4 = !(this->showScrollBarX);
+            		}
+            		else {
+HXLINE(1314)			_hx_tmp4 = false;
+            		}
+HXDLIN(1314)		if (_hx_tmp4) {
+HXLINE(1315)			bool _hx_tmp;
+HXDLIN(1315)			bool _hx_tmp1;
+HXDLIN(1315)			if (forceScrollBars) {
+HXLINE(1315)				_hx_tmp1 = this->get_showScrollBars();
+            			}
+            			else {
+HXLINE(1315)				_hx_tmp1 = false;
+            			}
+HXDLIN(1315)			if (_hx_tmp1) {
+HXLINE(1315)				_hx_tmp = ::hx::IsPointerNotEq( this->get_scrollPolicyX(),::feathers::controls::ScrollPolicy_obj::OFF_dyn() );
+            			}
+            			else {
+HXLINE(1315)				_hx_tmp = false;
+            			}
+HXDLIN(1315)			this->calculateViewPortOffsetsForFixedScrollBarX(_hx_tmp,useActualBounds);
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(BaseScrollContainer_obj,calculateViewPortOffsets,(void))
+
+void BaseScrollContainer_obj::calculateViewPortOffsetsForFixedScrollBarX(bool forceScrollBars,bool useActualBounds){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1320_calculateViewPortOffsetsForFixedScrollBarX)
+HXDLIN(1320)		bool _hx_tmp;
+HXDLIN(1320)		if (::hx::IsNotNull( this->scrollBarX )) {
+HXDLIN(1320)			if (!(this->get_measureViewPort())) {
+HXDLIN(1320)				_hx_tmp = useActualBounds;
+            			}
+            			else {
+HXDLIN(1320)				_hx_tmp = true;
+            			}
+            		}
+            		else {
+HXDLIN(1320)			_hx_tmp = false;
+            		}
+HXDLIN(1320)		if (_hx_tmp) {
+HXLINE(1321)			 ::Dynamic availableWidth;
+HXDLIN(1321)			if (useActualBounds) {
+HXLINE(1321)				availableWidth = this->actualWidth;
+            			}
+            			else {
+HXLINE(1321)				availableWidth = this->get_explicitWidth();
+            			}
+HXLINE(1322)			if (::hx::IsNotNull( availableWidth )) {
+HXLINE(1323)				Float availableWidth1 = this->get_paddingLeft();
+HXDLIN(1323)				Float availableWidth2 = (availableWidth1 + this->get_paddingRight());
+HXDLIN(1323)				availableWidth = (availableWidth - ((availableWidth2 + this->leftViewPortOffset) + this->rightViewPortOffset));
+HXLINE(1324)				if (::hx::IsLess( availableWidth,((Float)0.0) )) {
+HXLINE(1325)					availableWidth = ((Float)0.0);
+            				}
+            			}
+HXLINE(1328)			bool _hx_tmp;
+HXDLIN(1328)			bool _hx_tmp1;
+HXDLIN(1328)			if (!(useActualBounds)) {
+HXLINE(1328)				_hx_tmp1 = !(forceScrollBars);
+            			}
+            			else {
+HXLINE(1328)				_hx_tmp1 = false;
+            			}
+HXDLIN(1328)			if (_hx_tmp1) {
+HXLINE(1328)				_hx_tmp = ::hx::IsNull( availableWidth );
+            			}
+            			else {
+HXLINE(1328)				_hx_tmp = false;
+            			}
+HXDLIN(1328)			if (_hx_tmp) {
+HXLINE(1331)				availableWidth = ::feathers::controls::supportClasses::IViewPort_obj::get_visibleWidth(this->_viewPort);
+            			}
+HXLINE(1333)			 ::Dynamic maxAvailableWidth = this->get_explicitMaxWidth();
+HXLINE(1334)			if (::hx::IsNotNull( maxAvailableWidth )) {
+HXLINE(1335)				Float maxAvailableWidth1 = this->get_paddingLeft();
+HXDLIN(1335)				Float maxAvailableWidth2 = (maxAvailableWidth1 + this->get_paddingRight());
+HXDLIN(1335)				maxAvailableWidth = (maxAvailableWidth - ((maxAvailableWidth2 + this->leftViewPortOffset) + this->rightViewPortOffset));
+HXLINE(1336)				if (::hx::IsLess( maxAvailableWidth,((Float)0.0) )) {
+HXLINE(1337)					maxAvailableWidth = ((Float)0.0);
+            				}
+            			}
+HXLINE(1340)			if (!(this->get_showScrollBars())) {
+HXLINE(1341)				this->showScrollBarX = false;
+HXLINE(1342)				return;
+            			}
+HXLINE(1344)			Float totalContentWidth = ::feathers::core::IDisplayObject_obj::get_width(this->_viewPort);
+HXLINE(1345)			bool _hx_tmp2;
+HXDLIN(1345)			bool _hx_tmp3;
+HXDLIN(1345)			if (!(forceScrollBars)) {
+HXLINE(1345)				_hx_tmp3 = ::hx::IsPointerEq( this->_scrollPolicyX,::feathers::controls::ScrollPolicy_obj::ON_dyn() );
+            			}
+            			else {
+HXLINE(1345)				_hx_tmp3 = true;
+            			}
+HXDLIN(1345)			if (!(_hx_tmp3)) {
+HXLINE(1347)				bool _hx_tmp;
+HXDLIN(1347)				bool _hx_tmp1;
+HXDLIN(1347)				if (::hx::IsGreater( totalContentWidth,availableWidth )) {
+HXLINE(1347)					_hx_tmp1 = !(::feathers::utils::MathUtil_obj::fuzzyEquals(totalContentWidth,( (Float)(availableWidth) ),null()));
+            				}
+            				else {
+HXLINE(1347)					_hx_tmp1 = false;
+            				}
+HXDLIN(1347)				if (!(_hx_tmp1)) {
+HXLINE(1348)					bool _hx_tmp1;
+HXDLIN(1348)					if (::hx::IsNotNull( maxAvailableWidth )) {
+HXLINE(1348)						_hx_tmp1 = ::hx::IsGreater( totalContentWidth,maxAvailableWidth );
+            					}
+            					else {
+HXLINE(1348)						_hx_tmp1 = false;
+            					}
+HXDLIN(1348)					if (_hx_tmp1) {
+HXLINE(1347)						_hx_tmp = !(::feathers::utils::MathUtil_obj::fuzzyEquals(totalContentWidth,( (Float)(maxAvailableWidth) ),null()));
+            					}
+            					else {
+HXLINE(1347)						_hx_tmp = false;
+            					}
+            				}
+            				else {
+HXLINE(1347)					_hx_tmp = true;
+            				}
+HXDLIN(1347)				if (_hx_tmp) {
+HXLINE(1345)					_hx_tmp2 = ::hx::IsPointerNotEq( this->_scrollPolicyX,::feathers::controls::ScrollPolicy_obj::OFF_dyn() );
+            				}
+            				else {
+HXLINE(1345)					_hx_tmp2 = false;
+            				}
+            			}
+            			else {
+HXLINE(1345)				_hx_tmp2 = true;
+            			}
+HXDLIN(1345)			if (_hx_tmp2) {
+HXLINE(1351)				this->showScrollBarX = true;
+HXLINE(1352)				if (this->get_fixedScrollBars()) {
+HXLINE(1353)					if (::hx::IsPointerEq( this->get_scrollBarXPosition(),::feathers::layout::RelativePosition_obj::TOP_dyn() )) {
+HXLINE(1354)						 ::feathers::controls::supportClasses::BaseScrollContainer _hx_tmp = ::hx::ObjectPtr<OBJ_>(this);
+HXDLIN(1354)						Float _hx_tmp1 = _hx_tmp->topViewPortOffset;
+HXDLIN(1354)						_hx_tmp->topViewPortOffset = (_hx_tmp1 + ::feathers::core::IDisplayObject_obj::get_height(this->scrollBarX));
+            					}
+            					else {
+HXLINE(1356)						 ::feathers::controls::supportClasses::BaseScrollContainer _hx_tmp = ::hx::ObjectPtr<OBJ_>(this);
+HXDLIN(1356)						Float _hx_tmp1 = _hx_tmp->bottomViewPortOffset;
+HXDLIN(1356)						_hx_tmp->bottomViewPortOffset = (_hx_tmp1 + ::feathers::core::IDisplayObject_obj::get_height(this->scrollBarX));
+            					}
+            				}
+            			}
+            			else {
+HXLINE(1360)				this->showScrollBarX = false;
+            			}
+            		}
+            		else {
+HXLINE(1363)			this->showScrollBarX = false;
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(BaseScrollContainer_obj,calculateViewPortOffsetsForFixedScrollBarX,(void))
+
+void BaseScrollContainer_obj::calculateViewPortOffsetsForFixedScrollBarY(bool forceScrollBars,bool useActualBounds){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1368_calculateViewPortOffsetsForFixedScrollBarY)
+HXDLIN(1368)		bool _hx_tmp;
+HXDLIN(1368)		if (::hx::IsNotNull( this->scrollBarY )) {
+HXDLIN(1368)			if (!(this->get_measureViewPort())) {
+HXDLIN(1368)				_hx_tmp = useActualBounds;
+            			}
+            			else {
+HXDLIN(1368)				_hx_tmp = true;
+            			}
+            		}
+            		else {
+HXDLIN(1368)			_hx_tmp = false;
+            		}
+HXDLIN(1368)		if (_hx_tmp) {
+HXLINE(1369)			 ::Dynamic availableHeight;
+HXDLIN(1369)			if (useActualBounds) {
+HXLINE(1369)				availableHeight = this->actualHeight;
+            			}
+            			else {
+HXLINE(1369)				availableHeight = this->get_explicitHeight();
+            			}
+HXLINE(1370)			if (::hx::IsNotNull( availableHeight )) {
+HXLINE(1371)				Float availableHeight1 = this->get_paddingTop();
+HXDLIN(1371)				Float availableHeight2 = (availableHeight1 + this->get_paddingBottom());
+HXDLIN(1371)				availableHeight = (availableHeight - ((availableHeight2 + this->topViewPortOffset) + this->bottomViewPortOffset));
+HXLINE(1372)				if (::hx::IsLess( availableHeight,((Float)0.0) )) {
+HXLINE(1373)					availableHeight = ((Float)0.0);
+            				}
+            			}
+HXLINE(1376)			bool _hx_tmp;
+HXDLIN(1376)			bool _hx_tmp1;
+HXDLIN(1376)			if (!(useActualBounds)) {
+HXLINE(1376)				_hx_tmp1 = !(forceScrollBars);
+            			}
+            			else {
+HXLINE(1376)				_hx_tmp1 = false;
+            			}
+HXDLIN(1376)			if (_hx_tmp1) {
+HXLINE(1376)				_hx_tmp = ::hx::IsNull( availableHeight );
+            			}
+            			else {
+HXLINE(1376)				_hx_tmp = false;
+            			}
+HXDLIN(1376)			if (_hx_tmp) {
+HXLINE(1379)				availableHeight = ::feathers::controls::supportClasses::IViewPort_obj::get_visibleHeight(this->_viewPort);
+            			}
+HXLINE(1381)			 ::Dynamic maxAvailableHeight = this->get_explicitMaxHeight();
+HXLINE(1382)			if (::hx::IsNotNull( maxAvailableHeight )) {
+HXLINE(1383)				Float maxAvailableHeight1 = this->get_paddingTop();
+HXDLIN(1383)				Float maxAvailableHeight2 = (maxAvailableHeight1 + this->get_paddingBottom());
+HXDLIN(1383)				maxAvailableHeight = (maxAvailableHeight - ((maxAvailableHeight2 + this->topViewPortOffset) + this->bottomViewPortOffset));
+HXLINE(1384)				if (::hx::IsLess( maxAvailableHeight,((Float)0.0) )) {
+HXLINE(1385)					maxAvailableHeight = ((Float)0.0);
+            				}
+            			}
+HXLINE(1388)			if (!(this->get_showScrollBars())) {
+HXLINE(1389)				this->showScrollBarY = false;
+HXLINE(1390)				return;
+            			}
+HXLINE(1392)			Float totalContentHeight = ::feathers::core::IDisplayObject_obj::get_height(this->_viewPort);
+HXLINE(1393)			bool _hx_tmp2;
+HXDLIN(1393)			bool _hx_tmp3;
+HXDLIN(1393)			if (!(forceScrollBars)) {
+HXLINE(1393)				_hx_tmp3 = ::hx::IsPointerEq( this->_scrollPolicyY,::feathers::controls::ScrollPolicy_obj::ON_dyn() );
+            			}
+            			else {
+HXLINE(1393)				_hx_tmp3 = true;
+            			}
+HXDLIN(1393)			if (!(_hx_tmp3)) {
+HXLINE(1395)				bool _hx_tmp;
+HXDLIN(1395)				bool _hx_tmp1;
+HXDLIN(1395)				if (::hx::IsGreater( totalContentHeight,availableHeight )) {
+HXLINE(1395)					_hx_tmp1 = !(::feathers::utils::MathUtil_obj::fuzzyEquals(totalContentHeight,( (Float)(availableHeight) ),null()));
+            				}
+            				else {
+HXLINE(1395)					_hx_tmp1 = false;
+            				}
+HXDLIN(1395)				if (!(_hx_tmp1)) {
+HXLINE(1396)					bool _hx_tmp1;
+HXDLIN(1396)					if (::hx::IsNotNull( maxAvailableHeight )) {
+HXLINE(1396)						_hx_tmp1 = ::hx::IsGreater( totalContentHeight,maxAvailableHeight );
+            					}
+            					else {
+HXLINE(1396)						_hx_tmp1 = false;
+            					}
+HXDLIN(1396)					if (_hx_tmp1) {
+HXLINE(1395)						_hx_tmp = !(::feathers::utils::MathUtil_obj::fuzzyEquals(totalContentHeight,( (Float)(maxAvailableHeight) ),null()));
+            					}
+            					else {
+HXLINE(1395)						_hx_tmp = false;
+            					}
+            				}
+            				else {
+HXLINE(1395)					_hx_tmp = true;
+            				}
+HXDLIN(1395)				if (_hx_tmp) {
+HXLINE(1393)					_hx_tmp2 = ::hx::IsPointerNotEq( this->_scrollPolicyY,::feathers::controls::ScrollPolicy_obj::OFF_dyn() );
+            				}
+            				else {
+HXLINE(1393)					_hx_tmp2 = false;
+            				}
+            			}
+            			else {
+HXLINE(1393)				_hx_tmp2 = true;
+            			}
+HXDLIN(1393)			if (_hx_tmp2) {
+HXLINE(1400)				this->showScrollBarY = true;
+HXLINE(1401)				if (this->get_fixedScrollBars()) {
+HXLINE(1402)					if (::hx::IsPointerEq( this->get_scrollBarYPosition(),::feathers::layout::RelativePosition_obj::LEFT_dyn() )) {
+HXLINE(1403)						 ::feathers::controls::supportClasses::BaseScrollContainer _hx_tmp = ::hx::ObjectPtr<OBJ_>(this);
+HXDLIN(1403)						Float _hx_tmp1 = _hx_tmp->leftViewPortOffset;
+HXDLIN(1403)						_hx_tmp->leftViewPortOffset = (_hx_tmp1 + ::feathers::core::IDisplayObject_obj::get_width(this->scrollBarY));
+            					}
+            					else {
+HXLINE(1405)						 ::feathers::controls::supportClasses::BaseScrollContainer _hx_tmp = ::hx::ObjectPtr<OBJ_>(this);
+HXDLIN(1405)						Float _hx_tmp1 = _hx_tmp->rightViewPortOffset;
+HXDLIN(1405)						_hx_tmp->rightViewPortOffset = (_hx_tmp1 + ::feathers::core::IDisplayObject_obj::get_width(this->scrollBarY));
+            					}
+            				}
+            			}
+            			else {
+HXLINE(1409)				this->showScrollBarY = false;
+            			}
+            		}
+            		else {
+HXLINE(1412)			this->showScrollBarY = false;
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(BaseScrollContainer_obj,calculateViewPortOffsetsForFixedScrollBarY,(void))
+
+void BaseScrollContainer_obj::refreshViewPortBoundsForMeasurement(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1416_refreshViewPortBoundsForMeasurement)
+HXLINE(1417)		bool oldIgnoreViewPortResizing = this->_ignoreViewPortResizing;
+HXLINE(1422)		this->_ignoreViewPortResizing = true;
+HXLINE(1424)		Float viewPortX = this->get_paddingLeft();
+HXDLIN(1424)		Float viewPortX1 = (viewPortX + this->leftViewPortOffset);
+HXLINE(1425)		Float viewPortY = this->get_paddingTop();
+HXDLIN(1425)		Float viewPortY1 = (viewPortY + this->topViewPortOffset);
+HXLINE(1426)		bool _hx_tmp;
+HXDLIN(1426)		bool _hx_tmp1;
+HXDLIN(1426)		if (::hx::IsPointerNotEq( this->_scrollMode,::feathers::controls::ScrollMode_obj::MASK_dyn() )) {
+HXLINE(1426)			_hx_tmp1 = ::hx::IsPointerEq( this->_scrollMode,::feathers::controls::ScrollMode_obj::MASKLESS_dyn() );
+            		}
+            		else {
+HXLINE(1426)			_hx_tmp1 = true;
+            		}
+HXDLIN(1426)		if (!(_hx_tmp1)) {
+HXLINE(1426)			_hx_tmp = ::hx::IsNotNull( this->_currentViewPortMaskSkin );
+            		}
+            		else {
+HXLINE(1426)			_hx_tmp = true;
+            		}
+HXDLIN(1426)		if (_hx_tmp) {
+HXLINE(1427)			viewPortX1 = (viewPortX1 - this->get_scrollX());
+HXLINE(1428)			viewPortY1 = (viewPortY1 - this->get_scrollY());
+            		}
+HXLINE(1430)		::feathers::core::IDisplayObject_obj::set_x(this->_viewPort,viewPortX1);
+HXLINE(1431)		::feathers::core::IDisplayObject_obj::set_y(this->_viewPort,viewPortY1);
+HXLINE(1432)		if (::hx::IsNotNull( this->get_explicitWidth() )) {
+HXLINE(1433)			 ::Dynamic visibleWidth = this->get_explicitWidth();
+HXDLIN(1433)			Float visibleWidth1 = ((( (Float)(visibleWidth) ) - this->leftViewPortOffset) - this->rightViewPortOffset);
+HXDLIN(1433)			Float visibleWidth2 = (visibleWidth1 - this->get_paddingLeft());
+HXDLIN(1433)			Float visibleWidth3 = (visibleWidth2 - this->get_paddingRight());
+HXLINE(1434)			if ((visibleWidth3 < ((Float)0.0))) {
+HXLINE(1435)				visibleWidth3 = ((Float)0.0);
+            			}
+HXLINE(1437)			::feathers::controls::supportClasses::IViewPort_obj::set_visibleWidth(this->_viewPort,visibleWidth3);
+            		}
+            		else {
+HXLINE(1439)			::feathers::controls::supportClasses::IViewPort_obj::set_visibleWidth(this->_viewPort,null());
+            		}
+HXLINE(1441)		if (::hx::IsNotNull( this->get_explicitHeight() )) {
+HXLINE(1442)			 ::Dynamic visibleHeight = this->get_explicitHeight();
+HXDLIN(1442)			Float visibleHeight1 = ((( (Float)(visibleHeight) ) - this->topViewPortOffset) - this->bottomViewPortOffset);
+HXDLIN(1442)			Float visibleHeight2 = (visibleHeight1 - this->get_paddingTop());
+HXDLIN(1442)			Float visibleHeight3 = (visibleHeight2 - this->get_paddingBottom());
+HXLINE(1443)			if ((visibleHeight3 < ((Float)0.0))) {
+HXLINE(1444)				visibleHeight3 = ((Float)0.0);
+            			}
+HXLINE(1446)			::feathers::controls::supportClasses::IViewPort_obj::set_visibleHeight(this->_viewPort,visibleHeight3);
+            		}
+            		else {
+HXLINE(1448)			::feathers::controls::supportClasses::IViewPort_obj::set_visibleHeight(this->_viewPort,null());
+            		}
+HXLINE(1450)		if (::hx::IsNotNull( this->get_explicitMinWidth() )) {
+HXLINE(1451)			 ::Dynamic minVisibleWidth = this->get_explicitMinWidth();
+HXDLIN(1451)			Float minVisibleWidth1 = ((( (Float)(minVisibleWidth) ) - this->leftViewPortOffset) - this->rightViewPortOffset);
+HXDLIN(1451)			Float minVisibleWidth2 = (minVisibleWidth1 - this->get_paddingLeft());
+HXDLIN(1451)			Float minVisibleWidth3 = (minVisibleWidth2 - this->get_paddingRight());
+HXLINE(1452)			if ((minVisibleWidth3 < ((Float)0.0))) {
+HXLINE(1453)				minVisibleWidth3 = ((Float)0.0);
+            			}
+HXLINE(1455)			::feathers::controls::supportClasses::IViewPort_obj::set_minVisibleWidth(this->_viewPort,minVisibleWidth3);
+            		}
+            		else {
+HXLINE(1457)			::feathers::controls::supportClasses::IViewPort_obj::set_minVisibleWidth(this->_viewPort,null());
+            		}
+HXLINE(1459)		if (::hx::IsNotNull( this->get_explicitMinHeight() )) {
+HXLINE(1460)			 ::Dynamic minVisibleHeight = this->get_explicitMinHeight();
+HXDLIN(1460)			Float minVisibleHeight1 = ((( (Float)(minVisibleHeight) ) - this->topViewPortOffset) - this->bottomViewPortOffset);
+HXDLIN(1460)			Float minVisibleHeight2 = (minVisibleHeight1 - this->get_paddingTop());
+HXDLIN(1460)			Float minVisibleHeight3 = (minVisibleHeight2 - this->get_paddingBottom());
+HXLINE(1461)			if ((minVisibleHeight3 < ((Float)0.0))) {
+HXLINE(1462)				minVisibleHeight3 = ((Float)0.0);
+            			}
+HXLINE(1464)			::feathers::controls::supportClasses::IViewPort_obj::set_minVisibleHeight(this->_viewPort,minVisibleHeight3);
+            		}
+            		else {
+HXLINE(1466)			::feathers::controls::supportClasses::IViewPort_obj::set_minVisibleHeight(this->_viewPort,null());
+            		}
+HXLINE(1468)		if (::hx::IsNotNull( this->get_explicitMaxWidth() )) {
+HXLINE(1469)			 ::Dynamic maxVisibleWidth = this->get_explicitMaxWidth();
+HXDLIN(1469)			Float maxVisibleWidth1 = ((( (Float)(maxVisibleWidth) ) - this->leftViewPortOffset) - this->rightViewPortOffset);
+HXDLIN(1469)			Float maxVisibleWidth2 = (maxVisibleWidth1 - this->get_paddingLeft());
+HXDLIN(1469)			Float maxVisibleWidth3 = (maxVisibleWidth2 - this->get_paddingRight());
+HXLINE(1470)			if ((maxVisibleWidth3 < ((Float)0.0))) {
+HXLINE(1471)				maxVisibleWidth3 = ((Float)0.0);
+            			}
+HXLINE(1473)			::feathers::controls::supportClasses::IViewPort_obj::set_maxVisibleWidth(this->_viewPort,maxVisibleWidth3);
+            		}
+            		else {
+HXLINE(1474)			bool _hx_tmp;
+HXDLIN(1474)			if (::hx::IsNotNull( this->_backgroundSkinMeasurements )) {
+HXLINE(1474)				_hx_tmp = ::hx::IsNotNull( this->_backgroundSkinMeasurements->maxWidth );
+            			}
+            			else {
+HXLINE(1474)				_hx_tmp = false;
+            			}
+HXDLIN(1474)			if (_hx_tmp) {
+HXLINE(1475)				Float maxVisibleWidth = ((( (Float)(this->_backgroundSkinMeasurements->maxWidth) ) - this->leftViewPortOffset) - this->rightViewPortOffset);
+HXDLIN(1475)				Float maxVisibleWidth1 = (maxVisibleWidth - this->get_paddingLeft());
+HXDLIN(1475)				Float maxVisibleWidth2 = (maxVisibleWidth1 - this->get_paddingRight());
+HXLINE(1477)				if ((maxVisibleWidth2 < ((Float)0.0))) {
+HXLINE(1478)					maxVisibleWidth2 = ((Float)0.0);
+            				}
+HXLINE(1480)				::feathers::controls::supportClasses::IViewPort_obj::set_maxVisibleWidth(this->_viewPort,maxVisibleWidth2);
+            			}
+            			else {
+HXLINE(1482)				::feathers::controls::supportClasses::IViewPort_obj::set_maxVisibleWidth(this->_viewPort,::hx::DivByZero(((Float)1.0)));
+            			}
+            		}
+HXLINE(1484)		if (::hx::IsNotNull( this->get_explicitMaxHeight() )) {
+HXLINE(1485)			 ::Dynamic maxVisibleHeight = this->get_explicitMaxHeight();
+HXDLIN(1485)			Float maxVisibleHeight1 = ((( (Float)(maxVisibleHeight) ) - this->topViewPortOffset) - this->bottomViewPortOffset);
+HXDLIN(1485)			Float maxVisibleHeight2 = (maxVisibleHeight1 - this->get_paddingTop());
+HXDLIN(1485)			Float maxVisibleHeight3 = (maxVisibleHeight2 - this->get_paddingBottom());
+HXLINE(1486)			if ((maxVisibleHeight3 < ((Float)0.0))) {
+HXLINE(1487)				maxVisibleHeight3 = ((Float)0.0);
+            			}
+HXLINE(1489)			::feathers::controls::supportClasses::IViewPort_obj::set_maxVisibleHeight(this->_viewPort,maxVisibleHeight3);
+            		}
+            		else {
+HXLINE(1490)			bool _hx_tmp;
+HXDLIN(1490)			if (::hx::IsNotNull( this->_backgroundSkinMeasurements )) {
+HXLINE(1490)				_hx_tmp = ::hx::IsNotNull( this->_backgroundSkinMeasurements->maxHeight );
+            			}
+            			else {
+HXLINE(1490)				_hx_tmp = false;
+            			}
+HXDLIN(1490)			if (_hx_tmp) {
+HXLINE(1491)				Float maxVisibleHeight = ((( (Float)(this->_backgroundSkinMeasurements->maxHeight) ) - this->topViewPortOffset) - this->bottomViewPortOffset);
+HXDLIN(1491)				Float maxVisibleHeight1 = (maxVisibleHeight - this->get_paddingTop());
+HXDLIN(1491)				Float maxVisibleHeight2 = (maxVisibleHeight1 - this->get_paddingBottom());
+HXLINE(1493)				if ((maxVisibleHeight2 < ((Float)0.0))) {
+HXLINE(1494)					maxVisibleHeight2 = ((Float)0.0);
+            				}
+HXLINE(1496)				::feathers::controls::supportClasses::IViewPort_obj::set_maxVisibleHeight(this->_viewPort,maxVisibleHeight2);
+            			}
+            			else {
+HXLINE(1498)				::feathers::controls::supportClasses::IViewPort_obj::set_maxVisibleHeight(this->_viewPort,::hx::DivByZero(((Float)1.0)));
+            			}
+            		}
+HXLINE(1500)		::feathers::core::IValidating_obj::validateNow(this->_viewPort);
+HXLINE(1505)		this->_ignoreViewPortResizing = oldIgnoreViewPortResizing;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,refreshViewPortBoundsForMeasurement,(void))
+
+void BaseScrollContainer_obj::refreshViewPortBoundsForLayout(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1508_refreshViewPortBoundsForLayout)
+HXLINE(1509)		bool oldIgnoreViewPortResizing = this->_ignoreViewPortResizing;
+HXLINE(1514)		this->_ignoreViewPortResizing = true;
+HXLINE(1516)		Float visibleWidth = ((this->actualWidth - this->leftViewPortOffset) - this->rightViewPortOffset);
+HXDLIN(1516)		Float visibleWidth1 = (visibleWidth - this->get_paddingLeft());
+HXDLIN(1516)		Float visibleWidth2 = (visibleWidth1 - this->get_paddingRight());
+HXLINE(1517)		if ((visibleWidth2 < ((Float)0.0))) {
+HXLINE(1518)			visibleWidth2 = ((Float)0.0);
+            		}
+HXLINE(1520)		Float visibleHeight = ((this->actualHeight - this->topViewPortOffset) - this->bottomViewPortOffset);
+HXDLIN(1520)		Float visibleHeight1 = (visibleHeight - this->get_paddingTop());
+HXDLIN(1520)		Float visibleHeight2 = (visibleHeight1 - this->get_paddingBottom());
+HXLINE(1521)		if ((visibleHeight2 < ((Float)0.0))) {
+HXLINE(1522)			visibleHeight2 = ((Float)0.0);
+            		}
+HXLINE(1524)		Float minVisibleWidth = ((this->actualMinWidth - this->leftViewPortOffset) - this->rightViewPortOffset);
+HXDLIN(1524)		Float minVisibleWidth1 = (minVisibleWidth - this->get_paddingLeft());
+HXDLIN(1524)		Float minVisibleWidth2 = (minVisibleWidth1 - this->get_paddingRight());
+HXLINE(1525)		if ((minVisibleWidth2 < ((Float)0.0))) {
+HXLINE(1526)			minVisibleWidth2 = ((Float)0.0);
+            		}
+HXLINE(1528)		Float minVisibleHeight = ((this->actualMinHeight - this->topViewPortOffset) - this->bottomViewPortOffset);
+HXDLIN(1528)		Float minVisibleHeight1 = (minVisibleHeight - this->get_paddingTop());
+HXDLIN(1528)		Float minVisibleHeight2 = (minVisibleHeight1 - this->get_paddingBottom());
+HXLINE(1529)		if ((minVisibleHeight2 < ((Float)0.0))) {
+HXLINE(1530)			minVisibleHeight2 = ((Float)0.0);
+            		}
+HXLINE(1532)		Float maxVisibleWidth = ((this->actualMaxWidth - this->leftViewPortOffset) - this->rightViewPortOffset);
+HXDLIN(1532)		Float maxVisibleWidth1 = (maxVisibleWidth - this->get_paddingLeft());
+HXDLIN(1532)		Float maxVisibleWidth2 = (maxVisibleWidth1 - this->get_paddingRight());
+HXLINE(1533)		if ((maxVisibleWidth2 < ((Float)0.0))) {
+HXLINE(1534)			maxVisibleWidth2 = ((Float)0.0);
+            		}
+HXLINE(1536)		Float maxVisibleHeight = ((this->actualMaxHeight - this->topViewPortOffset) - this->bottomViewPortOffset);
+HXDLIN(1536)		Float maxVisibleHeight1 = (maxVisibleHeight - this->get_paddingTop());
+HXDLIN(1536)		Float maxVisibleHeight2 = (maxVisibleHeight1 - this->get_paddingBottom());
+HXLINE(1537)		if ((maxVisibleHeight2 < ((Float)0.0))) {
+HXLINE(1538)			maxVisibleHeight2 = ((Float)0.0);
+            		}
+HXLINE(1541)		Float viewPortX = this->get_paddingLeft();
+HXDLIN(1541)		Float viewPortX1 = (viewPortX + this->leftViewPortOffset);
+HXLINE(1542)		Float viewPortY = this->get_paddingTop();
+HXDLIN(1542)		Float viewPortY1 = (viewPortY + this->topViewPortOffset);
+HXLINE(1543)		bool _hx_tmp;
+HXDLIN(1543)		bool _hx_tmp1;
+HXDLIN(1543)		if (::hx::IsPointerNotEq( this->_scrollMode,::feathers::controls::ScrollMode_obj::MASK_dyn() )) {
+HXLINE(1543)			_hx_tmp1 = ::hx::IsPointerEq( this->_scrollMode,::feathers::controls::ScrollMode_obj::MASKLESS_dyn() );
+            		}
+            		else {
+HXLINE(1543)			_hx_tmp1 = true;
+            		}
+HXDLIN(1543)		if (!(_hx_tmp1)) {
+HXLINE(1543)			_hx_tmp = ::hx::IsNotNull( this->_currentViewPortMaskSkin );
+            		}
+            		else {
+HXLINE(1543)			_hx_tmp = true;
+            		}
+HXDLIN(1543)		if (_hx_tmp) {
+HXLINE(1544)			viewPortX1 = (viewPortX1 - this->get_scrollX());
+HXLINE(1545)			viewPortY1 = (viewPortY1 - this->get_scrollY());
+            		}
+HXLINE(1547)		::feathers::core::IDisplayObject_obj::set_x(this->_viewPort,viewPortX1);
+HXLINE(1548)		::feathers::core::IDisplayObject_obj::set_y(this->_viewPort,viewPortY1);
+HXLINE(1549)		::feathers::controls::supportClasses::IViewPort_obj::set_visibleWidth(this->_viewPort,visibleWidth2);
+HXLINE(1550)		::feathers::controls::supportClasses::IViewPort_obj::set_visibleHeight(this->_viewPort,visibleHeight2);
+HXLINE(1551)		::feathers::controls::supportClasses::IViewPort_obj::set_minVisibleWidth(this->_viewPort,minVisibleWidth2);
+HXLINE(1552)		::feathers::controls::supportClasses::IViewPort_obj::set_minVisibleHeight(this->_viewPort,minVisibleHeight2);
+HXLINE(1553)		::feathers::controls::supportClasses::IViewPort_obj::set_maxVisibleWidth(this->_viewPort,maxVisibleWidth2);
+HXLINE(1554)		::feathers::controls::supportClasses::IViewPort_obj::set_maxVisibleHeight(this->_viewPort,maxVisibleHeight2);
+HXLINE(1559)		this->_ignoreViewPortResizing = oldIgnoreViewPortResizing;
+HXLINE(1561)		::feathers::core::IValidating_obj::validateNow(this->_viewPort);
+HXLINE(1563)		bool oldSettingScrollerDimensions = this->_settingScrollerDimensions;
+HXLINE(1564)		this->_settingScrollerDimensions = true;
+HXLINE(1565)		 ::feathers::utils::Scroller _hx_tmp2 = this->scroller;
+HXDLIN(1565)		 ::Dynamic _hx_tmp3 = ::feathers::controls::supportClasses::IViewPort_obj::get_visibleWidth(this->_viewPort);
+HXDLIN(1565)		 ::Dynamic _hx_tmp4 = ::feathers::controls::supportClasses::IViewPort_obj::get_visibleHeight(this->_viewPort);
+HXDLIN(1565)		Float _hx_tmp5 = ::feathers::core::IDisplayObject_obj::get_width(this->_viewPort);
+HXDLIN(1565)		_hx_tmp2->setDimensions(_hx_tmp3,_hx_tmp4,_hx_tmp5,::feathers::core::IDisplayObject_obj::get_height(this->_viewPort));
+HXLINE(1566)		this->_settingScrollerDimensions = oldSettingScrollerDimensions;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,refreshViewPortBoundsForLayout,(void))
+
+void BaseScrollContainer_obj::refreshScrollerValues(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1569_refreshScrollerValues)
+HXLINE(1570)		if (::hx::IsNotNull( this->stage )) {
+HXLINE(1571)			this->scroller->set_target(::hx::TCast<  ::openfl::display::InteractiveObject >::cast(this->_viewPort));
+            		}
+HXLINE(1573)		bool _hx_tmp;
+HXDLIN(1573)		if (this->_enabled) {
+HXLINE(1573)			_hx_tmp = ::hx::IsPointerNotEq( this->_scrollPolicyX,::feathers::controls::ScrollPolicy_obj::OFF_dyn() );
+            		}
+            		else {
+HXLINE(1573)			_hx_tmp = false;
+            		}
+HXDLIN(1573)		this->scroller->enabledX = _hx_tmp;
+HXLINE(1574)		bool _hx_tmp1;
+HXDLIN(1574)		if (this->_enabled) {
+HXLINE(1574)			_hx_tmp1 = ::hx::IsPointerNotEq( this->_scrollPolicyY,::feathers::controls::ScrollPolicy_obj::OFF_dyn() );
+            		}
+            		else {
+HXLINE(1574)			_hx_tmp1 = false;
+            		}
+HXDLIN(1574)		this->scroller->enabledY = _hx_tmp1;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,refreshScrollerValues,(void))
+
+void BaseScrollContainer_obj::refreshScrollBarValues(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1577_refreshScrollBarValues)
+HXLINE(1578)		if (::hx::IsNotNull( this->scrollBarX )) {
+HXLINE(1581)			bool oldIgnoreScrollBarXChange = this->_ignoreScrollBarXChange;
+HXLINE(1582)			this->_ignoreScrollBarXChange = true;
+HXLINE(1583)			::Dynamic _hx_tmp = this->scrollBarX;
+HXDLIN(1583)			::feathers::controls::IRange_obj::set_minimum(_hx_tmp,this->scroller->get_minScrollX());
+HXLINE(1584)			::Dynamic _hx_tmp1 = this->scrollBarX;
+HXDLIN(1584)			::feathers::controls::IRange_obj::set_maximum(_hx_tmp1,this->scroller->get_maxScrollX());
+HXLINE(1585)			::Dynamic _hx_tmp2 = this->scrollBarX;
+HXDLIN(1585)			::feathers::controls::IRange_obj::set_value(_hx_tmp2,this->scroller->get_scrollX());
+HXLINE(1586)			::Dynamic _hx_tmp3 = this->scrollBarX;
+HXDLIN(1586)			Float _hx_tmp4 = this->scroller->get_maxScrollX();
+HXDLIN(1586)			Float _hx_tmp5 = (_hx_tmp4 - this->scroller->get_minScrollX());
+HXDLIN(1586)			Float _hx_tmp6 = (_hx_tmp5 * ( (Float)(::feathers::controls::supportClasses::IViewPort_obj::get_visibleWidth(this->_viewPort)) ));
+HXDLIN(1586)			::feathers::controls::IScrollBar_obj::set_page(_hx_tmp3,(_hx_tmp6 / ::feathers::core::IDisplayObject_obj::get_width(this->_viewPort)));
+HXLINE(1587)			::feathers::controls::IScrollBar_obj::set_step(this->scrollBarX,this->_scrollStepX);
+HXLINE(1588)			 ::openfl::display::DisplayObjectContainer displayScrollBarX = ::hx::TCast<  ::openfl::display::DisplayObjectContainer >::cast(this->scrollBarX);
+HXLINE(1589)			displayScrollBarX->set_visible(this->showScrollBarX);
+HXLINE(1590)			bool _hx_tmp7;
+HXDLIN(1590)			if (!(this->get_fixedScrollBars())) {
+HXLINE(1590)				_hx_tmp7 = !(this->get_autoHideScrollBars());
+            			}
+            			else {
+HXLINE(1590)				_hx_tmp7 = true;
+            			}
+HXDLIN(1590)			if (_hx_tmp7) {
+HXLINE(1593)				::feathers::core::IDisplayObject_obj::set_alpha(this->scrollBarX,((Float)1.0));
+            			}
+HXLINE(1595)			this->_ignoreScrollBarXChange = oldIgnoreScrollBarXChange;
+            		}
+HXLINE(1597)		if (::hx::IsNotNull( this->scrollBarY )) {
+HXLINE(1600)			bool oldIgnoreScrollBarYChange = this->_ignoreScrollBarYChange;
+HXLINE(1601)			this->_ignoreScrollBarYChange = true;
+HXLINE(1602)			::Dynamic _hx_tmp = this->scrollBarY;
+HXDLIN(1602)			::feathers::controls::IRange_obj::set_minimum(_hx_tmp,this->scroller->get_minScrollY());
+HXLINE(1603)			::Dynamic _hx_tmp1 = this->scrollBarY;
+HXDLIN(1603)			::feathers::controls::IRange_obj::set_maximum(_hx_tmp1,this->scroller->get_maxScrollY());
+HXLINE(1604)			::Dynamic _hx_tmp2 = this->scrollBarY;
+HXDLIN(1604)			::feathers::controls::IRange_obj::set_value(_hx_tmp2,this->scroller->get_scrollY());
+HXLINE(1605)			::Dynamic _hx_tmp3 = this->scrollBarY;
+HXDLIN(1605)			Float _hx_tmp4 = this->scroller->get_maxScrollY();
+HXDLIN(1605)			Float _hx_tmp5 = (_hx_tmp4 - this->scroller->get_minScrollY());
+HXDLIN(1605)			Float _hx_tmp6 = (_hx_tmp5 * ( (Float)(::feathers::controls::supportClasses::IViewPort_obj::get_visibleHeight(this->_viewPort)) ));
+HXDLIN(1605)			::feathers::controls::IScrollBar_obj::set_page(_hx_tmp3,(_hx_tmp6 / ::feathers::core::IDisplayObject_obj::get_height(this->_viewPort)));
+HXLINE(1606)			::feathers::controls::IScrollBar_obj::set_step(this->scrollBarY,this->_scrollStepY);
+HXLINE(1607)			 ::openfl::display::DisplayObjectContainer displayScrollBarY = ::hx::TCast<  ::openfl::display::DisplayObjectContainer >::cast(this->scrollBarY);
+HXLINE(1608)			displayScrollBarY->set_visible(this->showScrollBarY);
+HXLINE(1609)			bool _hx_tmp7;
+HXDLIN(1609)			if (!(this->get_fixedScrollBars())) {
+HXLINE(1609)				_hx_tmp7 = !(this->get_autoHideScrollBars());
+            			}
+            			else {
+HXLINE(1609)				_hx_tmp7 = true;
+            			}
+HXDLIN(1609)			if (_hx_tmp7) {
+HXLINE(1612)				::feathers::core::IDisplayObject_obj::set_alpha(this->scrollBarY,((Float)1.0));
+            			}
+HXLINE(1614)			this->_ignoreScrollBarYChange = oldIgnoreScrollBarYChange;
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,refreshScrollBarValues,(void))
+
+bool BaseScrollContainer_obj::measure(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1618_measure)
+HXLINE(1619)		bool needsWidth = ::hx::IsNull( this->get_explicitWidth() );
+HXLINE(1620)		bool needsHeight = ::hx::IsNull( this->get_explicitHeight() );
+HXLINE(1621)		bool needsMinWidth = ::hx::IsNull( this->get_explicitMinWidth() );
+HXLINE(1622)		bool needsMinHeight = ::hx::IsNull( this->get_explicitMinHeight() );
+HXLINE(1623)		bool needsMaxWidth = ::hx::IsNull( this->get_explicitMaxWidth() );
+HXLINE(1624)		bool needsMaxHeight = ::hx::IsNull( this->get_explicitMaxHeight() );
+HXLINE(1625)		bool _hx_tmp;
+HXDLIN(1625)		bool _hx_tmp1;
+HXDLIN(1625)		bool _hx_tmp2;
+HXDLIN(1625)		bool _hx_tmp3;
+HXDLIN(1625)		bool _hx_tmp4;
+HXDLIN(1625)		if (!(needsWidth)) {
+HXLINE(1625)			_hx_tmp4 = !(needsHeight);
+            		}
+            		else {
+HXLINE(1625)			_hx_tmp4 = false;
+            		}
+HXDLIN(1625)		if (_hx_tmp4) {
+HXLINE(1625)			_hx_tmp3 = !(needsMinWidth);
+            		}
+            		else {
+HXLINE(1625)			_hx_tmp3 = false;
+            		}
+HXDLIN(1625)		if (_hx_tmp3) {
+HXLINE(1625)			_hx_tmp2 = !(needsMinHeight);
+            		}
+            		else {
+HXLINE(1625)			_hx_tmp2 = false;
+            		}
+HXDLIN(1625)		if (_hx_tmp2) {
+HXLINE(1625)			_hx_tmp1 = !(needsMaxWidth);
+            		}
+            		else {
+HXLINE(1625)			_hx_tmp1 = false;
+            		}
+HXDLIN(1625)		if (_hx_tmp1) {
+HXLINE(1625)			_hx_tmp = !(needsMaxHeight);
+            		}
+            		else {
+HXLINE(1625)			_hx_tmp = false;
+            		}
+HXDLIN(1625)		if (_hx_tmp) {
+HXLINE(1626)			return false;
+            		}
+HXLINE(1629)		if (::hx::IsNotNull( this->_currentBackgroundSkin )) {
+HXLINE(1630)			::feathers::utils::MeasurementsUtil_obj::resetFluidlyWithParent(this->_backgroundSkinMeasurements,this->_currentBackgroundSkin,::hx::ObjectPtr<OBJ_>(this));
+            		}
+HXLINE(1633)		::Dynamic measureSkin = null();
+HXLINE(1634)		if (::Std_obj::isOfType(this->_currentBackgroundSkin,::hx::ClassOf< ::feathers::core::IMeasureObject >())) {
+HXLINE(1635)			measureSkin =  ::hx::interface_check(this->_currentBackgroundSkin,0xcfc32883);
+            		}
+HXLINE(1638)		if (::Std_obj::isOfType(this->_currentBackgroundSkin,::hx::ClassOf< ::feathers::core::IValidating >())) {
+HXLINE(1639)			::feathers::core::IValidating_obj::validateNow( ::hx::interface_check(this->_currentBackgroundSkin,0x64d4b3cd));
+            		}
+HXLINE(1642)		 ::Dynamic newWidth = this->get_explicitWidth();
+HXLINE(1643)		if (needsWidth) {
+HXLINE(1644)			if (this->get_measureViewPort()) {
+HXLINE(1645)				newWidth = ::feathers::controls::supportClasses::IViewPort_obj::get_visibleWidth(this->_viewPort);
+            			}
+            			else {
+HXLINE(1647)				newWidth = ((Float)0.0);
+            			}
+HXLINE(1649)			newWidth = (newWidth + (this->leftViewPortOffset + this->rightViewPortOffset));
+HXLINE(1650)			newWidth = ::Math_obj::max(( (Float)(newWidth) ),this->chromeMeasuredWidth);
+HXLINE(1651)			Float newWidth1 = this->get_paddingLeft();
+HXDLIN(1651)			newWidth = (newWidth + (newWidth1 + this->get_paddingRight()));
+HXLINE(1652)			if (::hx::IsNotNull( this->_currentBackgroundSkin )) {
+HXLINE(1653)				newWidth = ::Math_obj::max(( (Float)(newWidth) ),this->_currentBackgroundSkin->get_width());
+            			}
+            		}
+HXLINE(1657)		 ::Dynamic newHeight = this->get_explicitHeight();
+HXLINE(1658)		if (needsHeight) {
+HXLINE(1659)			if (this->get_measureViewPort()) {
+HXLINE(1660)				newHeight = ::feathers::controls::supportClasses::IViewPort_obj::get_visibleHeight(this->_viewPort);
+            			}
+            			else {
+HXLINE(1662)				newHeight = ((Float)0.0);
+            			}
+HXLINE(1664)			newHeight = (newHeight + (this->topViewPortOffset + this->bottomViewPortOffset));
+HXLINE(1665)			newHeight = ::Math_obj::max(( (Float)(newHeight) ),this->chromeMeasuredHeight);
+HXLINE(1666)			Float newHeight1 = this->get_paddingTop();
+HXDLIN(1666)			newHeight = (newHeight + (newHeight1 + this->get_paddingBottom()));
+HXLINE(1667)			if (::hx::IsNotNull( this->_currentBackgroundSkin )) {
+HXLINE(1668)				newHeight = ::Math_obj::max(( (Float)(newHeight) ),this->_currentBackgroundSkin->get_height());
+            			}
+            		}
+HXLINE(1672)		 ::Dynamic newMinWidth = this->get_explicitMinWidth();
+HXLINE(1673)		if (needsMinWidth) {
+HXLINE(1674)			if (this->get_measureViewPort()) {
+HXLINE(1675)				newMinWidth = ::feathers::controls::supportClasses::IViewPort_obj::get_minVisibleWidth(this->_viewPort);
+            			}
+            			else {
+HXLINE(1677)				newMinWidth = ((Float)0.0);
+            			}
+HXLINE(1679)			newMinWidth = (newMinWidth + (this->leftViewPortOffset + this->rightViewPortOffset));
+HXLINE(1680)			newMinWidth = ::Math_obj::max(( (Float)(newMinWidth) ),this->chromeMeasuredMinWidth);
+HXLINE(1681)			Float newMinWidth1 = this->get_paddingLeft();
+HXDLIN(1681)			newMinWidth = (newMinWidth + (newMinWidth1 + this->get_paddingRight()));
+HXLINE(1682)			if (::hx::IsNotNull( measureSkin )) {
+HXLINE(1683)				newMinWidth = ::Math_obj::max(( (Float)(newMinWidth) ),::feathers::core::IMeasureObject_obj::get_minWidth(measureSkin));
+            			}
+            			else {
+HXLINE(1684)				if (::hx::IsNotNull( this->_backgroundSkinMeasurements )) {
+HXLINE(1685)					newMinWidth = ::Math_obj::max(( (Float)(newMinWidth) ),( (Float)(this->_backgroundSkinMeasurements->minWidth) ));
+            				}
+            			}
+            		}
+HXLINE(1689)		 ::Dynamic newMinHeight = this->get_explicitMinHeight();
+HXLINE(1690)		if (needsMinHeight) {
+HXLINE(1691)			if (this->get_measureViewPort()) {
+HXLINE(1692)				newMinHeight = ::feathers::controls::supportClasses::IViewPort_obj::get_minVisibleHeight(this->_viewPort);
+            			}
+            			else {
+HXLINE(1694)				newMinHeight = ((Float)0.0);
+            			}
+HXLINE(1696)			newMinHeight = (newMinHeight + (this->topViewPortOffset + this->bottomViewPortOffset));
+HXLINE(1697)			newMinHeight = ::Math_obj::max(( (Float)(newMinHeight) ),this->chromeMeasuredMinHeight);
+HXLINE(1698)			Float newMinHeight1 = this->get_paddingTop();
+HXDLIN(1698)			newMinHeight = (newMinHeight + (newMinHeight1 + this->get_paddingBottom()));
+HXLINE(1699)			if (::hx::IsNotNull( measureSkin )) {
+HXLINE(1700)				newMinHeight = ::Math_obj::max(( (Float)(newMinHeight) ),::feathers::core::IMeasureObject_obj::get_minHeight(measureSkin));
+            			}
+            			else {
+HXLINE(1701)				if (::hx::IsNotNull( this->_backgroundSkinMeasurements )) {
+HXLINE(1702)					newMinHeight = ::Math_obj::max(( (Float)(newMinHeight) ),( (Float)(this->_backgroundSkinMeasurements->minHeight) ));
+            				}
+            			}
+            		}
+HXLINE(1705)		 ::Dynamic newMaxWidth = this->get_explicitMaxWidth();
+HXLINE(1706)		if (needsMaxWidth) {
+HXLINE(1707)			if (this->get_measureViewPort()) {
+HXLINE(1708)				newMaxWidth = ::feathers::controls::supportClasses::IViewPort_obj::get_maxVisibleWidth(this->_viewPort);
+            			}
+            			else {
+HXLINE(1710)				newMaxWidth = ::hx::DivByZero(((Float)1.0));
+            			}
+HXLINE(1712)			newMaxWidth = (newMaxWidth + (this->leftViewPortOffset + this->rightViewPortOffset));
+HXLINE(1713)			newMaxWidth = ::Math_obj::min(( (Float)(newMaxWidth) ),this->chromeMeasuredMaxWidth);
+HXLINE(1714)			Float newMaxWidth1 = this->get_paddingLeft();
+HXDLIN(1714)			newMaxWidth = (newMaxWidth + (newMaxWidth1 + this->get_paddingRight()));
+HXLINE(1715)			if (::hx::IsNotNull( measureSkin )) {
+HXLINE(1716)				newMaxWidth = ::Math_obj::min(( (Float)(newMaxWidth) ),::feathers::core::IMeasureObject_obj::get_maxWidth(measureSkin));
+            			}
+            			else {
+HXLINE(1717)				if (::hx::IsNotNull( this->_backgroundSkinMeasurements )) {
+HXLINE(1718)					newMaxWidth = ::Math_obj::min(( (Float)(newMaxWidth) ),( (Float)(this->_backgroundSkinMeasurements->maxWidth) ));
+            				}
+            			}
+            		}
+HXLINE(1722)		 ::Dynamic newMaxHeight = this->get_explicitMaxHeight();
+HXLINE(1723)		if (needsMaxHeight) {
+HXLINE(1724)			if (this->get_measureViewPort()) {
+HXLINE(1725)				newMaxHeight = ::feathers::controls::supportClasses::IViewPort_obj::get_maxVisibleHeight(this->_viewPort);
+            			}
+            			else {
+HXLINE(1727)				newMaxHeight = ::hx::DivByZero(((Float)1.0));
+            			}
+HXLINE(1729)			newMaxHeight = (newMaxHeight + (this->topViewPortOffset + this->bottomViewPortOffset));
+HXLINE(1730)			newMaxHeight = ::Math_obj::min(( (Float)(newMaxHeight) ),this->chromeMeasuredMaxHeight);
+HXLINE(1731)			Float newMaxHeight1 = this->get_paddingTop();
+HXDLIN(1731)			newMaxHeight = (newMaxHeight + (newMaxHeight1 + this->get_paddingBottom()));
+HXLINE(1732)			if (::hx::IsNotNull( measureSkin )) {
+HXLINE(1733)				newMaxHeight = ::Math_obj::min(( (Float)(newMaxHeight) ),::feathers::core::IMeasureObject_obj::get_maxHeight(measureSkin));
+            			}
+            			else {
+HXLINE(1734)				if (::hx::IsNotNull( this->_backgroundSkinMeasurements )) {
+HXLINE(1735)					newMaxHeight = ::Math_obj::min(( (Float)(newMaxHeight) ),( (Float)(this->_backgroundSkinMeasurements->maxHeight) ));
+            				}
+            			}
+            		}
+HXLINE(1739)		return this->saveMeasurements(( (Float)(newWidth) ),( (Float)(newHeight) ),newMinWidth,newMinHeight,newMaxWidth,newMaxHeight);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,measure,return )
+
+void BaseScrollContainer_obj::refreshBackgroundSkin(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1742_refreshBackgroundSkin)
+HXLINE(1743)		 ::openfl::display::DisplayObject oldSkin = this->_currentBackgroundSkin;
+HXLINE(1744)		this->_currentBackgroundSkin = this->getCurrentBackgroundSkin();
+HXLINE(1745)		if (::hx::IsInstanceEq( this->_currentBackgroundSkin,oldSkin )) {
+HXLINE(1746)			return;
+            		}
+HXLINE(1748)		this->removeCurrentBackgroundSkin(oldSkin);
+HXLINE(1749)		this->addCurrentBackgroundSkin(this->_currentBackgroundSkin);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,refreshBackgroundSkin,(void))
+
+ ::openfl::display::DisplayObject BaseScrollContainer_obj::getCurrentBackgroundSkin(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1752_getCurrentBackgroundSkin)
+HXLINE(1753)		bool _hx_tmp;
+HXDLIN(1753)		if (!(this->_enabled)) {
+HXLINE(1753)			_hx_tmp = ::hx::IsNotNull( this->get_disabledBackgroundSkin() );
+            		}
+            		else {
+HXLINE(1753)			_hx_tmp = false;
+            		}
+HXDLIN(1753)		if (_hx_tmp) {
+HXLINE(1754)			return this->get_disabledBackgroundSkin();
+            		}
+HXLINE(1756)		return this->get_backgroundSkin();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,getCurrentBackgroundSkin,return )
+
+void BaseScrollContainer_obj::addCurrentBackgroundSkin( ::openfl::display::DisplayObject skin){
+            	HX_GC_STACKFRAME(&_hx_pos_4200ed2106c74172_1759_addCurrentBackgroundSkin)
+HXLINE(1760)		if (::hx::IsNull( skin )) {
+HXLINE(1761)			this->_backgroundSkinMeasurements = null();
+HXLINE(1762)			return;
+            		}
+HXLINE(1764)		if (::Std_obj::isOfType(skin,::hx::ClassOf< ::feathers::core::IUIControl >())) {
+HXLINE(1765)			::feathers::core::IUIControl_obj::initializeNow( ::hx::interface_check(skin,0x2696a04f));
+            		}
+HXLINE(1767)		if (::hx::IsNull( this->_backgroundSkinMeasurements )) {
+HXLINE(1768)			this->_backgroundSkinMeasurements =  ::feathers::layout::Measurements_obj::__alloc( HX_CTX ,skin);
+            		}
+            		else {
+HXLINE(1770)			this->_backgroundSkinMeasurements->save(skin);
+            		}
+HXLINE(1772)		if (::Std_obj::isOfType(skin,::hx::ClassOf< ::feathers::skins::IProgrammaticSkin >())) {
+HXLINE(1773)			::feathers::skins::IProgrammaticSkin_obj::set_uiContext( ::hx::interface_check(skin,0x32a0d8d6),::hx::ObjectPtr<OBJ_>(this));
+            		}
+HXLINE(1775)		this->addChildAt(skin,0);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,addCurrentBackgroundSkin,(void))
+
+void BaseScrollContainer_obj::removeCurrentBackgroundSkin( ::openfl::display::DisplayObject skin){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1778_removeCurrentBackgroundSkin)
+HXLINE(1779)		if (::hx::IsNull( skin )) {
+HXLINE(1780)			return;
+            		}
+HXLINE(1782)		if (::Std_obj::isOfType(skin,::hx::ClassOf< ::feathers::skins::IProgrammaticSkin >())) {
+HXLINE(1783)			::feathers::skins::IProgrammaticSkin_obj::set_uiContext( ::hx::interface_check(skin,0x32a0d8d6),null());
+            		}
+HXLINE(1787)		this->_backgroundSkinMeasurements->restore(skin);
+HXLINE(1788)		if (::hx::IsInstanceEq( skin->parent,::hx::ObjectPtr<OBJ_>(this) )) {
+HXLINE(1789)			this->removeChild(skin);
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,removeCurrentBackgroundSkin,(void))
+
+void BaseScrollContainer_obj::refreshMaskSkin(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1793_refreshMaskSkin)
+HXLINE(1794)		 ::openfl::display::DisplayObject oldSkin = this->_currentMaskSkin;
+HXLINE(1795)		this->_currentMaskSkin = this->getCurrentMaskSkin();
+HXLINE(1796)		if (::hx::IsInstanceEq( this->_currentMaskSkin,oldSkin )) {
+HXLINE(1797)			return;
+            		}
+HXLINE(1799)		this->removeCurrentMaskSkin(oldSkin);
+HXLINE(1800)		this->addCurrentMaskSkin(this->_currentMaskSkin);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,refreshMaskSkin,(void))
+
+ ::openfl::display::DisplayObject BaseScrollContainer_obj::getCurrentMaskSkin(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1804_getCurrentMaskSkin)
+HXDLIN(1804)		return this->get_maskSkin();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,getCurrentMaskSkin,return )
+
+void BaseScrollContainer_obj::addCurrentMaskSkin( ::openfl::display::DisplayObject skin){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1807_addCurrentMaskSkin)
+HXLINE(1808)		if (::hx::IsNull( skin )) {
+HXLINE(1809)			return;
+            		}
+HXLINE(1811)		if (::Std_obj::isOfType(skin,::hx::ClassOf< ::feathers::core::IUIControl >())) {
+HXLINE(1812)			::feathers::core::IUIControl_obj::initializeNow( ::hx::interface_check(skin,0x2696a04f));
+            		}
+HXLINE(1814)		if (::Std_obj::isOfType(skin,::hx::ClassOf< ::feathers::skins::IProgrammaticSkin >())) {
+HXLINE(1815)			::feathers::skins::IProgrammaticSkin_obj::set_uiContext( ::hx::interface_check(skin,0x32a0d8d6),::hx::ObjectPtr<OBJ_>(this));
+            		}
+HXLINE(1817)		this->addChild(skin);
+HXLINE(1818)		this->set_mask(skin);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,addCurrentMaskSkin,(void))
+
+void BaseScrollContainer_obj::removeCurrentMaskSkin( ::openfl::display::DisplayObject skin){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1821_removeCurrentMaskSkin)
+HXLINE(1822)		if (::hx::IsNull( skin )) {
+HXLINE(1823)			return;
+            		}
+HXLINE(1825)		if (::Std_obj::isOfType(skin,::hx::ClassOf< ::feathers::skins::IProgrammaticSkin >())) {
+HXLINE(1826)			::feathers::skins::IProgrammaticSkin_obj::set_uiContext( ::hx::interface_check(skin,0x32a0d8d6),null());
+            		}
+HXLINE(1828)		if (::hx::IsInstanceEq( skin->parent,::hx::ObjectPtr<OBJ_>(this) )) {
+HXLINE(1829)			this->removeChild(skin);
+            		}
+HXLINE(1831)		this->set_mask(null());
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,removeCurrentMaskSkin,(void))
+
+void BaseScrollContainer_obj::refreshViewPortMaskSkin(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1834_refreshViewPortMaskSkin)
+HXLINE(1835)		 ::openfl::display::DisplayObject oldSkin = this->_currentViewPortMaskSkin;
+HXLINE(1836)		this->_currentViewPortMaskSkin = this->getCurrentViewPortMaskSkin();
+HXLINE(1837)		if (::hx::IsInstanceEq( this->_currentViewPortMaskSkin,oldSkin )) {
+HXLINE(1838)			return;
+            		}
+HXLINE(1840)		this->removeCurrentViewPortMaskSkin(oldSkin);
+HXLINE(1841)		this->addCurrentViewPortMaskSkin(this->_currentViewPortMaskSkin);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,refreshViewPortMaskSkin,(void))
+
+ ::openfl::display::DisplayObject BaseScrollContainer_obj::getCurrentViewPortMaskSkin(){
+            	HX_GC_STACKFRAME(&_hx_pos_4200ed2106c74172_1844_getCurrentViewPortMaskSkin)
+HXLINE(1845)		if (::hx::IsNotNull( this->get_viewPortMaskSkin() )) {
+HXLINE(1846)			return this->get_viewPortMaskSkin();
+            		}
+HXLINE(1848)		if (::hx::IsPointerEq( this->_scrollMode,::feathers::controls::ScrollMode_obj::MASK_dyn() )) {
+HXLINE(1849)			if (::hx::IsNull( this->_fallbackViewPortMaskSkin )) {
+HXLINE(1850)				this->_fallbackViewPortMaskSkin =  ::feathers::skins::RectangleSkin_obj::__alloc( HX_CTX ,::feathers::graphics::FillStyle_obj::SolidColor(16711935,null()),null());
+            			}
+HXLINE(1852)			return this->_fallbackViewPortMaskSkin;
+            		}
+HXLINE(1854)		return null();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,getCurrentViewPortMaskSkin,return )
+
+void BaseScrollContainer_obj::addCurrentViewPortMaskSkin( ::openfl::display::DisplayObject skin){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1857_addCurrentViewPortMaskSkin)
+HXLINE(1858)		if (::hx::IsNull( skin )) {
+HXLINE(1859)			return;
+            		}
+HXLINE(1861)		if (::Std_obj::isOfType(skin,::hx::ClassOf< ::feathers::core::IUIControl >())) {
+HXLINE(1862)			::feathers::core::IUIControl_obj::initializeNow( ::hx::interface_check(skin,0x2696a04f));
+            		}
+HXLINE(1864)		if (::Std_obj::isOfType(skin,::hx::ClassOf< ::feathers::skins::IProgrammaticSkin >())) {
+HXLINE(1865)			::feathers::skins::IProgrammaticSkin_obj::set_uiContext( ::hx::interface_check(skin,0x32a0d8d6),::hx::ObjectPtr<OBJ_>(this));
+            		}
+HXLINE(1867)		this->addChild(skin);
+HXLINE(1868)		::hx::TCast<  ::openfl::display::DisplayObject >::cast(this->_viewPort)->set_mask(skin);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,addCurrentViewPortMaskSkin,(void))
+
+void BaseScrollContainer_obj::removeCurrentViewPortMaskSkin( ::openfl::display::DisplayObject skin){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1871_removeCurrentViewPortMaskSkin)
+HXLINE(1872)		if (::hx::IsNull( skin )) {
+HXLINE(1873)			return;
+            		}
+HXLINE(1875)		if (::Std_obj::isOfType(skin,::hx::ClassOf< ::feathers::skins::IProgrammaticSkin >())) {
+HXLINE(1876)			::feathers::skins::IProgrammaticSkin_obj::set_uiContext( ::hx::interface_check(skin,0x32a0d8d6),null());
+            		}
+HXLINE(1878)		if (::hx::IsInstanceEq( skin->parent,::hx::ObjectPtr<OBJ_>(this) )) {
+HXLINE(1879)			this->removeChild(skin);
+            		}
+HXLINE(1881)		::hx::TCast<  ::openfl::display::DisplayObject >::cast(this->_viewPort)->set_mask(null());
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,removeCurrentViewPortMaskSkin,(void))
+
+void BaseScrollContainer_obj::layoutChildren(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1884_layoutChildren)
+HXLINE(1885)		this->layoutBackgroundSkin();
+HXLINE(1886)		this->layoutMaskSkin();
+HXLINE(1887)		this->layoutViewPortMaskSkin();
+HXLINE(1888)		this->layoutScrollBars();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,layoutChildren,(void))
+
+void BaseScrollContainer_obj::layoutBackgroundSkin(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1891_layoutBackgroundSkin)
+HXLINE(1892)		if (::hx::IsNull( this->_currentBackgroundSkin )) {
+HXLINE(1893)			return;
+            		}
+HXLINE(1895)		this->_currentBackgroundSkin->set_x(((Float)0.0));
+HXLINE(1896)		this->_currentBackgroundSkin->set_y(((Float)0.0));
+HXLINE(1901)		Float _hx_tmp = this->_currentBackgroundSkin->get_width();
+HXDLIN(1901)		if ((_hx_tmp != this->actualWidth)) {
+HXLINE(1902)			this->_currentBackgroundSkin->set_width(this->actualWidth);
+            		}
+HXLINE(1904)		Float _hx_tmp1 = this->_currentBackgroundSkin->get_height();
+HXDLIN(1904)		if ((_hx_tmp1 != this->actualHeight)) {
+HXLINE(1905)			this->_currentBackgroundSkin->set_height(this->actualHeight);
+            		}
+HXLINE(1907)		if (::Std_obj::isOfType(this->_currentBackgroundSkin,::hx::ClassOf< ::feathers::core::IValidating >())) {
+HXLINE(1908)			::feathers::core::IValidating_obj::validateNow( ::hx::interface_check(this->_currentBackgroundSkin,0x64d4b3cd));
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,layoutBackgroundSkin,(void))
+
+void BaseScrollContainer_obj::layoutMaskSkin(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1912_layoutMaskSkin)
+HXLINE(1913)		if (::hx::IsNull( this->_currentMaskSkin )) {
+HXLINE(1914)			return;
+            		}
+HXLINE(1917)		this->_currentMaskSkin->set_x(((Float)0.0));
+HXLINE(1918)		this->_currentMaskSkin->set_y(((Float)0.0));
+HXLINE(1919)		this->_currentMaskSkin->set_width(this->actualWidth);
+HXLINE(1920)		this->_currentMaskSkin->set_height(this->actualHeight);
+HXLINE(1921)		if (::Std_obj::isOfType(this->_currentMaskSkin,::hx::ClassOf< ::feathers::core::IValidating >())) {
+HXLINE(1922)			::feathers::core::IValidating_obj::validateNow( ::hx::interface_check(this->_currentMaskSkin,0x64d4b3cd));
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,layoutMaskSkin,(void))
+
+void BaseScrollContainer_obj::layoutViewPortMaskSkin(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1926_layoutViewPortMaskSkin)
+HXLINE(1927)		if (::hx::IsNull( this->_currentViewPortMaskSkin )) {
+HXLINE(1928)			return;
+            		}
+HXLINE(1931)		 ::openfl::display::DisplayObject _hx_tmp = this->_currentViewPortMaskSkin;
+HXDLIN(1931)		Float _hx_tmp1 = this->get_paddingLeft();
+HXDLIN(1931)		_hx_tmp->set_x((_hx_tmp1 + this->leftViewPortOffset));
+HXLINE(1932)		 ::openfl::display::DisplayObject _hx_tmp2 = this->_currentViewPortMaskSkin;
+HXDLIN(1932)		Float _hx_tmp3 = this->get_paddingTop();
+HXDLIN(1932)		_hx_tmp2->set_y((_hx_tmp3 + this->topViewPortOffset));
+HXLINE(1933)		 ::openfl::display::DisplayObject _hx_tmp4 = this->_currentViewPortMaskSkin;
+HXDLIN(1933)		_hx_tmp4->set_width(( (Float)(::feathers::controls::supportClasses::IViewPort_obj::get_visibleWidth(this->_viewPort)) ));
+HXLINE(1934)		 ::openfl::display::DisplayObject _hx_tmp5 = this->_currentViewPortMaskSkin;
+HXDLIN(1934)		_hx_tmp5->set_height(( (Float)(::feathers::controls::supportClasses::IViewPort_obj::get_visibleHeight(this->_viewPort)) ));
+HXLINE(1935)		if (::Std_obj::isOfType(this->_currentViewPortMaskSkin,::hx::ClassOf< ::feathers::core::IValidating >())) {
+HXLINE(1936)			::feathers::core::IValidating_obj::validateNow( ::hx::interface_check(this->_currentViewPortMaskSkin,0x64d4b3cd));
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,layoutViewPortMaskSkin,(void))
+
+void BaseScrollContainer_obj::layoutScrollBars(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_1940_layoutScrollBars)
+HXLINE(1941)		Float visibleWidth = ((this->actualWidth - this->leftViewPortOffset) - this->rightViewPortOffset);
+HXDLIN(1941)		Float visibleWidth1 = (visibleWidth - this->get_paddingLeft());
+HXDLIN(1941)		Float visibleWidth2 = (visibleWidth1 - this->get_paddingRight());
+HXLINE(1942)		if ((visibleWidth2 < ((Float)0.0))) {
+HXLINE(1943)			visibleWidth2 = ((Float)0.0);
+            		}
+HXLINE(1945)		Float visibleHeight = ((this->actualHeight - this->topViewPortOffset) - this->bottomViewPortOffset);
+HXDLIN(1945)		Float visibleHeight1 = (visibleHeight - this->get_paddingTop());
+HXDLIN(1945)		Float visibleHeight2 = (visibleHeight1 - this->get_paddingBottom());
+HXLINE(1946)		if ((visibleHeight2 < ((Float)0.0))) {
+HXLINE(1947)			visibleHeight2 = ((Float)0.0);
+            		}
+HXLINE(1950)		bool _hx_tmp;
+HXDLIN(1950)		if (::hx::IsNotNull( this->scrollBarX )) {
+HXLINE(1950)			_hx_tmp = ::Std_obj::isOfType(this->scrollBarX,::hx::ClassOf< ::feathers::core::IValidating >());
+            		}
+            		else {
+HXLINE(1950)			_hx_tmp = false;
+            		}
+HXDLIN(1950)		if (_hx_tmp) {
+HXLINE(1951)			::feathers::core::IValidating_obj::validateNow(this->scrollBarX);
+            		}
+HXLINE(1953)		bool _hx_tmp1;
+HXDLIN(1953)		if (::hx::IsNotNull( this->scrollBarY )) {
+HXLINE(1953)			_hx_tmp1 = ::Std_obj::isOfType(this->scrollBarY,::hx::ClassOf< ::feathers::core::IValidating >());
+            		}
+            		else {
+HXLINE(1953)			_hx_tmp1 = false;
+            		}
+HXDLIN(1953)		if (_hx_tmp1) {
+HXLINE(1954)			::feathers::core::IValidating_obj::validateNow(this->scrollBarY);
+            		}
+HXLINE(1957)		if (::hx::IsNotNull( this->scrollBarX )) {
+HXLINE(1958)			if ((this->get_scrollBarXPosition()->_hx_getIndex() == 0)) {
+HXLINE(1960)				::Dynamic _hx_tmp = this->scrollBarX;
+HXDLIN(1960)				::feathers::core::IDisplayObject_obj::set_y(_hx_tmp,this->get_paddingTop());
+            			}
+            			else {
+HXLINE(1962)				::Dynamic _hx_tmp = this->scrollBarX;
+HXDLIN(1962)				Float _hx_tmp1 = this->get_paddingTop();
+HXDLIN(1962)				::feathers::core::IDisplayObject_obj::set_y(_hx_tmp,((_hx_tmp1 + this->topViewPortOffset) + visibleHeight2));
+            			}
+HXLINE(1964)			::Dynamic _hx_tmp = this->scrollBarX;
+HXDLIN(1964)			Float _hx_tmp1 = this->get_paddingLeft();
+HXDLIN(1964)			::feathers::core::IDisplayObject_obj::set_x(_hx_tmp,(_hx_tmp1 + this->leftViewPortOffset));
+HXLINE(1965)			if (!(this->get_fixedScrollBars())) {
+HXLINE(1966)				::Dynamic fh = this->scrollBarX;
+HXDLIN(1966)				Float _hx_tmp = ::feathers::core::IDisplayObject_obj::get_y(fh);
+HXDLIN(1966)				::feathers::core::IDisplayObject_obj::set_y(fh,(_hx_tmp - ::feathers::core::IDisplayObject_obj::get_height(this->scrollBarX)));
+HXLINE(1967)				bool _hx_tmp1;
+HXDLIN(1967)				bool _hx_tmp2;
+HXDLIN(1967)				if (!(this->showScrollBarY)) {
+HXLINE(1967)					_hx_tmp2 = ::hx::IsNotNull( this->_hideScrollBarY );
+            				}
+            				else {
+HXLINE(1967)					_hx_tmp2 = true;
+            				}
+HXDLIN(1967)				if (_hx_tmp2) {
+HXLINE(1967)					_hx_tmp1 = ::hx::IsNotNull( this->scrollBarY );
+            				}
+            				else {
+HXLINE(1967)					_hx_tmp1 = false;
+            				}
+HXDLIN(1967)				if (_hx_tmp1) {
+HXLINE(1968)					Float scrollBarXWidth = (visibleWidth2 - ::feathers::core::IDisplayObject_obj::get_width(this->scrollBarY));
+HXLINE(1969)					if ((scrollBarXWidth < ((Float)0.0))) {
+HXLINE(1970)						scrollBarXWidth = ((Float)0.0);
+            					}
+HXLINE(1972)					::feathers::core::IDisplayObject_obj::set_width(this->scrollBarX,scrollBarXWidth);
+            				}
+            				else {
+HXLINE(1974)					::feathers::core::IDisplayObject_obj::set_width(this->scrollBarX,visibleWidth2);
+            				}
+            			}
+            			else {
+HXLINE(1977)				::feathers::core::IDisplayObject_obj::set_width(this->scrollBarX,visibleWidth2);
+            			}
+            		}
+HXLINE(1980)		if (::hx::IsNotNull( this->scrollBarY )) {
+HXLINE(1981)			if ((this->get_scrollBarYPosition()->_hx_getIndex() == 3)) {
+HXLINE(1983)				::Dynamic _hx_tmp = this->scrollBarY;
+HXDLIN(1983)				::feathers::core::IDisplayObject_obj::set_x(_hx_tmp,this->get_paddingLeft());
+            			}
+            			else {
+HXLINE(1985)				::Dynamic _hx_tmp = this->scrollBarY;
+HXDLIN(1985)				Float _hx_tmp1 = this->get_paddingLeft();
+HXDLIN(1985)				::feathers::core::IDisplayObject_obj::set_x(_hx_tmp,((_hx_tmp1 + this->leftViewPortOffset) + visibleWidth2));
+            			}
+HXLINE(1987)			::Dynamic _hx_tmp = this->scrollBarY;
+HXDLIN(1987)			Float _hx_tmp1 = this->get_paddingTop();
+HXDLIN(1987)			::feathers::core::IDisplayObject_obj::set_y(_hx_tmp,(_hx_tmp1 + this->topViewPortOffset));
+HXLINE(1988)			if (!(this->get_fixedScrollBars())) {
+HXLINE(1989)				::Dynamic fh = this->scrollBarY;
+HXDLIN(1989)				Float _hx_tmp = ::feathers::core::IDisplayObject_obj::get_x(fh);
+HXDLIN(1989)				::feathers::core::IDisplayObject_obj::set_x(fh,(_hx_tmp - ::feathers::core::IDisplayObject_obj::get_width(this->scrollBarY)));
+HXLINE(1990)				bool _hx_tmp1;
+HXDLIN(1990)				bool _hx_tmp2;
+HXDLIN(1990)				if (!(this->showScrollBarX)) {
+HXLINE(1990)					_hx_tmp2 = ::hx::IsNotNull( this->_hideScrollBarX );
+            				}
+            				else {
+HXLINE(1990)					_hx_tmp2 = true;
+            				}
+HXDLIN(1990)				if (_hx_tmp2) {
+HXLINE(1990)					_hx_tmp1 = ::hx::IsNotNull( this->scrollBarX );
+            				}
+            				else {
+HXLINE(1990)					_hx_tmp1 = false;
+            				}
+HXDLIN(1990)				if (_hx_tmp1) {
+HXLINE(1991)					Float scrollBarYHeight = (visibleHeight2 - ::feathers::core::IDisplayObject_obj::get_height(this->scrollBarX));
+HXLINE(1992)					if ((scrollBarYHeight < ((Float)0.0))) {
+HXLINE(1993)						scrollBarYHeight = ((Float)0.0);
+            					}
+HXLINE(1995)					::feathers::core::IDisplayObject_obj::set_height(this->scrollBarY,scrollBarYHeight);
+            				}
+            				else {
+HXLINE(1997)					::feathers::core::IDisplayObject_obj::set_height(this->scrollBarY,visibleHeight2);
+            				}
+            			}
+            			else {
+HXLINE(2000)				::feathers::core::IDisplayObject_obj::set_height(this->scrollBarY,visibleHeight2);
+            			}
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,layoutScrollBars,(void))
+
+void BaseScrollContainer_obj::refreshScrollRect(){
+            	HX_GC_STACKFRAME(&_hx_pos_4200ed2106c74172_2005_refreshScrollRect)
+HXLINE(2006)		Float scrollX = this->scroller->get_scrollX();
+HXLINE(2007)		Float scrollY = this->scroller->get_scrollY();
+HXLINE(2008)		if (this->get_scrollPixelSnapping()) {
+HXLINE(2009)			Float scaleFactorX = ::feathers::utils::DisplayUtil_obj::getConcatenatedScaleX(::hx::ObjectPtr<OBJ_>(this));
+HXLINE(2010)			Float scaleFactorY = ::feathers::utils::DisplayUtil_obj::getConcatenatedScaleY(::hx::ObjectPtr<OBJ_>(this));
+HXLINE(2011)			scrollX = (( (Float)(::Math_obj::round((scrollX / scaleFactorX))) ) * scaleFactorX);
+HXLINE(2012)			scrollY = (( (Float)(::Math_obj::round((scrollY / scaleFactorY))) ) * scaleFactorY);
+            		}
+HXLINE(2015)		bool _hx_tmp;
+HXDLIN(2015)		bool _hx_tmp1;
+HXDLIN(2015)		if (::hx::IsPointerNotEq( this->_scrollMode,::feathers::controls::ScrollMode_obj::MASK_dyn() )) {
+HXLINE(2015)			_hx_tmp1 = ::hx::IsPointerEq( this->_scrollMode,::feathers::controls::ScrollMode_obj::MASKLESS_dyn() );
+            		}
+            		else {
+HXLINE(2015)			_hx_tmp1 = true;
+            		}
+HXDLIN(2015)		if (!(_hx_tmp1)) {
+HXLINE(2015)			_hx_tmp = ::hx::IsNotNull( this->_currentViewPortMaskSkin );
+            		}
+            		else {
+HXLINE(2015)			_hx_tmp = true;
+            		}
+HXDLIN(2015)		if (_hx_tmp) {
+HXLINE(2016)			 ::openfl::display::DisplayObject displayViewPort = ::hx::TCast<  ::openfl::display::DisplayObject >::cast(this->_viewPort);
+HXLINE(2017)			displayViewPort->set_scrollRect(null());
+HXLINE(2018)			::Dynamic _hx_tmp = this->_viewPort;
+HXDLIN(2018)			Float _hx_tmp1 = this->get_paddingLeft();
+HXDLIN(2018)			::feathers::core::IDisplayObject_obj::set_x(_hx_tmp,((_hx_tmp1 + this->leftViewPortOffset) - scrollX));
+HXLINE(2019)			::Dynamic _hx_tmp2 = this->_viewPort;
+HXDLIN(2019)			Float _hx_tmp3 = this->get_paddingTop();
+HXDLIN(2019)			::feathers::core::IDisplayObject_obj::set_y(_hx_tmp2,((_hx_tmp3 + this->topViewPortOffset) - scrollY));
+            		}
+            		else {
+HXLINE(2020)			if (::hx::IsPointerEq( this->_scrollMode,::feathers::controls::ScrollMode_obj::SCROLL_RECT_dyn() )) {
+HXLINE(2023)				 ::openfl::geom::Rectangle scrollRect = this->_scrollRect1;
+HXLINE(2024)				if (::hx::IsInstanceEq( this->_currentScrollRect,scrollRect )) {
+HXLINE(2025)					scrollRect = this->_scrollRect2;
+            				}
+HXLINE(2027)				this->_currentScrollRect = scrollRect;
+HXLINE(2028)				Float scrollRectWidth = ((this->actualWidth - this->leftViewPortOffset) - this->rightViewPortOffset);
+HXDLIN(2028)				Float scrollRectWidth1 = (scrollRectWidth - this->get_paddingLeft());
+HXDLIN(2028)				Float scrollRectWidth2 = (scrollRectWidth1 - this->get_paddingRight());
+HXLINE(2029)				if ((scrollRectWidth2 < ((Float)0.0))) {
+HXLINE(2030)					scrollRectWidth2 = ((Float)0.0);
+            				}
+HXLINE(2032)				Float scrollRectHeight = ((this->actualHeight - this->topViewPortOffset) - this->bottomViewPortOffset);
+HXDLIN(2032)				Float scrollRectHeight1 = (scrollRectHeight - this->get_paddingTop());
+HXDLIN(2032)				Float scrollRectHeight2 = (scrollRectHeight1 - this->get_paddingBottom());
+HXLINE(2033)				if ((scrollRectHeight2 < ((Float)0.0))) {
+HXLINE(2034)					scrollRectHeight2 = ((Float)0.0);
+            				}
+HXLINE(2036)				scrollRect->setTo(scrollX,scrollY,scrollRectWidth2,scrollRectHeight2);
+HXLINE(2037)				 ::openfl::display::DisplayObject displayViewPort = ::hx::TCast<  ::openfl::display::DisplayObject >::cast(this->_viewPort);
+HXLINE(2038)				displayViewPort->set_scrollRect(scrollRect);
+            			}
+            			else {
+HXLINE(2040)				HX_STACK_DO_THROW( ::openfl::errors::ArgumentError_obj::__alloc( HX_CTX ,(HX_("Unknown scrollMode: ",2c,43,7e,35) + ::Std_obj::string(this->_scrollMode))));
+            			}
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,refreshScrollRect,(void))
+
+void BaseScrollContainer_obj::revealScrollBarX(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2044_revealScrollBarX)
+HXLINE(2045)		bool _hx_tmp;
+HXDLIN(2045)		if (::hx::IsNotNull( this->scrollBarX )) {
+HXLINE(2045)			Float _hx_tmp1 = this->scroller->get_minScrollX();
+HXDLIN(2045)			_hx_tmp = (_hx_tmp1 == this->scroller->get_maxScrollX());
+            		}
+            		else {
+HXLINE(2045)			_hx_tmp = true;
+            		}
+HXDLIN(2045)		if (_hx_tmp) {
+HXLINE(2046)			return;
+            		}
+HXLINE(2048)		if (::hx::IsNotNull( this->_hideScrollBarX )) {
+HXLINE(2049)			::motion::Actuate_obj::stop(this->_hideScrollBarX,null(),null(),null());
+            		}
+HXLINE(2051)		::feathers::core::IDisplayObject_obj::set_alpha(this->scrollBarX,((Float)1.0));
+HXLINE(2052)		this->_scrollBarXRevealTime = ::openfl::Lib_obj::getTimer();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,revealScrollBarX,(void))
+
+void BaseScrollContainer_obj::revealScrollBarY(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2055_revealScrollBarY)
+HXLINE(2056)		bool _hx_tmp;
+HXDLIN(2056)		if (::hx::IsNotNull( this->scrollBarY )) {
+HXLINE(2056)			Float _hx_tmp1 = this->scroller->get_minScrollY();
+HXDLIN(2056)			_hx_tmp = (_hx_tmp1 == this->scroller->get_maxScrollY());
+            		}
+            		else {
+HXLINE(2056)			_hx_tmp = true;
+            		}
+HXDLIN(2056)		if (_hx_tmp) {
+HXLINE(2057)			return;
+            		}
+HXLINE(2059)		if (::hx::IsNotNull( this->_hideScrollBarY )) {
+HXLINE(2060)			::motion::Actuate_obj::stop(this->_hideScrollBarY,null(),null(),null());
+            		}
+HXLINE(2062)		::feathers::core::IDisplayObject_obj::set_alpha(this->scrollBarY,((Float)1.0));
+HXLINE(2063)		this->_scrollBarYRevealTime = ::openfl::Lib_obj::getTimer();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,revealScrollBarY,(void))
+
+void BaseScrollContainer_obj::hideScrollBarX(){
+            		HX_BEGIN_LOCAL_FUNC_S1(::hx::LocalFunc,_hx_Closure_0, ::feathers::controls::supportClasses::BaseScrollContainer,_gthis) HXARGC(1)
+            		Float _hx_run(Float alpha){
+            			HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2078_hideScrollBarX)
+HXLINE(2078)			return ::feathers::core::IDisplayObject_obj::set_alpha(_gthis->scrollBarX,alpha);
+            		}
+            		HX_END_LOCAL_FUNC1(return)
+
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2066_hideScrollBarX)
+HXDLIN(2066)		 ::feathers::controls::supportClasses::BaseScrollContainer _gthis = ::hx::ObjectPtr<OBJ_>(this);
+HXLINE(2067)		bool _hx_tmp;
+HXDLIN(2067)		if (::hx::IsNotNull( this->scrollBarX )) {
+HXLINE(2067)			_hx_tmp = ::hx::IsNotNull( this->_hideScrollBarX );
+            		}
+            		else {
+HXLINE(2067)			_hx_tmp = true;
+            		}
+HXDLIN(2067)		if (_hx_tmp) {
+HXLINE(2068)			return;
+            		}
+HXLINE(2070)		if ((::feathers::core::IDisplayObject_obj::get_alpha(this->scrollBarX) == ((Float)0.0))) {
+HXLINE(2072)			return;
+            		}
+HXLINE(2074)		if ((this->get_hideScrollBarDuration() == ((Float)0.0))) {
+HXLINE(2075)			::feathers::core::IDisplayObject_obj::set_alpha(this->scrollBarX,((Float)0.0));
+HXLINE(2076)			return;
+            		}
+HXLINE(2080)		Float tween = this->get_hideScrollBarDuration();
+HXLINE(2078)		 ::motion::actuators::GenericActuator tween1 = ::motion::Actuate_obj::update( ::Dynamic(new _hx_Closure_0(_gthis)),tween,::cpp::VirtualArray_obj::__new(1)->init(0,::feathers::core::IDisplayObject_obj::get_alpha(this->scrollBarX)),::cpp::VirtualArray_obj::__new(1)->init(0,((Float)0.0)),true);
+HXLINE(2081)		this->_hideScrollBarX = ::hx::TCast<  ::motion::actuators::SimpleActuator >::cast(tween1);
+HXLINE(2082)		 ::motion::actuators::SimpleActuator _hx_tmp1 = this->_hideScrollBarX;
+HXDLIN(2082)		_hx_tmp1->ease(this->get_hideScrollBarEase());
+HXLINE(2083)		this->_hideScrollBarX->autoVisible(false);
+HXLINE(2084)		int visibleTime = ::openfl::Lib_obj::getTimer();
+HXDLIN(2084)		Float visibleTime1 = (( (Float)((visibleTime - this->_scrollBarXRevealTime)) ) / ((Float)1000.0));
+HXLINE(2085)		if ((visibleTime1 < this->get_showScrollBarMinimumDuration())) {
+HXLINE(2086)			 ::motion::actuators::SimpleActuator _hx_tmp = this->_hideScrollBarX;
+HXDLIN(2086)			_hx_tmp->delay((this->get_showScrollBarMinimumDuration() - visibleTime1));
+            		}
+HXLINE(2088)		this->_hideScrollBarX->onComplete(this->hideScrollBarX_onComplete_dyn(),null());
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,hideScrollBarX,(void))
+
+void BaseScrollContainer_obj::hideScrollBarY(){
+            		HX_BEGIN_LOCAL_FUNC_S1(::hx::LocalFunc,_hx_Closure_0, ::feathers::controls::supportClasses::BaseScrollContainer,_gthis) HXARGC(1)
+            		Float _hx_run(Float alpha){
+            			HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2103_hideScrollBarY)
+HXLINE(2103)			return ::feathers::core::IDisplayObject_obj::set_alpha(_gthis->scrollBarY,alpha);
+            		}
+            		HX_END_LOCAL_FUNC1(return)
+
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2091_hideScrollBarY)
+HXDLIN(2091)		 ::feathers::controls::supportClasses::BaseScrollContainer _gthis = ::hx::ObjectPtr<OBJ_>(this);
+HXLINE(2092)		bool _hx_tmp;
+HXDLIN(2092)		if (::hx::IsNotNull( this->scrollBarY )) {
+HXLINE(2092)			_hx_tmp = ::hx::IsNotNull( this->_hideScrollBarY );
+            		}
+            		else {
+HXLINE(2092)			_hx_tmp = true;
+            		}
+HXDLIN(2092)		if (_hx_tmp) {
+HXLINE(2093)			return;
+            		}
+HXLINE(2095)		if ((::feathers::core::IDisplayObject_obj::get_alpha(this->scrollBarY) == ((Float)0.0))) {
+HXLINE(2097)			return;
+            		}
+HXLINE(2099)		if ((this->get_hideScrollBarDuration() == ((Float)0.0))) {
+HXLINE(2100)			::feathers::core::IDisplayObject_obj::set_alpha(this->scrollBarY,((Float)0.0));
+HXLINE(2101)			return;
+            		}
+HXLINE(2105)		Float tween = this->get_hideScrollBarDuration();
+HXLINE(2103)		 ::motion::actuators::GenericActuator tween1 = ::motion::Actuate_obj::update( ::Dynamic(new _hx_Closure_0(_gthis)),tween,::cpp::VirtualArray_obj::__new(1)->init(0,::feathers::core::IDisplayObject_obj::get_alpha(this->scrollBarY)),::cpp::VirtualArray_obj::__new(1)->init(0,((Float)0.0)),true);
+HXLINE(2106)		this->_hideScrollBarY = ::hx::TCast<  ::motion::actuators::SimpleActuator >::cast(tween1);
+HXLINE(2107)		 ::motion::actuators::SimpleActuator _hx_tmp1 = this->_hideScrollBarY;
+HXDLIN(2107)		_hx_tmp1->ease(this->get_hideScrollBarEase());
+HXLINE(2108)		this->_hideScrollBarY->autoVisible(false);
+HXLINE(2109)		int visibleTime = ::openfl::Lib_obj::getTimer();
+HXDLIN(2109)		Float visibleTime1 = (( (Float)((visibleTime - this->_scrollBarYRevealTime)) ) / ((Float)1000.0));
+HXLINE(2110)		if ((visibleTime1 < this->get_showScrollBarMinimumDuration())) {
+HXLINE(2111)			 ::motion::actuators::SimpleActuator _hx_tmp = this->_hideScrollBarY;
+HXDLIN(2111)			_hx_tmp->delay((this->get_showScrollBarMinimumDuration() - visibleTime1));
+            		}
+HXLINE(2113)		this->_hideScrollBarY->onComplete(this->hideScrollBarY_onComplete_dyn(),null());
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,hideScrollBarY,(void))
+
+void BaseScrollContainer_obj::checkForRevealScrollBars(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2116_checkForRevealScrollBars)
+HXLINE(2117)		bool _hx_tmp;
+HXDLIN(2117)		if (!(this->_scrollerDraggingX)) {
+HXLINE(2117)			_hx_tmp = this->scroller->get_draggingX();
+            		}
+            		else {
+HXLINE(2117)			_hx_tmp = false;
+            		}
+HXDLIN(2117)		if (_hx_tmp) {
+HXLINE(2118)			this->_scrollerDraggingX = true;
+HXLINE(2119)			this->revealScrollBarX();
+            		}
+HXLINE(2121)		bool _hx_tmp1;
+HXDLIN(2121)		if (!(this->_scrollerDraggingY)) {
+HXLINE(2121)			_hx_tmp1 = this->scroller->get_draggingY();
+            		}
+            		else {
+HXLINE(2121)			_hx_tmp1 = false;
+            		}
+HXDLIN(2121)		if (_hx_tmp1) {
+HXLINE(2122)			this->_scrollerDraggingY = true;
+HXLINE(2123)			this->revealScrollBarY();
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,checkForRevealScrollBars,(void))
+
+void BaseScrollContainer_obj::scrollWithKeyboard( ::openfl::events::KeyboardEvent event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2127_scrollWithKeyboard)
+HXLINE(2128)		bool _hx_tmp;
+HXDLIN(2128)		if (::hx::IsPointerEq( this->_scrollPolicyY,::feathers::controls::ScrollPolicy_obj::OFF_dyn() )) {
+HXLINE(2128)			_hx_tmp = ::hx::IsPointerEq( this->_scrollPolicyX,::feathers::controls::ScrollPolicy_obj::OFF_dyn() );
+            		}
+            		else {
+HXLINE(2128)			_hx_tmp = false;
+            		}
+HXDLIN(2128)		if (_hx_tmp) {
+HXLINE(2129)			return;
+            		}
+HXLINE(2132)		Float stepX = this->_scrollStepX;
+HXLINE(2133)		if ((stepX <= ((Float)0.0))) {
+HXLINE(2134)			stepX = ((Float)1.0);
+            		}
+HXLINE(2136)		Float stepY = this->_scrollStepY;
+HXLINE(2137)		if ((stepY <= ((Float)0.0))) {
+HXLINE(2138)			stepY = ((Float)1.0);
+            		}
+HXLINE(2140)		Float newScrollX = this->get_scrollX();
+HXLINE(2141)		Float newScrollY = this->get_scrollY();
+HXLINE(2142)		switch((int)(event->keyCode)){
+            			case (int)33: {
+HXLINE(2152)				Float newScrollY1 = this->get_scrollY();
+HXDLIN(2152)				newScrollY = (newScrollY1 - ( (Float)(::feathers::controls::supportClasses::IViewPort_obj::get_visibleHeight(this->_viewPort)) ));
+            			}
+            			break;
+            			case (int)34: {
+HXLINE(2154)				Float newScrollY1 = this->get_scrollY();
+HXDLIN(2154)				newScrollY = (newScrollY1 + ::feathers::controls::supportClasses::IViewPort_obj::get_visibleHeight(this->_viewPort));
+            			}
+            			break;
+            			case (int)35: {
+HXLINE(2158)				newScrollY = this->get_maxScrollY();
+            			}
+            			break;
+            			case (int)36: {
+HXLINE(2156)				newScrollY = this->get_minScrollY();
+            			}
+            			break;
+            			case (int)37: {
+HXLINE(2148)				newScrollX = (this->get_scrollX() - stepX);
+            			}
+            			break;
+            			case (int)38: {
+HXLINE(2144)				newScrollY = (this->get_scrollY() - stepY);
+            			}
+            			break;
+            			case (int)39: {
+HXLINE(2150)				newScrollX = (this->get_scrollX() + stepX);
+            			}
+            			break;
+            			case (int)40: {
+HXLINE(2146)				newScrollY = (this->get_scrollY() + stepY);
+            			}
+            			break;
+            			default:{
+HXLINE(2161)				return;
+            			}
+            		}
+HXLINE(2163)		if ((newScrollY < this->get_minScrollY())) {
+HXLINE(2164)			newScrollY = this->get_minScrollY();
+            		}
+            		else {
+HXLINE(2165)			if ((newScrollY > this->get_maxScrollY())) {
+HXLINE(2166)				newScrollY = this->get_maxScrollY();
+            			}
+            		}
+HXLINE(2168)		if ((newScrollX < this->get_minScrollX())) {
+HXLINE(2169)			newScrollX = this->get_minScrollX();
+            		}
+            		else {
+HXLINE(2170)			if ((newScrollX > this->get_maxScrollX())) {
+HXLINE(2171)				newScrollX = this->get_maxScrollX();
+            			}
+            		}
+HXLINE(2174)		bool scrolled = false;
+HXLINE(2175)		bool _hx_tmp1;
+HXDLIN(2175)		if ((this->get_scrollY() != newScrollY)) {
+HXLINE(2175)			_hx_tmp1 = ::hx::IsPointerNotEq( this->_scrollPolicyY,::feathers::controls::ScrollPolicy_obj::OFF_dyn() );
+            		}
+            		else {
+HXLINE(2175)			_hx_tmp1 = false;
+            		}
+HXDLIN(2175)		if (_hx_tmp1) {
+HXLINE(2176)			scrolled = true;
+HXLINE(2177)			this->set_scrollY(newScrollY);
+            		}
+HXLINE(2179)		bool _hx_tmp2;
+HXDLIN(2179)		if ((this->get_scrollX() != newScrollX)) {
+HXLINE(2179)			_hx_tmp2 = ::hx::IsPointerNotEq( this->_scrollPolicyX,::feathers::controls::ScrollPolicy_obj::OFF_dyn() );
+            		}
+            		else {
+HXLINE(2179)			_hx_tmp2 = false;
+            		}
+HXDLIN(2179)		if (_hx_tmp2) {
+HXLINE(2180)			scrolled = true;
+HXLINE(2181)			this->set_scrollX(newScrollX);
+            		}
+HXLINE(2183)		if (scrolled) {
+HXLINE(2184)			event->preventDefault();
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,scrollWithKeyboard,(void))
+
+void BaseScrollContainer_obj::baseScrollContainer_addedToStageHandler( ::openfl::events::Event event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2190_baseScrollContainer_addedToStageHandler)
+HXDLIN(2190)		this->setInvalid(::feathers::core::InvalidationFlag_obj::SCROLL_dyn());
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,baseScrollContainer_addedToStageHandler,(void))
+
+void BaseScrollContainer_obj::baseScrollContainer_removedFromStageHandler( ::openfl::events::Event event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2194_baseScrollContainer_removedFromStageHandler)
+HXDLIN(2194)		if (::hx::IsNotNull( this->scroller )) {
+HXLINE(2195)			this->scroller->set_target(null());
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,baseScrollContainer_removedFromStageHandler,(void))
+
+void BaseScrollContainer_obj::baseScrollContainer_keyDownHandler( ::openfl::events::KeyboardEvent event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2199_baseScrollContainer_keyDownHandler)
+HXLINE(2200)		bool _hx_tmp;
+HXDLIN(2200)		if (this->_enabled) {
+HXLINE(2200)			_hx_tmp = event->isDefaultPrevented();
+            		}
+            		else {
+HXLINE(2200)			_hx_tmp = true;
+            		}
+HXDLIN(2200)		if (_hx_tmp) {
+HXLINE(2201)			return;
+            		}
+HXLINE(2204)		this->scrollWithKeyboard(event);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,baseScrollContainer_keyDownHandler,(void))
+
+void BaseScrollContainer_obj::baseScrollContainer_scroller_scrollStartHandler( ::feathers::events::ScrollEvent event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2207_baseScrollContainer_scroller_scrollStartHandler)
+HXLINE(2208)		 ::Dynamic touchPointID = this->scroller->get_touchPointID();
+HXLINE(2209)		if (this->scroller->get_touchPointIsSimulated()) {
+HXLINE(2210)			 ::feathers::utils::ExclusivePointer exclusivePointer = ::feathers::utils::ExclusivePointer_obj::forStage(this->stage);
+HXLINE(2211)			bool result = exclusivePointer->claimMouse(::hx::ObjectPtr<OBJ_>(this));
+HXLINE(2212)			if (!(result)) {
+HXLINE(2213)				this->scroller->stop();
+HXLINE(2214)				return;
+            			}
+            		}
+            		else {
+HXLINE(2216)			if (::hx::IsNotNull( touchPointID )) {
+HXLINE(2217)				 ::feathers::utils::ExclusivePointer exclusivePointer = ::feathers::utils::ExclusivePointer_obj::forStage(this->stage);
+HXLINE(2218)				bool result = exclusivePointer->claimTouch(( (int)(touchPointID) ),::hx::ObjectPtr<OBJ_>(this));
+HXLINE(2219)				if (!(result)) {
+HXLINE(2220)					this->scroller->stop();
+HXLINE(2221)					return;
+            				}
+            			}
+            		}
+HXLINE(2224)		::openfl::events::IEventDispatcher_obj::addEventListener(this->_viewPort,HX_("mouseDown",27,b1,c2,ee),this->baseScrollContainer_viewPort_mouseDownHandler_dyn(),null(),null(),null());
+HXLINE(2225)		::openfl::events::IEventDispatcher_obj::addEventListener(this->_viewPort,HX_("touchBegin",ea,cd,e6,a9),this->baseScrollContainer_viewPort_touchBeginHandler_dyn(),null(),null(),null());
+HXLINE(2226)		this->_scrollerDraggingX = false;
+HXLINE(2227)		this->_scrollerDraggingY = false;
+HXLINE(2228)		this->checkForRevealScrollBars();
+HXLINE(2229)		::feathers::events::ScrollEvent_obj::dispatch(::hx::ObjectPtr<OBJ_>(this),HX_("scrollStart",15,bd,e8,cd),null(),null());
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,baseScrollContainer_scroller_scrollStartHandler,(void))
+
+void BaseScrollContainer_obj::baseScrollContainer_scroller_scrollHandler( ::openfl::events::Event event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2232_baseScrollContainer_scroller_scrollHandler)
+HXLINE(2233)		if (this->_ignoreScrollerChanges) {
+HXLINE(2234)			bool _hx_tmp;
+HXDLIN(2234)			if (this->_settingScrollerDimensions) {
+HXLINE(2234)				_hx_tmp = this->needsScrollMeasurement();
+            			}
+            			else {
+HXLINE(2234)				_hx_tmp = false;
+            			}
+HXDLIN(2234)			if (_hx_tmp) {
+HXLINE(2238)				this->setInvalid(::feathers::core::InvalidationFlag_obj::SCROLL_dyn());
+            			}
+            			else {
+HXLINE(2241)				::Dynamic _hx_tmp = this->_viewPort;
+HXDLIN(2241)				::feathers::controls::supportClasses::IViewPort_obj::set_scrollX(_hx_tmp,this->get_scrollX());
+HXLINE(2242)				::Dynamic _hx_tmp1 = this->_viewPort;
+HXDLIN(2242)				::feathers::controls::supportClasses::IViewPort_obj::set_scrollY(_hx_tmp1,this->get_scrollY());
+            			}
+HXLINE(2244)			return;
+            		}
+HXLINE(2246)		this->checkForRevealScrollBars();
+HXLINE(2247)		if (this->needsScrollMeasurement()) {
+HXLINE(2248)			this->setInvalid(::feathers::core::InvalidationFlag_obj::SCROLL_dyn());
+            		}
+            		else {
+HXLINE(2250)			::Dynamic _hx_tmp = this->_viewPort;
+HXDLIN(2250)			::feathers::controls::supportClasses::IViewPort_obj::set_scrollX(_hx_tmp,this->get_scrollX());
+HXLINE(2251)			::Dynamic _hx_tmp1 = this->_viewPort;
+HXDLIN(2251)			::feathers::controls::supportClasses::IViewPort_obj::set_scrollY(_hx_tmp1,this->get_scrollY());
+HXLINE(2252)			this->refreshScrollRect();
+HXLINE(2253)			this->refreshScrollBarValues();
+            		}
+HXLINE(2255)		::feathers::events::ScrollEvent_obj::dispatch(::hx::ObjectPtr<OBJ_>(this),HX_("scroll",0d,d8,64,47),null(),null());
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,baseScrollContainer_scroller_scrollHandler,(void))
+
+void BaseScrollContainer_obj::baseScrollContainer_scroller_scrollCompleteHandler( ::feathers::events::ScrollEvent event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2258_baseScrollContainer_scroller_scrollCompleteHandler)
+HXLINE(2259)		::openfl::events::IEventDispatcher_obj::removeEventListener(this->_viewPort,HX_("mouseDown",27,b1,c2,ee),this->baseScrollContainer_viewPort_mouseDownHandler_dyn(),null());
+HXLINE(2260)		::openfl::events::IEventDispatcher_obj::removeEventListener(this->_viewPort,HX_("touchBegin",ea,cd,e6,a9),this->baseScrollContainer_viewPort_touchBeginHandler_dyn(),null());
+HXLINE(2261)		this->_scrollerDraggingX = false;
+HXLINE(2262)		this->_scrollerDraggingY = false;
+HXLINE(2263)		bool _hx_tmp;
+HXDLIN(2263)		bool _hx_tmp1;
+HXDLIN(2263)		if (!(this->_scrollBarXHover)) {
+HXLINE(2263)			_hx_tmp1 = !(this->get_fixedScrollBars());
+            		}
+            		else {
+HXLINE(2263)			_hx_tmp1 = false;
+            		}
+HXDLIN(2263)		if (_hx_tmp1) {
+HXLINE(2263)			_hx_tmp = this->get_autoHideScrollBars();
+            		}
+            		else {
+HXLINE(2263)			_hx_tmp = false;
+            		}
+HXDLIN(2263)		if (_hx_tmp) {
+HXLINE(2264)			this->hideScrollBarX();
+            		}
+HXLINE(2266)		bool _hx_tmp2;
+HXDLIN(2266)		bool _hx_tmp3;
+HXDLIN(2266)		if (!(this->_scrollBarYHover)) {
+HXLINE(2266)			_hx_tmp3 = !(this->get_fixedScrollBars());
+            		}
+            		else {
+HXLINE(2266)			_hx_tmp3 = false;
+            		}
+HXDLIN(2266)		if (_hx_tmp3) {
+HXLINE(2266)			_hx_tmp2 = this->get_autoHideScrollBars();
+            		}
+            		else {
+HXLINE(2266)			_hx_tmp2 = false;
+            		}
+HXDLIN(2266)		if (_hx_tmp2) {
+HXLINE(2267)			this->hideScrollBarY();
+            		}
+HXLINE(2269)		::feathers::events::ScrollEvent_obj::dispatch(::hx::ObjectPtr<OBJ_>(this),HX_("scrollComplete",e6,e9,b8,0b),null(),null());
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,baseScrollContainer_scroller_scrollCompleteHandler,(void))
+
+void BaseScrollContainer_obj::reclaimMouse(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2272_reclaimMouse)
+HXLINE(2273)		if (!(this->scroller->get_touchPointIsSimulated())) {
+HXLINE(2274)			return;
+            		}
+HXLINE(2276)		 ::feathers::utils::ExclusivePointer exclusivePointer = ::feathers::utils::ExclusivePointer_obj::forStage(this->stage);
+HXLINE(2277)		 ::openfl::display::DisplayObject claim = exclusivePointer->getMouseClaim();
+HXLINE(2278)		if (::hx::IsNotNull( claim )) {
+HXLINE(2279)			return;
+            		}
+HXLINE(2281)		exclusivePointer->claimMouse(::hx::ObjectPtr<OBJ_>(this));
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,reclaimMouse,(void))
+
+void BaseScrollContainer_obj::reclaimTouch(int touchPointID){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2284_reclaimTouch)
+HXLINE(2285)		bool _hx_tmp;
+HXDLIN(2285)		bool _hx_tmp1;
+HXDLIN(2285)		if (!(this->scroller->get_touchPointIsSimulated())) {
+HXLINE(2285)			_hx_tmp1 = ::hx::IsNull( this->scroller->get_touchPointID() );
+            		}
+            		else {
+HXLINE(2285)			_hx_tmp1 = true;
+            		}
+HXDLIN(2285)		if (!(_hx_tmp1)) {
+HXLINE(2285)			_hx_tmp = ::hx::IsNotEq( this->scroller->get_touchPointID(),touchPointID );
+            		}
+            		else {
+HXLINE(2285)			_hx_tmp = true;
+            		}
+HXDLIN(2285)		if (_hx_tmp) {
+HXLINE(2286)			return;
+            		}
+HXLINE(2288)		 ::feathers::utils::ExclusivePointer exclusivePointer = ::feathers::utils::ExclusivePointer_obj::forStage(this->stage);
+HXLINE(2289)		 ::openfl::display::DisplayObject claim = exclusivePointer->getTouchClaim(touchPointID);
+HXLINE(2290)		if (::hx::IsNotNull( claim )) {
+HXLINE(2291)			return;
+            		}
+HXLINE(2293)		exclusivePointer->claimTouch(touchPointID,::hx::ObjectPtr<OBJ_>(this));
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,reclaimTouch,(void))
+
+void BaseScrollContainer_obj::baseScrollContainer_viewPort_mouseDownHandler( ::openfl::events::MouseEvent event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2297_baseScrollContainer_viewPort_mouseDownHandler)
+HXDLIN(2297)		this->reclaimMouse();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,baseScrollContainer_viewPort_mouseDownHandler,(void))
+
+void BaseScrollContainer_obj::baseScrollContainer_viewPort_touchBeginHandler( ::openfl::events::TouchEvent event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2301_baseScrollContainer_viewPort_touchBeginHandler)
+HXDLIN(2301)		this->reclaimTouch(event->touchPointID);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,baseScrollContainer_viewPort_touchBeginHandler,(void))
+
+void BaseScrollContainer_obj::scrollBarX_changeHandler( ::openfl::events::Event event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2304_scrollBarX_changeHandler)
+HXLINE(2305)		if (this->_ignoreScrollBarXChange) {
+HXLINE(2306)			return;
+            		}
+HXLINE(2308)		 ::feathers::utils::Scroller _hx_tmp = this->scroller;
+HXDLIN(2308)		_hx_tmp->set_scrollX(::feathers::controls::IRange_obj::get_value(this->scrollBarX));
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,scrollBarX_changeHandler,(void))
+
+void BaseScrollContainer_obj::scrollBarY_changeHandler( ::openfl::events::Event event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2311_scrollBarY_changeHandler)
+HXLINE(2312)		if (this->_ignoreScrollBarYChange) {
+HXLINE(2313)			return;
+            		}
+HXLINE(2315)		 ::feathers::utils::Scroller _hx_tmp = this->scroller;
+HXDLIN(2315)		_hx_tmp->set_scrollY(::feathers::controls::IRange_obj::get_value(this->scrollBarY));
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,scrollBarY_changeHandler,(void))
+
+void BaseScrollContainer_obj::scrollBarX_rollOverHandler( ::openfl::events::MouseEvent event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2318_scrollBarX_rollOverHandler)
+HXLINE(2319)		this->_scrollBarXHover = true;
+HXLINE(2320)		this->revealScrollBarX();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,scrollBarX_rollOverHandler,(void))
+
+void BaseScrollContainer_obj::scrollBarX_rollOutHandler( ::openfl::events::MouseEvent event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2323_scrollBarX_rollOutHandler)
+HXLINE(2324)		if (!(this->_scrollBarXHover)) {
+HXLINE(2325)			return;
+            		}
+HXLINE(2327)		this->_scrollBarXHover = false;
+HXLINE(2328)		bool _hx_tmp;
+HXDLIN(2328)		bool _hx_tmp1;
+HXDLIN(2328)		if (!(this->_scrollerDraggingX)) {
+HXLINE(2328)			_hx_tmp1 = !(this->get_fixedScrollBars());
+            		}
+            		else {
+HXLINE(2328)			_hx_tmp1 = false;
+            		}
+HXDLIN(2328)		if (_hx_tmp1) {
+HXLINE(2328)			_hx_tmp = this->get_autoHideScrollBars();
+            		}
+            		else {
+HXLINE(2328)			_hx_tmp = false;
+            		}
+HXDLIN(2328)		if (_hx_tmp) {
+HXLINE(2329)			this->hideScrollBarX();
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,scrollBarX_rollOutHandler,(void))
+
+void BaseScrollContainer_obj::scrollBarY_rollOverHandler( ::openfl::events::MouseEvent event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2333_scrollBarY_rollOverHandler)
+HXLINE(2334)		this->_scrollBarYHover = true;
+HXLINE(2335)		this->revealScrollBarY();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,scrollBarY_rollOverHandler,(void))
+
+void BaseScrollContainer_obj::scrollBarY_rollOutHandler( ::openfl::events::MouseEvent event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2338_scrollBarY_rollOutHandler)
+HXLINE(2339)		if (!(this->_scrollBarYHover)) {
+HXLINE(2340)			return;
+            		}
+HXLINE(2342)		this->_scrollBarYHover = false;
+HXLINE(2343)		bool _hx_tmp;
+HXDLIN(2343)		bool _hx_tmp1;
+HXDLIN(2343)		if (!(this->_scrollerDraggingY)) {
+HXLINE(2343)			_hx_tmp1 = !(this->get_fixedScrollBars());
+            		}
+            		else {
+HXLINE(2343)			_hx_tmp1 = false;
+            		}
+HXDLIN(2343)		if (_hx_tmp1) {
+HXLINE(2343)			_hx_tmp = this->get_autoHideScrollBars();
+            		}
+            		else {
+HXLINE(2343)			_hx_tmp = false;
+            		}
+HXDLIN(2343)		if (_hx_tmp) {
+HXLINE(2344)			this->hideScrollBarY();
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,scrollBarY_rollOutHandler,(void))
+
+void BaseScrollContainer_obj::scrollBarX_scrollStartHandler( ::feathers::events::ScrollEvent event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2348_scrollBarX_scrollStartHandler)
+HXLINE(2349)		this->scroller->stop();
+HXLINE(2350)		this->_scrollerDraggingX = true;
+HXLINE(2351)		::feathers::events::ScrollEvent_obj::dispatch(::hx::ObjectPtr<OBJ_>(this),HX_("scrollStart",15,bd,e8,cd),null(),null());
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,scrollBarX_scrollStartHandler,(void))
+
+void BaseScrollContainer_obj::scrollBarX_scrollCompleteHandler( ::feathers::events::ScrollEvent event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2354_scrollBarX_scrollCompleteHandler)
+HXLINE(2355)		this->_scrollerDraggingX = false;
+HXLINE(2356)		bool _hx_tmp;
+HXDLIN(2356)		bool _hx_tmp1;
+HXDLIN(2356)		if (!(this->_scrollBarXHover)) {
+HXLINE(2356)			_hx_tmp1 = !(this->get_fixedScrollBars());
+            		}
+            		else {
+HXLINE(2356)			_hx_tmp1 = false;
+            		}
+HXDLIN(2356)		if (_hx_tmp1) {
+HXLINE(2356)			_hx_tmp = this->get_autoHideScrollBars();
+            		}
+            		else {
+HXLINE(2356)			_hx_tmp = false;
+            		}
+HXDLIN(2356)		if (_hx_tmp) {
+HXLINE(2357)			this->hideScrollBarX();
+            		}
+HXLINE(2359)		::feathers::events::ScrollEvent_obj::dispatch(::hx::ObjectPtr<OBJ_>(this),HX_("scrollComplete",e6,e9,b8,0b),null(),null());
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,scrollBarX_scrollCompleteHandler,(void))
+
+void BaseScrollContainer_obj::scrollBarY_scrollStartHandler( ::feathers::events::ScrollEvent event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2362_scrollBarY_scrollStartHandler)
+HXLINE(2363)		this->scroller->stop();
+HXLINE(2364)		this->_scrollerDraggingY = true;
+HXLINE(2365)		::feathers::events::ScrollEvent_obj::dispatch(::hx::ObjectPtr<OBJ_>(this),HX_("scrollStart",15,bd,e8,cd),null(),null());
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,scrollBarY_scrollStartHandler,(void))
+
+void BaseScrollContainer_obj::scrollBarY_scrollCompleteHandler( ::feathers::events::ScrollEvent event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2368_scrollBarY_scrollCompleteHandler)
+HXLINE(2369)		this->_scrollerDraggingY = false;
+HXLINE(2370)		bool _hx_tmp;
+HXDLIN(2370)		bool _hx_tmp1;
+HXDLIN(2370)		if (!(this->_scrollBarYHover)) {
+HXLINE(2370)			_hx_tmp1 = !(this->get_fixedScrollBars());
+            		}
+            		else {
+HXLINE(2370)			_hx_tmp1 = false;
+            		}
+HXDLIN(2370)		if (_hx_tmp1) {
+HXLINE(2370)			_hx_tmp = this->get_autoHideScrollBars();
+            		}
+            		else {
+HXLINE(2370)			_hx_tmp = false;
+            		}
+HXDLIN(2370)		if (_hx_tmp) {
+HXLINE(2371)			this->hideScrollBarY();
+            		}
+HXLINE(2373)		::feathers::events::ScrollEvent_obj::dispatch(::hx::ObjectPtr<OBJ_>(this),HX_("scrollComplete",e6,e9,b8,0b),null(),null());
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,scrollBarY_scrollCompleteHandler,(void))
+
+void BaseScrollContainer_obj::hideScrollBarX_onComplete(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2377_hideScrollBarX_onComplete)
+HXDLIN(2377)		this->_hideScrollBarX = null();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,hideScrollBarX_onComplete,(void))
+
+void BaseScrollContainer_obj::hideScrollBarY_onComplete(){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2381_hideScrollBarY_onComplete)
+HXDLIN(2381)		this->_hideScrollBarY = null();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,hideScrollBarY_onComplete,(void))
+
+void BaseScrollContainer_obj::viewPort_resizeHandler( ::openfl::events::Event event){
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_2384_viewPort_resizeHandler)
+HXLINE(2387)		bool _hx_tmp;
+HXDLIN(2387)		if (!(this->_ignoreViewPortResizing)) {
+HXLINE(2388)			Float _hx_tmp1 = ::feathers::core::IDisplayObject_obj::get_width(this->_viewPort);
+HXDLIN(2388)			if (::feathers::utils::MathUtil_obj::fuzzyEquals(_hx_tmp1,this->_previousViewPortWidth,null())) {
+HXLINE(2389)				Float _hx_tmp1 = ::feathers::core::IDisplayObject_obj::get_height(this->_viewPort);
+HXLINE(2387)				_hx_tmp = ::feathers::utils::MathUtil_obj::fuzzyEquals(_hx_tmp1,this->_previousViewPortHeight,null());
+            			}
+            			else {
+HXLINE(2387)				_hx_tmp = false;
+            			}
+            		}
+            		else {
+HXLINE(2387)			_hx_tmp = true;
+            		}
+HXDLIN(2387)		if (_hx_tmp) {
+HXLINE(2390)			return;
+            		}
+HXLINE(2392)		this->_previousViewPortWidth = ::feathers::core::IDisplayObject_obj::get_width(this->_viewPort);
+HXLINE(2393)		this->_previousViewPortHeight = ::feathers::core::IDisplayObject_obj::get_height(this->_viewPort);
+HXLINE(2394)		if (this->_validating) {
+HXLINE(2395)			this->_viewPortBoundsChanged = true;
+            		}
+            		else {
+HXLINE(2397)			this->setInvalid(::feathers::core::InvalidationFlag_obj::SIZE_dyn());
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,viewPort_resizeHandler,(void))
+
+Float BaseScrollContainer_obj::get_paddingTop(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_85_get_paddingTop)
+HXDLIN(  85)		return this->_hx___paddingTop;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_paddingTop,return )
+
+Float BaseScrollContainer_obj::set_paddingTop(Float value){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_99_set_paddingTop)
+HXLINE( 100)		if (!(this->setStyle(HX_("paddingTop",44,fd,05,3a),null()))) {
+HXLINE( 101)			return this->_hx___paddingTop;
+            		}
+HXLINE( 103)		if ((this->_hx___paddingTop == value)) {
+HXLINE( 104)			return this->_hx___paddingTop;
+            		}
+HXLINE( 109)		this->_previousClearStyle = this->clearStyle_paddingTop_dyn();
+HXLINE( 110)		this->_hx___paddingTop = value;
+HXLINE( 111)		this->setInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+HXLINE( 112)		return this->_hx___paddingTop;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_paddingTop,return )
+
+Float BaseScrollContainer_obj::clearStyle_paddingTop(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_125_clearStyle_paddingTop)
+HXLINE( 126)		this->set_paddingTop(((Float)0.0));
+HXLINE( 127)		return this->get_paddingTop();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,clearStyle_paddingTop,return )
+
+Float BaseScrollContainer_obj::get_paddingRight(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_85_get_paddingRight)
+HXDLIN(  85)		return this->_hx___paddingRight;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_paddingRight,return )
+
+Float BaseScrollContainer_obj::set_paddingRight(Float value){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_99_set_paddingRight)
+HXLINE( 100)		if (!(this->setStyle(HX_("paddingRight",4b,ec,a7,1a),null()))) {
+HXLINE( 101)			return this->_hx___paddingRight;
+            		}
+HXLINE( 103)		if ((this->_hx___paddingRight == value)) {
+HXLINE( 104)			return this->_hx___paddingRight;
+            		}
+HXLINE( 109)		this->_previousClearStyle = this->clearStyle_paddingRight_dyn();
+HXLINE( 110)		this->_hx___paddingRight = value;
+HXLINE( 111)		this->setInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+HXLINE( 112)		return this->_hx___paddingRight;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_paddingRight,return )
+
+Float BaseScrollContainer_obj::clearStyle_paddingRight(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_125_clearStyle_paddingRight)
+HXLINE( 126)		this->set_paddingRight(((Float)0.0));
+HXLINE( 127)		return this->get_paddingRight();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,clearStyle_paddingRight,return )
+
+Float BaseScrollContainer_obj::get_paddingBottom(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_85_get_paddingBottom)
+HXDLIN(  85)		return this->_hx___paddingBottom;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_paddingBottom,return )
+
+Float BaseScrollContainer_obj::set_paddingBottom(Float value){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_99_set_paddingBottom)
+HXLINE( 100)		if (!(this->setStyle(HX_("paddingBottom",9c,67,99,4f),null()))) {
+HXLINE( 101)			return this->_hx___paddingBottom;
+            		}
+HXLINE( 103)		if ((this->_hx___paddingBottom == value)) {
+HXLINE( 104)			return this->_hx___paddingBottom;
+            		}
+HXLINE( 109)		this->_previousClearStyle = this->clearStyle_paddingBottom_dyn();
+HXLINE( 110)		this->_hx___paddingBottom = value;
+HXLINE( 111)		this->setInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+HXLINE( 112)		return this->_hx___paddingBottom;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_paddingBottom,return )
+
+Float BaseScrollContainer_obj::clearStyle_paddingBottom(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_125_clearStyle_paddingBottom)
+HXLINE( 126)		this->set_paddingBottom(((Float)0.0));
+HXLINE( 127)		return this->get_paddingBottom();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,clearStyle_paddingBottom,return )
+
+Float BaseScrollContainer_obj::get_paddingLeft(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_85_get_paddingLeft)
+HXDLIN(  85)		return this->_hx___paddingLeft;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_paddingLeft,return )
+
+Float BaseScrollContainer_obj::set_paddingLeft(Float value){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_99_set_paddingLeft)
+HXLINE( 100)		if (!(this->setStyle(HX_("paddingLeft",78,4a,e6,85),null()))) {
+HXLINE( 101)			return this->_hx___paddingLeft;
+            		}
+HXLINE( 103)		if ((this->_hx___paddingLeft == value)) {
+HXLINE( 104)			return this->_hx___paddingLeft;
+            		}
+HXLINE( 109)		this->_previousClearStyle = this->clearStyle_paddingLeft_dyn();
+HXLINE( 110)		this->_hx___paddingLeft = value;
+HXLINE( 111)		this->setInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+HXLINE( 112)		return this->_hx___paddingLeft;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_paddingLeft,return )
+
+Float BaseScrollContainer_obj::clearStyle_paddingLeft(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_125_clearStyle_paddingLeft)
+HXLINE( 126)		this->set_paddingLeft(((Float)0.0));
+HXLINE( 127)		return this->get_paddingLeft();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,clearStyle_paddingLeft,return )
+
+ ::openfl::display::DisplayObject BaseScrollContainer_obj::get_backgroundSkin(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_85_get_backgroundSkin)
+HXDLIN(  85)		return this->_hx___backgroundSkin;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_backgroundSkin,return )
+
+ ::openfl::display::DisplayObject BaseScrollContainer_obj::set_backgroundSkin( ::openfl::display::DisplayObject value){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_99_set_backgroundSkin)
+HXLINE( 100)		if (!(this->setStyle(HX_("backgroundSkin",8b,65,6f,20),null()))) {
+HXLINE( 101)			return this->_hx___backgroundSkin;
+            		}
+HXLINE( 103)		if (::hx::IsInstanceEq( this->_hx___backgroundSkin,value )) {
+HXLINE( 104)			return this->_hx___backgroundSkin;
+            		}
+HXLINE( 109)		this->_previousClearStyle = this->clearStyle_backgroundSkin_dyn();
+HXLINE( 110)		this->_hx___backgroundSkin = value;
+HXLINE( 111)		this->setInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+HXLINE( 112)		return this->_hx___backgroundSkin;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_backgroundSkin,return )
+
+ ::openfl::display::DisplayObject BaseScrollContainer_obj::clearStyle_backgroundSkin(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_125_clearStyle_backgroundSkin)
+HXLINE( 126)		this->set_backgroundSkin(null());
+HXLINE( 127)		return this->get_backgroundSkin();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,clearStyle_backgroundSkin,return )
+
+ ::openfl::display::DisplayObject BaseScrollContainer_obj::get_disabledBackgroundSkin(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_85_get_disabledBackgroundSkin)
+HXDLIN(  85)		return this->_hx___disabledBackgroundSkin;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_disabledBackgroundSkin,return )
+
+ ::openfl::display::DisplayObject BaseScrollContainer_obj::set_disabledBackgroundSkin( ::openfl::display::DisplayObject value){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_99_set_disabledBackgroundSkin)
+HXLINE( 100)		if (!(this->setStyle(HX_("disabledBackgroundSkin",27,5c,3a,d3),null()))) {
+HXLINE( 101)			return this->_hx___disabledBackgroundSkin;
+            		}
+HXLINE( 103)		if (::hx::IsInstanceEq( this->_hx___disabledBackgroundSkin,value )) {
+HXLINE( 104)			return this->_hx___disabledBackgroundSkin;
+            		}
+HXLINE( 109)		this->_previousClearStyle = this->clearStyle_disabledBackgroundSkin_dyn();
+HXLINE( 110)		this->_hx___disabledBackgroundSkin = value;
+HXLINE( 111)		this->setInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+HXLINE( 112)		return this->_hx___disabledBackgroundSkin;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_disabledBackgroundSkin,return )
+
+ ::openfl::display::DisplayObject BaseScrollContainer_obj::clearStyle_disabledBackgroundSkin(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_125_clearStyle_disabledBackgroundSkin)
+HXLINE( 126)		this->set_disabledBackgroundSkin(null());
+HXLINE( 127)		return this->get_disabledBackgroundSkin();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,clearStyle_disabledBackgroundSkin,return )
+
+ ::openfl::display::DisplayObject BaseScrollContainer_obj::get_maskSkin(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_85_get_maskSkin)
+HXDLIN(  85)		return this->_hx___maskSkin;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_maskSkin,return )
+
+ ::openfl::display::DisplayObject BaseScrollContainer_obj::set_maskSkin( ::openfl::display::DisplayObject value){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_99_set_maskSkin)
+HXLINE( 100)		if (!(this->setStyle(HX_("maskSkin",89,69,35,ea),null()))) {
+HXLINE( 101)			return this->_hx___maskSkin;
+            		}
+HXLINE( 103)		if (::hx::IsInstanceEq( this->_hx___maskSkin,value )) {
+HXLINE( 104)			return this->_hx___maskSkin;
+            		}
+HXLINE( 109)		this->_previousClearStyle = this->clearStyle_maskSkin_dyn();
+HXLINE( 110)		this->_hx___maskSkin = value;
+HXLINE( 111)		this->setInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+HXLINE( 112)		return this->_hx___maskSkin;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_maskSkin,return )
+
+ ::openfl::display::DisplayObject BaseScrollContainer_obj::clearStyle_maskSkin(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_125_clearStyle_maskSkin)
+HXLINE( 126)		this->set_maskSkin(null());
+HXLINE( 127)		return this->get_maskSkin();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,clearStyle_maskSkin,return )
+
+ ::openfl::display::DisplayObject BaseScrollContainer_obj::get_viewPortMaskSkin(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_85_get_viewPortMaskSkin)
+HXDLIN(  85)		return this->_hx___viewPortMaskSkin;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_viewPortMaskSkin,return )
+
+ ::openfl::display::DisplayObject BaseScrollContainer_obj::set_viewPortMaskSkin( ::openfl::display::DisplayObject value){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_99_set_viewPortMaskSkin)
+HXLINE( 100)		if (!(this->setStyle(HX_("viewPortMaskSkin",2f,94,fa,8c),null()))) {
+HXLINE( 101)			return this->_hx___viewPortMaskSkin;
+            		}
+HXLINE( 103)		if (::hx::IsInstanceEq( this->_hx___viewPortMaskSkin,value )) {
+HXLINE( 104)			return this->_hx___viewPortMaskSkin;
+            		}
+HXLINE( 109)		this->_previousClearStyle = this->clearStyle_viewPortMaskSkin_dyn();
+HXLINE( 110)		this->_hx___viewPortMaskSkin = value;
+HXLINE( 111)		this->setInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+HXLINE( 112)		return this->_hx___viewPortMaskSkin;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_viewPortMaskSkin,return )
+
+ ::openfl::display::DisplayObject BaseScrollContainer_obj::clearStyle_viewPortMaskSkin(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_125_clearStyle_viewPortMaskSkin)
+HXLINE( 126)		this->set_viewPortMaskSkin(null());
+HXLINE( 127)		return this->get_viewPortMaskSkin();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,clearStyle_viewPortMaskSkin,return )
+
+bool BaseScrollContainer_obj::get_fixedScrollBars(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_85_get_fixedScrollBars)
+HXDLIN(  85)		return this->_hx___fixedScrollBars;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_fixedScrollBars,return )
+
+bool BaseScrollContainer_obj::set_fixedScrollBars(bool value){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_99_set_fixedScrollBars)
+HXLINE( 100)		if (!(this->setStyle(HX_("fixedScrollBars",81,4c,7d,24),null()))) {
+HXLINE( 101)			return this->_hx___fixedScrollBars;
+            		}
+HXLINE( 103)		if ((this->_hx___fixedScrollBars == value)) {
+HXLINE( 104)			return this->_hx___fixedScrollBars;
+            		}
+HXLINE( 109)		this->_previousClearStyle = this->clearStyle_fixedScrollBars_dyn();
+HXLINE( 110)		this->_hx___fixedScrollBars = value;
+HXLINE( 111)		this->setInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+HXLINE( 112)		return this->_hx___fixedScrollBars;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_fixedScrollBars,return )
+
+bool BaseScrollContainer_obj::clearStyle_fixedScrollBars(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_125_clearStyle_fixedScrollBars)
+HXLINE( 126)		this->set_fixedScrollBars(false);
+HXLINE( 127)		return this->get_fixedScrollBars();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,clearStyle_fixedScrollBars,return )
+
+bool BaseScrollContainer_obj::get_showScrollBars(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_85_get_showScrollBars)
+HXDLIN(  85)		return this->_hx___showScrollBars;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_showScrollBars,return )
+
+bool BaseScrollContainer_obj::set_showScrollBars(bool value){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_99_set_showScrollBars)
+HXLINE( 100)		if (!(this->setStyle(HX_("showScrollBars",4a,4d,f5,28),null()))) {
+HXLINE( 101)			return this->_hx___showScrollBars;
+            		}
+HXLINE( 103)		if ((this->_hx___showScrollBars == value)) {
+HXLINE( 104)			return this->_hx___showScrollBars;
+            		}
+HXLINE( 109)		this->_previousClearStyle = this->clearStyle_showScrollBars_dyn();
+HXLINE( 110)		this->_hx___showScrollBars = value;
+HXLINE( 111)		this->setInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+HXLINE( 112)		return this->_hx___showScrollBars;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_showScrollBars,return )
+
+bool BaseScrollContainer_obj::clearStyle_showScrollBars(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_125_clearStyle_showScrollBars)
+HXLINE( 126)		this->set_showScrollBars(true);
+HXLINE( 127)		return this->get_showScrollBars();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,clearStyle_showScrollBars,return )
+
+bool BaseScrollContainer_obj::get_autoHideScrollBars(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_85_get_autoHideScrollBars)
+HXDLIN(  85)		return this->_hx___autoHideScrollBars;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_autoHideScrollBars,return )
+
+bool BaseScrollContainer_obj::set_autoHideScrollBars(bool value){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_99_set_autoHideScrollBars)
+HXLINE( 100)		if (!(this->setStyle(HX_("autoHideScrollBars",1e,ed,f4,84),null()))) {
+HXLINE( 101)			return this->_hx___autoHideScrollBars;
+            		}
+HXLINE( 103)		if ((this->_hx___autoHideScrollBars == value)) {
+HXLINE( 104)			return this->_hx___autoHideScrollBars;
+            		}
+HXLINE( 109)		this->_previousClearStyle = this->clearStyle_autoHideScrollBars_dyn();
+HXLINE( 110)		this->_hx___autoHideScrollBars = value;
+HXLINE( 111)		this->setInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+HXLINE( 112)		return this->_hx___autoHideScrollBars;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_autoHideScrollBars,return )
+
+bool BaseScrollContainer_obj::clearStyle_autoHideScrollBars(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_125_clearStyle_autoHideScrollBars)
+HXLINE( 126)		this->set_autoHideScrollBars(true);
+HXLINE( 127)		return this->get_autoHideScrollBars();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,clearStyle_autoHideScrollBars,return )
+
+ ::feathers::layout::RelativePosition BaseScrollContainer_obj::get_scrollBarXPosition(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_85_get_scrollBarXPosition)
+HXDLIN(  85)		return this->_hx___scrollBarXPosition;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_scrollBarXPosition,return )
+
+ ::feathers::layout::RelativePosition BaseScrollContainer_obj::set_scrollBarXPosition( ::feathers::layout::RelativePosition value){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_99_set_scrollBarXPosition)
+HXLINE( 100)		if (!(this->setStyle(HX_("scrollBarXPosition",9b,f4,81,52),null()))) {
+HXLINE( 101)			return this->_hx___scrollBarXPosition;
+            		}
+HXLINE( 103)		if (::hx::IsPointerEq( this->_hx___scrollBarXPosition,value )) {
+HXLINE( 104)			return this->_hx___scrollBarXPosition;
+            		}
+HXLINE( 109)		this->_previousClearStyle = this->clearStyle_scrollBarXPosition_dyn();
+HXLINE( 110)		this->_hx___scrollBarXPosition = value;
+HXLINE( 111)		this->setInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+HXLINE( 112)		return this->_hx___scrollBarXPosition;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_scrollBarXPosition,return )
+
+ ::feathers::layout::RelativePosition BaseScrollContainer_obj::clearStyle_scrollBarXPosition(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_125_clearStyle_scrollBarXPosition)
+HXLINE( 126)		this->set_scrollBarXPosition(::feathers::layout::RelativePosition_obj::BOTTOM_dyn());
+HXLINE( 127)		return this->get_scrollBarXPosition();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,clearStyle_scrollBarXPosition,return )
+
+ ::feathers::layout::RelativePosition BaseScrollContainer_obj::get_scrollBarYPosition(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_85_get_scrollBarYPosition)
+HXDLIN(  85)		return this->_hx___scrollBarYPosition;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_scrollBarYPosition,return )
+
+ ::feathers::layout::RelativePosition BaseScrollContainer_obj::set_scrollBarYPosition( ::feathers::layout::RelativePosition value){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_99_set_scrollBarYPosition)
+HXLINE( 100)		if (!(this->setStyle(HX_("scrollBarYPosition",9c,5d,73,25),null()))) {
+HXLINE( 101)			return this->_hx___scrollBarYPosition;
+            		}
+HXLINE( 103)		if (::hx::IsPointerEq( this->_hx___scrollBarYPosition,value )) {
+HXLINE( 104)			return this->_hx___scrollBarYPosition;
+            		}
+HXLINE( 109)		this->_previousClearStyle = this->clearStyle_scrollBarYPosition_dyn();
+HXLINE( 110)		this->_hx___scrollBarYPosition = value;
+HXLINE( 111)		this->setInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+HXLINE( 112)		return this->_hx___scrollBarYPosition;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_scrollBarYPosition,return )
+
+ ::feathers::layout::RelativePosition BaseScrollContainer_obj::clearStyle_scrollBarYPosition(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_125_clearStyle_scrollBarYPosition)
+HXLINE( 126)		this->set_scrollBarYPosition(::feathers::layout::RelativePosition_obj::RIGHT_dyn());
+HXLINE( 127)		return this->get_scrollBarYPosition();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,clearStyle_scrollBarYPosition,return )
+
+Float BaseScrollContainer_obj::get_showScrollBarMinimumDuration(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_85_get_showScrollBarMinimumDuration)
+HXDLIN(  85)		return this->_hx___showScrollBarMinimumDuration;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_showScrollBarMinimumDuration,return )
+
+Float BaseScrollContainer_obj::set_showScrollBarMinimumDuration(Float value){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_99_set_showScrollBarMinimumDuration)
+HXLINE( 100)		if (!(this->setStyle(HX_("showScrollBarMinimumDuration",39,8e,3b,f7),null()))) {
+HXLINE( 101)			return this->_hx___showScrollBarMinimumDuration;
+            		}
+HXLINE( 103)		if ((this->_hx___showScrollBarMinimumDuration == value)) {
+HXLINE( 104)			return this->_hx___showScrollBarMinimumDuration;
+            		}
+HXLINE( 109)		this->_previousClearStyle = this->clearStyle_showScrollBarMinimumDuration_dyn();
+HXLINE( 110)		this->_hx___showScrollBarMinimumDuration = value;
+HXLINE( 111)		this->setInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+HXLINE( 112)		return this->_hx___showScrollBarMinimumDuration;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_showScrollBarMinimumDuration,return )
+
+Float BaseScrollContainer_obj::clearStyle_showScrollBarMinimumDuration(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_125_clearStyle_showScrollBarMinimumDuration)
+HXLINE( 126)		this->set_showScrollBarMinimumDuration(((Float)0.5));
+HXLINE( 127)		return this->get_showScrollBarMinimumDuration();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,clearStyle_showScrollBarMinimumDuration,return )
+
+Float BaseScrollContainer_obj::get_hideScrollBarDuration(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_85_get_hideScrollBarDuration)
+HXDLIN(  85)		return this->_hx___hideScrollBarDuration;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_hideScrollBarDuration,return )
+
+Float BaseScrollContainer_obj::set_hideScrollBarDuration(Float value){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_99_set_hideScrollBarDuration)
+HXLINE( 100)		if (!(this->setStyle(HX_("hideScrollBarDuration",18,6a,9a,c2),null()))) {
+HXLINE( 101)			return this->_hx___hideScrollBarDuration;
+            		}
+HXLINE( 103)		if ((this->_hx___hideScrollBarDuration == value)) {
+HXLINE( 104)			return this->_hx___hideScrollBarDuration;
+            		}
+HXLINE( 109)		this->_previousClearStyle = this->clearStyle_hideScrollBarDuration_dyn();
+HXLINE( 110)		this->_hx___hideScrollBarDuration = value;
+HXLINE( 111)		this->setInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+HXLINE( 112)		return this->_hx___hideScrollBarDuration;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_hideScrollBarDuration,return )
+
+Float BaseScrollContainer_obj::clearStyle_hideScrollBarDuration(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_125_clearStyle_hideScrollBarDuration)
+HXLINE( 126)		this->set_hideScrollBarDuration(((Float)0.2));
+HXLINE( 127)		return this->get_hideScrollBarDuration();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,clearStyle_hideScrollBarDuration,return )
+
+::Dynamic BaseScrollContainer_obj::get_hideScrollBarEase(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_85_get_hideScrollBarEase)
+HXDLIN(  85)		return this->_hx___hideScrollBarEase;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_hideScrollBarEase,return )
+
+::Dynamic BaseScrollContainer_obj::set_hideScrollBarEase(::Dynamic value){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_99_set_hideScrollBarEase)
+HXLINE( 100)		if (!(this->setStyle(HX_("hideScrollBarEase",b2,34,1b,26),null()))) {
+HXLINE( 101)			return this->_hx___hideScrollBarEase;
+            		}
+HXLINE( 103)		if (::hx::IsInstanceEq( this->_hx___hideScrollBarEase,value )) {
+HXLINE( 104)			return this->_hx___hideScrollBarEase;
+            		}
+HXLINE( 109)		this->_previousClearStyle = this->clearStyle_hideScrollBarEase_dyn();
+HXLINE( 110)		this->_hx___hideScrollBarEase = value;
+HXLINE( 111)		this->setInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+HXLINE( 112)		return this->_hx___hideScrollBarEase;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_hideScrollBarEase,return )
+
+::Dynamic BaseScrollContainer_obj::clearStyle_hideScrollBarEase(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_125_clearStyle_hideScrollBarEase)
+HXLINE( 126)		this->set_hideScrollBarEase(::motion::easing::Quart_obj::easeOut);
+HXLINE( 127)		return this->get_hideScrollBarEase();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,clearStyle_hideScrollBarEase,return )
+
+bool BaseScrollContainer_obj::get_scrollPixelSnapping(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_85_get_scrollPixelSnapping)
+HXDLIN(  85)		return this->_hx___scrollPixelSnapping;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,get_scrollPixelSnapping,return )
+
+bool BaseScrollContainer_obj::set_scrollPixelSnapping(bool value){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_99_set_scrollPixelSnapping)
+HXLINE( 100)		if (!(this->setStyle(HX_("scrollPixelSnapping",15,62,d3,0b),null()))) {
+HXLINE( 101)			return this->_hx___scrollPixelSnapping;
+            		}
+HXLINE( 103)		if ((this->_hx___scrollPixelSnapping == value)) {
+HXLINE( 104)			return this->_hx___scrollPixelSnapping;
+            		}
+HXLINE( 109)		this->_previousClearStyle = this->clearStyle_scrollPixelSnapping_dyn();
+HXLINE( 110)		this->_hx___scrollPixelSnapping = value;
+HXLINE( 111)		this->setInvalid(::feathers::core::InvalidationFlag_obj::STYLES_dyn());
+HXLINE( 112)		return this->_hx___scrollPixelSnapping;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(BaseScrollContainer_obj,set_scrollPixelSnapping,return )
+
+bool BaseScrollContainer_obj::clearStyle_scrollPixelSnapping(){
+            	HX_STACKFRAME(&_hx_pos_c57e7e519d634598_125_clearStyle_scrollPixelSnapping)
+HXLINE( 126)		this->set_scrollPixelSnapping(false);
+HXLINE( 127)		return this->get_scrollPixelSnapping();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BaseScrollContainer_obj,clearStyle_scrollPixelSnapping,return )
+
+ ::feathers::core::InvalidationFlag BaseScrollContainer_obj::INVALIDATION_FLAG_SCROLLER_FACTORY;
+
+ ::feathers::core::InvalidationFlag BaseScrollContainer_obj::INVALIDATION_FLAG_SCROLL_BAR_FACTORY;
+
+ ::feathers::utils::DisplayObjectFactory BaseScrollContainer_obj::defaultScrollBarXFactory;
+
+ ::feathers::utils::DisplayObjectFactory BaseScrollContainer_obj::defaultScrollBarYFactory;
+
+
+::hx::ObjectPtr< BaseScrollContainer_obj > BaseScrollContainer_obj::__new() {
+	::hx::ObjectPtr< BaseScrollContainer_obj > __this = new BaseScrollContainer_obj();
+	__this->__construct();
+	return __this;
+}
+
+::hx::ObjectPtr< BaseScrollContainer_obj > BaseScrollContainer_obj::__alloc(::hx::Ctx *_hx_ctx) {
+	BaseScrollContainer_obj *__this = (BaseScrollContainer_obj*)(::hx::Ctx::alloc(_hx_ctx, sizeof(BaseScrollContainer_obj), true, "feathers.controls.supportClasses.BaseScrollContainer"));
+	*(void **)__this = BaseScrollContainer_obj::_hx_vtable;
+	__this->__construct();
+	return __this;
+}
+
+BaseScrollContainer_obj::BaseScrollContainer_obj()
+{
+}
+
+void BaseScrollContainer_obj::__Mark(HX_MARK_PARAMS)
+{
+	HX_MARK_BEGIN_CLASS(BaseScrollContainer);
+	HX_MARK_MEMBER_NAME(_viewPort,"_viewPort");
+	HX_MARK_MEMBER_NAME(scroller,"scroller");
+	HX_MARK_MEMBER_NAME(_scrollerDraggingX,"_scrollerDraggingX");
+	HX_MARK_MEMBER_NAME(_scrollerDraggingY,"_scrollerDraggingY");
+	HX_MARK_MEMBER_NAME(_scrollBarXHover,"_scrollBarXHover");
+	HX_MARK_MEMBER_NAME(_scrollBarYHover,"_scrollBarYHover");
+	HX_MARK_MEMBER_NAME(_currentBackgroundSkin,"_currentBackgroundSkin");
+	HX_MARK_MEMBER_NAME(_backgroundSkinMeasurements,"_backgroundSkinMeasurements");
+	HX_MARK_MEMBER_NAME(_currentMaskSkin,"_currentMaskSkin");
+	HX_MARK_MEMBER_NAME(_currentViewPortMaskSkin,"_currentViewPortMaskSkin");
+	HX_MARK_MEMBER_NAME(_fallbackViewPortMaskSkin,"_fallbackViewPortMaskSkin");
+	HX_MARK_MEMBER_NAME(topViewPortOffset,"topViewPortOffset");
+	HX_MARK_MEMBER_NAME(rightViewPortOffset,"rightViewPortOffset");
+	HX_MARK_MEMBER_NAME(bottomViewPortOffset,"bottomViewPortOffset");
+	HX_MARK_MEMBER_NAME(leftViewPortOffset,"leftViewPortOffset");
+	HX_MARK_MEMBER_NAME(chromeMeasuredWidth,"chromeMeasuredWidth");
+	HX_MARK_MEMBER_NAME(chromeMeasuredMinWidth,"chromeMeasuredMinWidth");
+	HX_MARK_MEMBER_NAME(chromeMeasuredMaxWidth,"chromeMeasuredMaxWidth");
+	HX_MARK_MEMBER_NAME(chromeMeasuredHeight,"chromeMeasuredHeight");
+	HX_MARK_MEMBER_NAME(chromeMeasuredMinHeight,"chromeMeasuredMinHeight");
+	HX_MARK_MEMBER_NAME(chromeMeasuredMaxHeight,"chromeMeasuredMaxHeight");
+	HX_MARK_MEMBER_NAME(scrollBarX,"scrollBarX");
+	HX_MARK_MEMBER_NAME(scrollBarY,"scrollBarY");
+	HX_MARK_MEMBER_NAME(_ignoreScrollBarXChange,"_ignoreScrollBarXChange");
+	HX_MARK_MEMBER_NAME(_ignoreScrollBarYChange,"_ignoreScrollBarYChange");
+	HX_MARK_MEMBER_NAME(showScrollBarX,"showScrollBarX");
+	HX_MARK_MEMBER_NAME(showScrollBarY,"showScrollBarY");
+	HX_MARK_MEMBER_NAME(_oldScrollBarXFactory,"_oldScrollBarXFactory");
+	HX_MARK_MEMBER_NAME(_scrollBarXFactory,"_scrollBarXFactory");
+	HX_MARK_MEMBER_NAME(_oldScrollBarYFactory,"_oldScrollBarYFactory");
+	HX_MARK_MEMBER_NAME(_scrollBarYFactory,"_scrollBarYFactory");
+	HX_MARK_MEMBER_NAME(_scrollerFactory,"_scrollerFactory");
+	HX_MARK_MEMBER_NAME(_temporaryScrollX,"_temporaryScrollX");
+	HX_MARK_MEMBER_NAME(_temporaryRestrictedScrollX,"_temporaryRestrictedScrollX");
+	HX_MARK_MEMBER_NAME(_temporaryScrollY,"_temporaryScrollY");
+	HX_MARK_MEMBER_NAME(_temporaryRestrictedScrollY,"_temporaryRestrictedScrollY");
+	HX_MARK_MEMBER_NAME(_scrollStepX,"_scrollStepX");
+	HX_MARK_MEMBER_NAME(_scrollStepY,"_scrollStepY");
+	HX_MARK_MEMBER_NAME(_scrollPolicyX,"_scrollPolicyX");
+	HX_MARK_MEMBER_NAME(_scrollPolicyY,"_scrollPolicyY");
+	HX_MARK_MEMBER_NAME(_scrollBarXRevealTime,"_scrollBarXRevealTime");
+	HX_MARK_MEMBER_NAME(_scrollBarYRevealTime,"_scrollBarYRevealTime");
+	HX_MARK_MEMBER_NAME(_hideScrollBarX,"_hideScrollBarX");
+	HX_MARK_MEMBER_NAME(_hideScrollBarY,"_hideScrollBarY");
+	HX_MARK_MEMBER_NAME(_prevMinScrollX,"_prevMinScrollX");
+	HX_MARK_MEMBER_NAME(_prevMaxScrollX,"_prevMaxScrollX");
+	HX_MARK_MEMBER_NAME(_prevMinScrollY,"_prevMinScrollY");
+	HX_MARK_MEMBER_NAME(_prevMaxScrollY,"_prevMaxScrollY");
+	HX_MARK_MEMBER_NAME(_currentScrollRect,"_currentScrollRect");
+	HX_MARK_MEMBER_NAME(_scrollRect1,"_scrollRect1");
+	HX_MARK_MEMBER_NAME(_scrollRect2,"_scrollRect2");
+	HX_MARK_MEMBER_NAME(_ignoreScrollerChanges,"_ignoreScrollerChanges");
+	HX_MARK_MEMBER_NAME(_settingScrollerDimensions,"_settingScrollerDimensions");
+	HX_MARK_MEMBER_NAME(_viewPortBoundsChanged,"_viewPortBoundsChanged");
+	HX_MARK_MEMBER_NAME(_ignoreViewPortResizing,"_ignoreViewPortResizing");
+	HX_MARK_MEMBER_NAME(_previousViewPortWidth,"_previousViewPortWidth");
+	HX_MARK_MEMBER_NAME(_previousViewPortHeight,"_previousViewPortHeight");
+	HX_MARK_MEMBER_NAME(_scrollMode,"_scrollMode");
+	HX_MARK_MEMBER_NAME(_hx___paddingTop,"__paddingTop");
+	HX_MARK_MEMBER_NAME(_hx___paddingRight,"__paddingRight");
+	HX_MARK_MEMBER_NAME(_hx___paddingBottom,"__paddingBottom");
+	HX_MARK_MEMBER_NAME(_hx___paddingLeft,"__paddingLeft");
+	HX_MARK_MEMBER_NAME(_hx___backgroundSkin,"__backgroundSkin");
+	HX_MARK_MEMBER_NAME(_hx___disabledBackgroundSkin,"__disabledBackgroundSkin");
+	HX_MARK_MEMBER_NAME(_hx___maskSkin,"__maskSkin");
+	HX_MARK_MEMBER_NAME(_hx___viewPortMaskSkin,"__viewPortMaskSkin");
+	HX_MARK_MEMBER_NAME(_hx___fixedScrollBars,"__fixedScrollBars");
+	HX_MARK_MEMBER_NAME(_hx___showScrollBars,"__showScrollBars");
+	HX_MARK_MEMBER_NAME(_hx___autoHideScrollBars,"__autoHideScrollBars");
+	HX_MARK_MEMBER_NAME(_hx___scrollBarXPosition,"__scrollBarXPosition");
+	HX_MARK_MEMBER_NAME(_hx___scrollBarYPosition,"__scrollBarYPosition");
+	HX_MARK_MEMBER_NAME(_hx___showScrollBarMinimumDuration,"__showScrollBarMinimumDuration");
+	HX_MARK_MEMBER_NAME(_hx___hideScrollBarDuration,"__hideScrollBarDuration");
+	HX_MARK_MEMBER_NAME(_hx___hideScrollBarEase,"__hideScrollBarEase");
+	HX_MARK_MEMBER_NAME(_hx___scrollPixelSnapping,"__scrollPixelSnapping");
+	 ::feathers::core::FeathersControl_obj::__Mark(HX_MARK_ARG);
+	HX_MARK_END_CLASS();
+}
+
+void BaseScrollContainer_obj::__Visit(HX_VISIT_PARAMS)
+{
+	HX_VISIT_MEMBER_NAME(_viewPort,"_viewPort");
+	HX_VISIT_MEMBER_NAME(scroller,"scroller");
+	HX_VISIT_MEMBER_NAME(_scrollerDraggingX,"_scrollerDraggingX");
+	HX_VISIT_MEMBER_NAME(_scrollerDraggingY,"_scrollerDraggingY");
+	HX_VISIT_MEMBER_NAME(_scrollBarXHover,"_scrollBarXHover");
+	HX_VISIT_MEMBER_NAME(_scrollBarYHover,"_scrollBarYHover");
+	HX_VISIT_MEMBER_NAME(_currentBackgroundSkin,"_currentBackgroundSkin");
+	HX_VISIT_MEMBER_NAME(_backgroundSkinMeasurements,"_backgroundSkinMeasurements");
+	HX_VISIT_MEMBER_NAME(_currentMaskSkin,"_currentMaskSkin");
+	HX_VISIT_MEMBER_NAME(_currentViewPortMaskSkin,"_currentViewPortMaskSkin");
+	HX_VISIT_MEMBER_NAME(_fallbackViewPortMaskSkin,"_fallbackViewPortMaskSkin");
+	HX_VISIT_MEMBER_NAME(topViewPortOffset,"topViewPortOffset");
+	HX_VISIT_MEMBER_NAME(rightViewPortOffset,"rightViewPortOffset");
+	HX_VISIT_MEMBER_NAME(bottomViewPortOffset,"bottomViewPortOffset");
+	HX_VISIT_MEMBER_NAME(leftViewPortOffset,"leftViewPortOffset");
+	HX_VISIT_MEMBER_NAME(chromeMeasuredWidth,"chromeMeasuredWidth");
+	HX_VISIT_MEMBER_NAME(chromeMeasuredMinWidth,"chromeMeasuredMinWidth");
+	HX_VISIT_MEMBER_NAME(chromeMeasuredMaxWidth,"chromeMeasuredMaxWidth");
+	HX_VISIT_MEMBER_NAME(chromeMeasuredHeight,"chromeMeasuredHeight");
+	HX_VISIT_MEMBER_NAME(chromeMeasuredMinHeight,"chromeMeasuredMinHeight");
+	HX_VISIT_MEMBER_NAME(chromeMeasuredMaxHeight,"chromeMeasuredMaxHeight");
+	HX_VISIT_MEMBER_NAME(scrollBarX,"scrollBarX");
+	HX_VISIT_MEMBER_NAME(scrollBarY,"scrollBarY");
+	HX_VISIT_MEMBER_NAME(_ignoreScrollBarXChange,"_ignoreScrollBarXChange");
+	HX_VISIT_MEMBER_NAME(_ignoreScrollBarYChange,"_ignoreScrollBarYChange");
+	HX_VISIT_MEMBER_NAME(showScrollBarX,"showScrollBarX");
+	HX_VISIT_MEMBER_NAME(showScrollBarY,"showScrollBarY");
+	HX_VISIT_MEMBER_NAME(_oldScrollBarXFactory,"_oldScrollBarXFactory");
+	HX_VISIT_MEMBER_NAME(_scrollBarXFactory,"_scrollBarXFactory");
+	HX_VISIT_MEMBER_NAME(_oldScrollBarYFactory,"_oldScrollBarYFactory");
+	HX_VISIT_MEMBER_NAME(_scrollBarYFactory,"_scrollBarYFactory");
+	HX_VISIT_MEMBER_NAME(_scrollerFactory,"_scrollerFactory");
+	HX_VISIT_MEMBER_NAME(_temporaryScrollX,"_temporaryScrollX");
+	HX_VISIT_MEMBER_NAME(_temporaryRestrictedScrollX,"_temporaryRestrictedScrollX");
+	HX_VISIT_MEMBER_NAME(_temporaryScrollY,"_temporaryScrollY");
+	HX_VISIT_MEMBER_NAME(_temporaryRestrictedScrollY,"_temporaryRestrictedScrollY");
+	HX_VISIT_MEMBER_NAME(_scrollStepX,"_scrollStepX");
+	HX_VISIT_MEMBER_NAME(_scrollStepY,"_scrollStepY");
+	HX_VISIT_MEMBER_NAME(_scrollPolicyX,"_scrollPolicyX");
+	HX_VISIT_MEMBER_NAME(_scrollPolicyY,"_scrollPolicyY");
+	HX_VISIT_MEMBER_NAME(_scrollBarXRevealTime,"_scrollBarXRevealTime");
+	HX_VISIT_MEMBER_NAME(_scrollBarYRevealTime,"_scrollBarYRevealTime");
+	HX_VISIT_MEMBER_NAME(_hideScrollBarX,"_hideScrollBarX");
+	HX_VISIT_MEMBER_NAME(_hideScrollBarY,"_hideScrollBarY");
+	HX_VISIT_MEMBER_NAME(_prevMinScrollX,"_prevMinScrollX");
+	HX_VISIT_MEMBER_NAME(_prevMaxScrollX,"_prevMaxScrollX");
+	HX_VISIT_MEMBER_NAME(_prevMinScrollY,"_prevMinScrollY");
+	HX_VISIT_MEMBER_NAME(_prevMaxScrollY,"_prevMaxScrollY");
+	HX_VISIT_MEMBER_NAME(_currentScrollRect,"_currentScrollRect");
+	HX_VISIT_MEMBER_NAME(_scrollRect1,"_scrollRect1");
+	HX_VISIT_MEMBER_NAME(_scrollRect2,"_scrollRect2");
+	HX_VISIT_MEMBER_NAME(_ignoreScrollerChanges,"_ignoreScrollerChanges");
+	HX_VISIT_MEMBER_NAME(_settingScrollerDimensions,"_settingScrollerDimensions");
+	HX_VISIT_MEMBER_NAME(_viewPortBoundsChanged,"_viewPortBoundsChanged");
+	HX_VISIT_MEMBER_NAME(_ignoreViewPortResizing,"_ignoreViewPortResizing");
+	HX_VISIT_MEMBER_NAME(_previousViewPortWidth,"_previousViewPortWidth");
+	HX_VISIT_MEMBER_NAME(_previousViewPortHeight,"_previousViewPortHeight");
+	HX_VISIT_MEMBER_NAME(_scrollMode,"_scrollMode");
+	HX_VISIT_MEMBER_NAME(_hx___paddingTop,"__paddingTop");
+	HX_VISIT_MEMBER_NAME(_hx___paddingRight,"__paddingRight");
+	HX_VISIT_MEMBER_NAME(_hx___paddingBottom,"__paddingBottom");
+	HX_VISIT_MEMBER_NAME(_hx___paddingLeft,"__paddingLeft");
+	HX_VISIT_MEMBER_NAME(_hx___backgroundSkin,"__backgroundSkin");
+	HX_VISIT_MEMBER_NAME(_hx___disabledBackgroundSkin,"__disabledBackgroundSkin");
+	HX_VISIT_MEMBER_NAME(_hx___maskSkin,"__maskSkin");
+	HX_VISIT_MEMBER_NAME(_hx___viewPortMaskSkin,"__viewPortMaskSkin");
+	HX_VISIT_MEMBER_NAME(_hx___fixedScrollBars,"__fixedScrollBars");
+	HX_VISIT_MEMBER_NAME(_hx___showScrollBars,"__showScrollBars");
+	HX_VISIT_MEMBER_NAME(_hx___autoHideScrollBars,"__autoHideScrollBars");
+	HX_VISIT_MEMBER_NAME(_hx___scrollBarXPosition,"__scrollBarXPosition");
+	HX_VISIT_MEMBER_NAME(_hx___scrollBarYPosition,"__scrollBarYPosition");
+	HX_VISIT_MEMBER_NAME(_hx___showScrollBarMinimumDuration,"__showScrollBarMinimumDuration");
+	HX_VISIT_MEMBER_NAME(_hx___hideScrollBarDuration,"__hideScrollBarDuration");
+	HX_VISIT_MEMBER_NAME(_hx___hideScrollBarEase,"__hideScrollBarEase");
+	HX_VISIT_MEMBER_NAME(_hx___scrollPixelSnapping,"__scrollPixelSnapping");
+	 ::feathers::core::FeathersControl_obj::__Visit(HX_VISIT_ARG);
+}
+
+::hx::Val BaseScrollContainer_obj::__Field(const ::String &inName,::hx::PropertyAccess inCallProp)
+{
+	switch(inName.length) {
+	case 6:
+		if (HX_FIELD_EQ(inName,"update") ) { return ::hx::Val( update_dyn() ); }
+		break;
+	case 7:
+		if (HX_FIELD_EQ(inName,"scrollX") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_scrollX() ); }
+		if (HX_FIELD_EQ(inName,"scrollY") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_scrollY() ); }
+		if (HX_FIELD_EQ(inName,"measure") ) { return ::hx::Val( measure_dyn() ); }
+		break;
+	case 8:
+		if (HX_FIELD_EQ(inName,"viewPort") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_viewPort() ); }
+		if (HX_FIELD_EQ(inName,"scroller") ) { return ::hx::Val( scroller ); }
+		if (HX_FIELD_EQ(inName,"maskSkin") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_maskSkin() ); }
+		break;
+	case 9:
+		if (HX_FIELD_EQ(inName,"_viewPort") ) { return ::hx::Val( _viewPort ); }
+		break;
+	case 10:
+		if (HX_FIELD_EQ(inName,"paddingTop") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_paddingTop() ); }
+		if (HX_FIELD_EQ(inName,"scrollBarX") ) { return ::hx::Val( scrollBarX ); }
+		if (HX_FIELD_EQ(inName,"scrollBarY") ) { return ::hx::Val( scrollBarY ); }
+		if (HX_FIELD_EQ(inName,"minScrollX") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_minScrollX() ); }
+		if (HX_FIELD_EQ(inName,"minScrollY") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_minScrollY() ); }
+		if (HX_FIELD_EQ(inName,"maxScrollX") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_maxScrollX() ); }
+		if (HX_FIELD_EQ(inName,"maxScrollY") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_maxScrollY() ); }
+		if (HX_FIELD_EQ(inName,"scrollMode") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_scrollMode() ); }
+		if (HX_FIELD_EQ(inName,"setPadding") ) { return ::hx::Val( setPadding_dyn() ); }
+		if (HX_FIELD_EQ(inName,"__maskSkin") ) { return ::hx::Val( _hx___maskSkin ); }
+		break;
+	case 11:
+		if (HX_FIELD_EQ(inName,"paddingLeft") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_paddingLeft() ); }
+		if (HX_FIELD_EQ(inName,"get_scrollX") ) { return ::hx::Val( get_scrollX_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_scrollX") ) { return ::hx::Val( set_scrollX_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_scrollY") ) { return ::hx::Val( get_scrollY_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_scrollY") ) { return ::hx::Val( set_scrollY_dyn() ); }
+		if (HX_FIELD_EQ(inName,"scrollStepX") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_scrollStepX() ); }
+		if (HX_FIELD_EQ(inName,"scrollStepY") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_scrollStepY() ); }
+		if (HX_FIELD_EQ(inName,"_scrollMode") ) { return ::hx::Val( _scrollMode ); }
+		break;
+	case 12:
+		if (HX_FIELD_EQ(inName,"get_viewPort") ) { return ::hx::Val( get_viewPort_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_viewPort") ) { return ::hx::Val( set_viewPort_dyn() ); }
+		if (HX_FIELD_EQ(inName,"paddingRight") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_paddingRight() ); }
+		if (HX_FIELD_EQ(inName,"_scrollStepX") ) { return ::hx::Val( _scrollStepX ); }
+		if (HX_FIELD_EQ(inName,"_scrollStepY") ) { return ::hx::Val( _scrollStepY ); }
+		if (HX_FIELD_EQ(inName,"_scrollRect1") ) { return ::hx::Val( _scrollRect1 ); }
+		if (HX_FIELD_EQ(inName,"_scrollRect2") ) { return ::hx::Val( _scrollRect2 ); }
+		if (HX_FIELD_EQ(inName,"reclaimMouse") ) { return ::hx::Val( reclaimMouse_dyn() ); }
+		if (HX_FIELD_EQ(inName,"reclaimTouch") ) { return ::hx::Val( reclaimTouch_dyn() ); }
+		if (HX_FIELD_EQ(inName,"__paddingTop") ) { return ::hx::Val( _hx___paddingTop ); }
+		if (HX_FIELD_EQ(inName,"get_maskSkin") ) { return ::hx::Val( get_maskSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_maskSkin") ) { return ::hx::Val( set_maskSkin_dyn() ); }
+		break;
+	case 13:
+		if (HX_FIELD_EQ(inName,"paddingBottom") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_paddingBottom() ); }
+		if (HX_FIELD_EQ(inName,"scrollPolicyX") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_scrollPolicyX() ); }
+		if (HX_FIELD_EQ(inName,"scrollPolicyY") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_scrollPolicyY() ); }
+		if (HX_FIELD_EQ(inName,"__paddingLeft") ) { return ::hx::Val( _hx___paddingLeft ); }
+		break;
+	case 14:
+		if (HX_FIELD_EQ(inName,"get_tabEnabled") ) { return ::hx::Val( get_tabEnabled_dyn() ); }
+		if (HX_FIELD_EQ(inName,"backgroundSkin") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_backgroundSkin() ); }
+		if (HX_FIELD_EQ(inName,"showScrollBars") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_showScrollBars() ); }
+		if (HX_FIELD_EQ(inName,"showScrollBarX") ) { return ::hx::Val( showScrollBarX ); }
+		if (HX_FIELD_EQ(inName,"showScrollBarY") ) { return ::hx::Val( showScrollBarY ); }
+		if (HX_FIELD_EQ(inName,"get_minScrollX") ) { return ::hx::Val( get_minScrollX_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_minScrollY") ) { return ::hx::Val( get_minScrollY_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_maxScrollX") ) { return ::hx::Val( get_maxScrollX_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_maxScrollY") ) { return ::hx::Val( get_maxScrollY_dyn() ); }
+		if (HX_FIELD_EQ(inName,"_scrollPolicyX") ) { return ::hx::Val( _scrollPolicyX ); }
+		if (HX_FIELD_EQ(inName,"_scrollPolicyY") ) { return ::hx::Val( _scrollPolicyY ); }
+		if (HX_FIELD_EQ(inName,"get_scrollMode") ) { return ::hx::Val( get_scrollMode_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_scrollMode") ) { return ::hx::Val( set_scrollMode_dyn() ); }
+		if (HX_FIELD_EQ(inName,"createScroller") ) { return ::hx::Val( createScroller_dyn() ); }
+		if (HX_FIELD_EQ(inName,"refreshEnabled") ) { return ::hx::Val( refreshEnabled_dyn() ); }
+		if (HX_FIELD_EQ(inName,"layoutChildren") ) { return ::hx::Val( layoutChildren_dyn() ); }
+		if (HX_FIELD_EQ(inName,"layoutMaskSkin") ) { return ::hx::Val( layoutMaskSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"hideScrollBarX") ) { return ::hx::Val( hideScrollBarX_dyn() ); }
+		if (HX_FIELD_EQ(inName,"hideScrollBarY") ) { return ::hx::Val( hideScrollBarY_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_paddingTop") ) { return ::hx::Val( get_paddingTop_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_paddingTop") ) { return ::hx::Val( set_paddingTop_dyn() ); }
+		if (HX_FIELD_EQ(inName,"__paddingRight") ) { return ::hx::Val( _hx___paddingRight ); }
+		break;
+	case 15:
+		if (HX_FIELD_EQ(inName,"fixedScrollBars") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_fixedScrollBars() ); }
+		if (HX_FIELD_EQ(inName,"scrollerFactory") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_scrollerFactory() ); }
+		if (HX_FIELD_EQ(inName,"get_scrollStepX") ) { return ::hx::Val( get_scrollStepX_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_scrollStepX") ) { return ::hx::Val( set_scrollStepX_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_scrollStepY") ) { return ::hx::Val( get_scrollStepY_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_scrollStepY") ) { return ::hx::Val( set_scrollStepY_dyn() ); }
+		if (HX_FIELD_EQ(inName,"_hideScrollBarX") ) { return ::hx::Val( _hideScrollBarX ); }
+		if (HX_FIELD_EQ(inName,"_hideScrollBarY") ) { return ::hx::Val( _hideScrollBarY ); }
+		if (HX_FIELD_EQ(inName,"_prevMinScrollX") ) { return ::hx::Val( _prevMinScrollX ); }
+		if (HX_FIELD_EQ(inName,"_prevMaxScrollX") ) { return ::hx::Val( _prevMaxScrollX ); }
+		if (HX_FIELD_EQ(inName,"_prevMinScrollY") ) { return ::hx::Val( _prevMinScrollY ); }
+		if (HX_FIELD_EQ(inName,"_prevMaxScrollY") ) { return ::hx::Val( _prevMaxScrollY ); }
+		if (HX_FIELD_EQ(inName,"measureViewPort") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_measureViewPort() ); }
+		if (HX_FIELD_EQ(inName,"refreshViewPort") ) { return ::hx::Val( refreshViewPort_dyn() ); }
+		if (HX_FIELD_EQ(inName,"refreshMaskSkin") ) { return ::hx::Val( refreshMaskSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"__paddingBottom") ) { return ::hx::Val( _hx___paddingBottom ); }
+		if (HX_FIELD_EQ(inName,"get_paddingLeft") ) { return ::hx::Val( get_paddingLeft_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_paddingLeft") ) { return ::hx::Val( set_paddingLeft_dyn() ); }
+		break;
+	case 16:
+		if (HX_FIELD_EQ(inName,"_scrollBarXHover") ) { return ::hx::Val( _scrollBarXHover ); }
+		if (HX_FIELD_EQ(inName,"_scrollBarYHover") ) { return ::hx::Val( _scrollBarYHover ); }
+		if (HX_FIELD_EQ(inName,"_currentMaskSkin") ) { return ::hx::Val( _currentMaskSkin ); }
+		if (HX_FIELD_EQ(inName,"viewPortMaskSkin") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_viewPortMaskSkin() ); }
+		if (HX_FIELD_EQ(inName,"_scrollerFactory") ) { return ::hx::Val( _scrollerFactory ); }
+		if (HX_FIELD_EQ(inName,"needsMeasurement") ) { return ::hx::Val( needsMeasurement_dyn() ); }
+		if (HX_FIELD_EQ(inName,"createScrollBars") ) { return ::hx::Val( createScrollBars_dyn() ); }
+		if (HX_FIELD_EQ(inName,"layoutScrollBars") ) { return ::hx::Val( layoutScrollBars_dyn() ); }
+		if (HX_FIELD_EQ(inName,"revealScrollBarX") ) { return ::hx::Val( revealScrollBarX_dyn() ); }
+		if (HX_FIELD_EQ(inName,"revealScrollBarY") ) { return ::hx::Val( revealScrollBarY_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_paddingRight") ) { return ::hx::Val( get_paddingRight_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_paddingRight") ) { return ::hx::Val( set_paddingRight_dyn() ); }
+		if (HX_FIELD_EQ(inName,"__backgroundSkin") ) { return ::hx::Val( _hx___backgroundSkin ); }
+		if (HX_FIELD_EQ(inName,"__showScrollBars") ) { return ::hx::Val( _hx___showScrollBars ); }
+		break;
+	case 17:
+		if (HX_FIELD_EQ(inName,"topViewPortOffset") ) { return ::hx::Val( topViewPortOffset ); }
+		if (HX_FIELD_EQ(inName,"scrollBarXFactory") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_scrollBarXFactory() ); }
+		if (HX_FIELD_EQ(inName,"scrollBarYFactory") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_scrollBarYFactory() ); }
+		if (HX_FIELD_EQ(inName,"_temporaryScrollX") ) { return ::hx::Val( _temporaryScrollX ); }
+		if (HX_FIELD_EQ(inName,"restrictedScrollX") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_restrictedScrollX() ); }
+		if (HX_FIELD_EQ(inName,"_temporaryScrollY") ) { return ::hx::Val( _temporaryScrollY ); }
+		if (HX_FIELD_EQ(inName,"restrictedScrollY") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_restrictedScrollY() ); }
+		if (HX_FIELD_EQ(inName,"get_scrollPolicyX") ) { return ::hx::Val( get_scrollPolicyX_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_scrollPolicyX") ) { return ::hx::Val( set_scrollPolicyX_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_scrollPolicyY") ) { return ::hx::Val( get_scrollPolicyY_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_scrollPolicyY") ) { return ::hx::Val( set_scrollPolicyY_dyn() ); }
+		if (HX_FIELD_EQ(inName,"hideScrollBarEase") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_hideScrollBarEase() ); }
+		if (HX_FIELD_EQ(inName,"refreshScrollRect") ) { return ::hx::Val( refreshScrollRect_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_paddingBottom") ) { return ::hx::Val( get_paddingBottom_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_paddingBottom") ) { return ::hx::Val( set_paddingBottom_dyn() ); }
+		if (HX_FIELD_EQ(inName,"__fixedScrollBars") ) { return ::hx::Val( _hx___fixedScrollBars ); }
+		break;
+	case 18:
+		if (HX_FIELD_EQ(inName,"_scrollerDraggingX") ) { return ::hx::Val( _scrollerDraggingX ); }
+		if (HX_FIELD_EQ(inName,"_scrollerDraggingY") ) { return ::hx::Val( _scrollerDraggingY ); }
+		if (HX_FIELD_EQ(inName,"leftViewPortOffset") ) { return ::hx::Val( leftViewPortOffset ); }
+		if (HX_FIELD_EQ(inName,"autoHideScrollBars") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_autoHideScrollBars() ); }
+		if (HX_FIELD_EQ(inName,"_scrollBarXFactory") ) { return ::hx::Val( _scrollBarXFactory ); }
+		if (HX_FIELD_EQ(inName,"_scrollBarYFactory") ) { return ::hx::Val( _scrollBarYFactory ); }
+		if (HX_FIELD_EQ(inName,"scrollBarXPosition") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_scrollBarXPosition() ); }
+		if (HX_FIELD_EQ(inName,"scrollBarYPosition") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_scrollBarYPosition() ); }
+		if (HX_FIELD_EQ(inName,"_currentScrollRect") ) { return ::hx::Val( _currentScrollRect ); }
+		if (HX_FIELD_EQ(inName,"getCurrentMaskSkin") ) { return ::hx::Val( getCurrentMaskSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"addCurrentMaskSkin") ) { return ::hx::Val( addCurrentMaskSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"scrollWithKeyboard") ) { return ::hx::Val( scrollWithKeyboard_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_backgroundSkin") ) { return ::hx::Val( get_backgroundSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_backgroundSkin") ) { return ::hx::Val( set_backgroundSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"__viewPortMaskSkin") ) { return ::hx::Val( _hx___viewPortMaskSkin ); }
+		if (HX_FIELD_EQ(inName,"get_showScrollBars") ) { return ::hx::Val( get_showScrollBars_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_showScrollBars") ) { return ::hx::Val( set_showScrollBars_dyn() ); }
+		break;
+	case 19:
+		if (HX_FIELD_EQ(inName,"rightViewPortOffset") ) { return ::hx::Val( rightViewPortOffset ); }
+		if (HX_FIELD_EQ(inName,"chromeMeasuredWidth") ) { return ::hx::Val( chromeMeasuredWidth ); }
+		if (HX_FIELD_EQ(inName,"get_scrollerFactory") ) { return ::hx::Val( get_scrollerFactory_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_scrollerFactory") ) { return ::hx::Val( set_scrollerFactory_dyn() ); }
+		if (HX_FIELD_EQ(inName,"scrollPixelSnapping") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_scrollPixelSnapping() ); }
+		if (HX_FIELD_EQ(inName,"get_measureViewPort") ) { return ::hx::Val( get_measureViewPort_dyn() ); }
+		if (HX_FIELD_EQ(inName,"clearStyle_maskSkin") ) { return ::hx::Val( clearStyle_maskSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_fixedScrollBars") ) { return ::hx::Val( get_fixedScrollBars_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_fixedScrollBars") ) { return ::hx::Val( set_fixedScrollBars_dyn() ); }
+		if (HX_FIELD_EQ(inName,"__hideScrollBarEase") ) { return ::hx::Val( _hx___hideScrollBarEase ); }
+		break;
+	case 20:
+		if (HX_FIELD_EQ(inName,"bottomViewPortOffset") ) { return ::hx::Val( bottomViewPortOffset ); }
+		if (HX_FIELD_EQ(inName,"chromeMeasuredHeight") ) { return ::hx::Val( chromeMeasuredHeight ); }
+		if (HX_FIELD_EQ(inName,"resetViewPortOffsets") ) { return ::hx::Val( resetViewPortOffsets_dyn() ); }
+		if (HX_FIELD_EQ(inName,"layoutBackgroundSkin") ) { return ::hx::Val( layoutBackgroundSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_viewPortMaskSkin") ) { return ::hx::Val( get_viewPortMaskSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_viewPortMaskSkin") ) { return ::hx::Val( set_viewPortMaskSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"__autoHideScrollBars") ) { return ::hx::Val( _hx___autoHideScrollBars ); }
+		if (HX_FIELD_EQ(inName,"__scrollBarXPosition") ) { return ::hx::Val( _hx___scrollBarXPosition ); }
+		if (HX_FIELD_EQ(inName,"__scrollBarYPosition") ) { return ::hx::Val( _hx___scrollBarYPosition ); }
+		break;
+	case 21:
+		if (HX_FIELD_EQ(inName,"_oldScrollBarXFactory") ) { return ::hx::Val( _oldScrollBarXFactory ); }
+		if (HX_FIELD_EQ(inName,"get_scrollBarXFactory") ) { return ::hx::Val( get_scrollBarXFactory_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_scrollBarXFactory") ) { return ::hx::Val( set_scrollBarXFactory_dyn() ); }
+		if (HX_FIELD_EQ(inName,"_oldScrollBarYFactory") ) { return ::hx::Val( _oldScrollBarYFactory ); }
+		if (HX_FIELD_EQ(inName,"get_scrollBarYFactory") ) { return ::hx::Val( get_scrollBarYFactory_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_scrollBarYFactory") ) { return ::hx::Val( set_scrollBarYFactory_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_restrictedScrollX") ) { return ::hx::Val( get_restrictedScrollX_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_restrictedScrollX") ) { return ::hx::Val( set_restrictedScrollX_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_restrictedScrollY") ) { return ::hx::Val( get_restrictedScrollY_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_restrictedScrollY") ) { return ::hx::Val( set_restrictedScrollY_dyn() ); }
+		if (HX_FIELD_EQ(inName,"_scrollBarXRevealTime") ) { return ::hx::Val( _scrollBarXRevealTime ); }
+		if (HX_FIELD_EQ(inName,"_scrollBarYRevealTime") ) { return ::hx::Val( _scrollBarYRevealTime ); }
+		if (HX_FIELD_EQ(inName,"hideScrollBarDuration") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_hideScrollBarDuration() ); }
+		if (HX_FIELD_EQ(inName,"refreshScrollerValues") ) { return ::hx::Val( refreshScrollerValues_dyn() ); }
+		if (HX_FIELD_EQ(inName,"refreshBackgroundSkin") ) { return ::hx::Val( refreshBackgroundSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"removeCurrentMaskSkin") ) { return ::hx::Val( removeCurrentMaskSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"clearStyle_paddingTop") ) { return ::hx::Val( clearStyle_paddingTop_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_hideScrollBarEase") ) { return ::hx::Val( get_hideScrollBarEase_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_hideScrollBarEase") ) { return ::hx::Val( set_hideScrollBarEase_dyn() ); }
+		if (HX_FIELD_EQ(inName,"__scrollPixelSnapping") ) { return ::hx::Val( _hx___scrollPixelSnapping ); }
+		break;
+	case 22:
+		if (HX_FIELD_EQ(inName,"_currentBackgroundSkin") ) { return ::hx::Val( _currentBackgroundSkin ); }
+		if (HX_FIELD_EQ(inName,"chromeMeasuredMinWidth") ) { return ::hx::Val( chromeMeasuredMinWidth ); }
+		if (HX_FIELD_EQ(inName,"chromeMeasuredMaxWidth") ) { return ::hx::Val( chromeMeasuredMaxWidth ); }
+		if (HX_FIELD_EQ(inName,"disabledBackgroundSkin") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_disabledBackgroundSkin() ); }
+		if (HX_FIELD_EQ(inName,"_ignoreScrollerChanges") ) { return ::hx::Val( _ignoreScrollerChanges ); }
+		if (HX_FIELD_EQ(inName,"_viewPortBoundsChanged") ) { return ::hx::Val( _viewPortBoundsChanged ); }
+		if (HX_FIELD_EQ(inName,"_previousViewPortWidth") ) { return ::hx::Val( _previousViewPortWidth ); }
+		if (HX_FIELD_EQ(inName,"needsScrollMeasurement") ) { return ::hx::Val( needsScrollMeasurement_dyn() ); }
+		if (HX_FIELD_EQ(inName,"refreshScrollBarValues") ) { return ::hx::Val( refreshScrollBarValues_dyn() ); }
+		if (HX_FIELD_EQ(inName,"layoutViewPortMaskSkin") ) { return ::hx::Val( layoutViewPortMaskSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"viewPort_resizeHandler") ) { return ::hx::Val( viewPort_resizeHandler_dyn() ); }
+		if (HX_FIELD_EQ(inName,"clearStyle_paddingLeft") ) { return ::hx::Val( clearStyle_paddingLeft_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_autoHideScrollBars") ) { return ::hx::Val( get_autoHideScrollBars_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_autoHideScrollBars") ) { return ::hx::Val( set_autoHideScrollBars_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_scrollBarXPosition") ) { return ::hx::Val( get_scrollBarXPosition_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_scrollBarXPosition") ) { return ::hx::Val( set_scrollBarXPosition_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_scrollBarYPosition") ) { return ::hx::Val( get_scrollBarYPosition_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_scrollBarYPosition") ) { return ::hx::Val( set_scrollBarYPosition_dyn() ); }
+		break;
+	case 23:
+		if (HX_FIELD_EQ(inName,"chromeMeasuredMinHeight") ) { return ::hx::Val( chromeMeasuredMinHeight ); }
+		if (HX_FIELD_EQ(inName,"chromeMeasuredMaxHeight") ) { return ::hx::Val( chromeMeasuredMaxHeight ); }
+		if (HX_FIELD_EQ(inName,"_ignoreScrollBarXChange") ) { return ::hx::Val( _ignoreScrollBarXChange ); }
+		if (HX_FIELD_EQ(inName,"_ignoreScrollBarYChange") ) { return ::hx::Val( _ignoreScrollBarYChange ); }
+		if (HX_FIELD_EQ(inName,"_ignoreViewPortResizing") ) { return ::hx::Val( _ignoreViewPortResizing ); }
+		if (HX_FIELD_EQ(inName,"_previousViewPortHeight") ) { return ::hx::Val( _previousViewPortHeight ); }
+		if (HX_FIELD_EQ(inName,"refreshViewPortMaskSkin") ) { return ::hx::Val( refreshViewPortMaskSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"clearStyle_paddingRight") ) { return ::hx::Val( clearStyle_paddingRight_dyn() ); }
+		if (HX_FIELD_EQ(inName,"__hideScrollBarDuration") ) { return ::hx::Val( _hx___hideScrollBarDuration ); }
+		if (HX_FIELD_EQ(inName,"get_scrollPixelSnapping") ) { return ::hx::Val( get_scrollPixelSnapping_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_scrollPixelSnapping") ) { return ::hx::Val( set_scrollPixelSnapping_dyn() ); }
+		break;
+	case 24:
+		if (HX_FIELD_EQ(inName,"_currentViewPortMaskSkin") ) { return ::hx::Val( _currentViewPortMaskSkin ); }
+		if (HX_FIELD_EQ(inName,"getViewPortVisibleBounds") ) { return ::hx::Val( getViewPortVisibleBounds_dyn() ); }
+		if (HX_FIELD_EQ(inName,"calculateViewPortOffsets") ) { return ::hx::Val( calculateViewPortOffsets_dyn() ); }
+		if (HX_FIELD_EQ(inName,"getCurrentBackgroundSkin") ) { return ::hx::Val( getCurrentBackgroundSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"addCurrentBackgroundSkin") ) { return ::hx::Val( addCurrentBackgroundSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"checkForRevealScrollBars") ) { return ::hx::Val( checkForRevealScrollBars_dyn() ); }
+		if (HX_FIELD_EQ(inName,"scrollBarX_changeHandler") ) { return ::hx::Val( scrollBarX_changeHandler_dyn() ); }
+		if (HX_FIELD_EQ(inName,"scrollBarY_changeHandler") ) { return ::hx::Val( scrollBarY_changeHandler_dyn() ); }
+		if (HX_FIELD_EQ(inName,"clearStyle_paddingBottom") ) { return ::hx::Val( clearStyle_paddingBottom_dyn() ); }
+		if (HX_FIELD_EQ(inName,"__disabledBackgroundSkin") ) { return ::hx::Val( _hx___disabledBackgroundSkin ); }
+		break;
+	case 25:
+		if (HX_FIELD_EQ(inName,"_fallbackViewPortMaskSkin") ) { return ::hx::Val( _fallbackViewPortMaskSkin ); }
+		if (HX_FIELD_EQ(inName,"scrollBarX_rollOutHandler") ) { return ::hx::Val( scrollBarX_rollOutHandler_dyn() ); }
+		if (HX_FIELD_EQ(inName,"scrollBarY_rollOutHandler") ) { return ::hx::Val( scrollBarY_rollOutHandler_dyn() ); }
+		if (HX_FIELD_EQ(inName,"hideScrollBarX_onComplete") ) { return ::hx::Val( hideScrollBarX_onComplete_dyn() ); }
+		if (HX_FIELD_EQ(inName,"hideScrollBarY_onComplete") ) { return ::hx::Val( hideScrollBarY_onComplete_dyn() ); }
+		if (HX_FIELD_EQ(inName,"clearStyle_backgroundSkin") ) { return ::hx::Val( clearStyle_backgroundSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"clearStyle_showScrollBars") ) { return ::hx::Val( clearStyle_showScrollBars_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_hideScrollBarDuration") ) { return ::hx::Val( get_hideScrollBarDuration_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_hideScrollBarDuration") ) { return ::hx::Val( set_hideScrollBarDuration_dyn() ); }
+		break;
+	case 26:
+		if (HX_FIELD_EQ(inName,"_settingScrollerDimensions") ) { return ::hx::Val( _settingScrollerDimensions ); }
+		if (HX_FIELD_EQ(inName,"getCurrentViewPortMaskSkin") ) { return ::hx::Val( getCurrentViewPortMaskSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"addCurrentViewPortMaskSkin") ) { return ::hx::Val( addCurrentViewPortMaskSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"scrollBarX_rollOverHandler") ) { return ::hx::Val( scrollBarX_rollOverHandler_dyn() ); }
+		if (HX_FIELD_EQ(inName,"scrollBarY_rollOverHandler") ) { return ::hx::Val( scrollBarY_rollOverHandler_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_disabledBackgroundSkin") ) { return ::hx::Val( get_disabledBackgroundSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_disabledBackgroundSkin") ) { return ::hx::Val( set_disabledBackgroundSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"clearStyle_fixedScrollBars") ) { return ::hx::Val( clearStyle_fixedScrollBars_dyn() ); }
+		break;
+	case 27:
+		if (HX_FIELD_EQ(inName,"_backgroundSkinMeasurements") ) { return ::hx::Val( _backgroundSkinMeasurements ); }
+		if (HX_FIELD_EQ(inName,"_temporaryRestrictedScrollX") ) { return ::hx::Val( _temporaryRestrictedScrollX ); }
+		if (HX_FIELD_EQ(inName,"_temporaryRestrictedScrollY") ) { return ::hx::Val( _temporaryRestrictedScrollY ); }
+		if (HX_FIELD_EQ(inName,"removeCurrentBackgroundSkin") ) { return ::hx::Val( removeCurrentBackgroundSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"clearStyle_viewPortMaskSkin") ) { return ::hx::Val( clearStyle_viewPortMaskSkin_dyn() ); }
+		break;
+	case 28:
+		if (HX_FIELD_EQ(inName,"showScrollBarMinimumDuration") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( get_showScrollBarMinimumDuration() ); }
+		if (HX_FIELD_EQ(inName,"clearStyle_hideScrollBarEase") ) { return ::hx::Val( clearStyle_hideScrollBarEase_dyn() ); }
+		break;
+	case 29:
+		if (HX_FIELD_EQ(inName,"applyTemporaryScrollPositions") ) { return ::hx::Val( applyTemporaryScrollPositions_dyn() ); }
+		if (HX_FIELD_EQ(inName,"removeCurrentViewPortMaskSkin") ) { return ::hx::Val( removeCurrentViewPortMaskSkin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"scrollBarX_scrollStartHandler") ) { return ::hx::Val( scrollBarX_scrollStartHandler_dyn() ); }
+		if (HX_FIELD_EQ(inName,"scrollBarY_scrollStartHandler") ) { return ::hx::Val( scrollBarY_scrollStartHandler_dyn() ); }
+		if (HX_FIELD_EQ(inName,"clearStyle_autoHideScrollBars") ) { return ::hx::Val( clearStyle_autoHideScrollBars_dyn() ); }
+		if (HX_FIELD_EQ(inName,"clearStyle_scrollBarXPosition") ) { return ::hx::Val( clearStyle_scrollBarXPosition_dyn() ); }
+		if (HX_FIELD_EQ(inName,"clearStyle_scrollBarYPosition") ) { return ::hx::Val( clearStyle_scrollBarYPosition_dyn() ); }
+		break;
+	case 30:
+		if (HX_FIELD_EQ(inName,"refreshViewPortBoundsForLayout") ) { return ::hx::Val( refreshViewPortBoundsForLayout_dyn() ); }
+		if (HX_FIELD_EQ(inName,"__showScrollBarMinimumDuration") ) { return ::hx::Val( _hx___showScrollBarMinimumDuration ); }
+		if (HX_FIELD_EQ(inName,"clearStyle_scrollPixelSnapping") ) { return ::hx::Val( clearStyle_scrollPixelSnapping_dyn() ); }
+		break;
+	case 32:
+		if (HX_FIELD_EQ(inName,"scrollBarX_scrollCompleteHandler") ) { return ::hx::Val( scrollBarX_scrollCompleteHandler_dyn() ); }
+		if (HX_FIELD_EQ(inName,"scrollBarY_scrollCompleteHandler") ) { return ::hx::Val( scrollBarY_scrollCompleteHandler_dyn() ); }
+		if (HX_FIELD_EQ(inName,"get_showScrollBarMinimumDuration") ) { return ::hx::Val( get_showScrollBarMinimumDuration_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_showScrollBarMinimumDuration") ) { return ::hx::Val( set_showScrollBarMinimumDuration_dyn() ); }
+		if (HX_FIELD_EQ(inName,"clearStyle_hideScrollBarDuration") ) { return ::hx::Val( clearStyle_hideScrollBarDuration_dyn() ); }
+		break;
+	case 33:
+		if (HX_FIELD_EQ(inName,"clearStyle_disabledBackgroundSkin") ) { return ::hx::Val( clearStyle_disabledBackgroundSkin_dyn() ); }
+		break;
+	case 34:
+		if (HX_FIELD_EQ(inName,"restrictScrollAfterRefreshViewPort") ) { return ::hx::Val( restrictScrollAfterRefreshViewPort_dyn() ); }
+		if (HX_FIELD_EQ(inName,"baseScrollContainer_keyDownHandler") ) { return ::hx::Val( baseScrollContainer_keyDownHandler_dyn() ); }
+		break;
+	case 35:
+		if (HX_FIELD_EQ(inName,"refreshViewPortBoundsForMeasurement") ) { return ::hx::Val( refreshViewPortBoundsForMeasurement_dyn() ); }
+		break;
+	case 39:
+		if (HX_FIELD_EQ(inName,"baseScrollContainer_addedToStageHandler") ) { return ::hx::Val( baseScrollContainer_addedToStageHandler_dyn() ); }
+		if (HX_FIELD_EQ(inName,"clearStyle_showScrollBarMinimumDuration") ) { return ::hx::Val( clearStyle_showScrollBarMinimumDuration_dyn() ); }
+		break;
+	case 42:
+		if (HX_FIELD_EQ(inName,"calculateViewPortOffsetsForFixedScrollBarX") ) { return ::hx::Val( calculateViewPortOffsetsForFixedScrollBarX_dyn() ); }
+		if (HX_FIELD_EQ(inName,"calculateViewPortOffsetsForFixedScrollBarY") ) { return ::hx::Val( calculateViewPortOffsetsForFixedScrollBarY_dyn() ); }
+		if (HX_FIELD_EQ(inName,"baseScrollContainer_scroller_scrollHandler") ) { return ::hx::Val( baseScrollContainer_scroller_scrollHandler_dyn() ); }
+		break;
+	case 43:
+		if (HX_FIELD_EQ(inName,"baseScrollContainer_removedFromStageHandler") ) { return ::hx::Val( baseScrollContainer_removedFromStageHandler_dyn() ); }
+		break;
+	case 45:
+		if (HX_FIELD_EQ(inName,"baseScrollContainer_viewPort_mouseDownHandler") ) { return ::hx::Val( baseScrollContainer_viewPort_mouseDownHandler_dyn() ); }
+		break;
+	case 46:
+		if (HX_FIELD_EQ(inName,"baseScrollContainer_viewPort_touchBeginHandler") ) { return ::hx::Val( baseScrollContainer_viewPort_touchBeginHandler_dyn() ); }
+		break;
+	case 47:
+		if (HX_FIELD_EQ(inName,"baseScrollContainer_scroller_scrollStartHandler") ) { return ::hx::Val( baseScrollContainer_scroller_scrollStartHandler_dyn() ); }
+		break;
+	case 50:
+		if (HX_FIELD_EQ(inName,"baseScrollContainer_scroller_scrollCompleteHandler") ) { return ::hx::Val( baseScrollContainer_scroller_scrollCompleteHandler_dyn() ); }
+	}
+	return super::__Field(inName,inCallProp);
+}
+
+bool BaseScrollContainer_obj::__GetStatic(const ::String &inName, Dynamic &outValue, ::hx::PropertyAccess inCallProp)
+{
+	switch(inName.length) {
+	case 24:
+		if (HX_FIELD_EQ(inName,"defaultScrollBarXFactory") ) { outValue = ( defaultScrollBarXFactory ); return true; }
+		if (HX_FIELD_EQ(inName,"defaultScrollBarYFactory") ) { outValue = ( defaultScrollBarYFactory ); return true; }
+		break;
+	case 34:
+		if (HX_FIELD_EQ(inName,"INVALIDATION_FLAG_SCROLLER_FACTORY") ) { outValue = ( INVALIDATION_FLAG_SCROLLER_FACTORY ); return true; }
+		break;
+	case 36:
+		if (HX_FIELD_EQ(inName,"INVALIDATION_FLAG_SCROLL_BAR_FACTORY") ) { outValue = ( INVALIDATION_FLAG_SCROLL_BAR_FACTORY ); return true; }
+	}
+	return false;
+}
+
+::hx::Val BaseScrollContainer_obj::__SetField(const ::String &inName,const ::hx::Val &inValue,::hx::PropertyAccess inCallProp)
+{
+	switch(inName.length) {
+	case 7:
+		if (HX_FIELD_EQ(inName,"scrollX") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_scrollX(inValue.Cast< Float >()) ); }
+		if (HX_FIELD_EQ(inName,"scrollY") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_scrollY(inValue.Cast< Float >()) ); }
+		break;
+	case 8:
+		if (HX_FIELD_EQ(inName,"viewPort") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_viewPort(inValue.Cast< ::Dynamic >()) ); }
+		if (HX_FIELD_EQ(inName,"scroller") ) { scroller=inValue.Cast<  ::feathers::utils::Scroller >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"maskSkin") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_maskSkin(inValue.Cast<  ::openfl::display::DisplayObject >()) ); }
+		break;
+	case 9:
+		if (HX_FIELD_EQ(inName,"_viewPort") ) { _viewPort=inValue.Cast< ::Dynamic >(); return inValue; }
+		break;
+	case 10:
+		if (HX_FIELD_EQ(inName,"paddingTop") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_paddingTop(inValue.Cast< Float >()) ); }
+		if (HX_FIELD_EQ(inName,"scrollBarX") ) { scrollBarX=inValue.Cast< ::Dynamic >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"scrollBarY") ) { scrollBarY=inValue.Cast< ::Dynamic >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"scrollMode") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_scrollMode(inValue.Cast<  ::feathers::controls::ScrollMode >()) ); }
+		if (HX_FIELD_EQ(inName,"__maskSkin") ) { _hx___maskSkin=inValue.Cast<  ::openfl::display::DisplayObject >(); return inValue; }
+		break;
+	case 11:
+		if (HX_FIELD_EQ(inName,"paddingLeft") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_paddingLeft(inValue.Cast< Float >()) ); }
+		if (HX_FIELD_EQ(inName,"scrollStepX") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_scrollStepX(inValue.Cast< Float >()) ); }
+		if (HX_FIELD_EQ(inName,"scrollStepY") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_scrollStepY(inValue.Cast< Float >()) ); }
+		if (HX_FIELD_EQ(inName,"_scrollMode") ) { _scrollMode=inValue.Cast<  ::feathers::controls::ScrollMode >(); return inValue; }
+		break;
+	case 12:
+		if (HX_FIELD_EQ(inName,"paddingRight") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_paddingRight(inValue.Cast< Float >()) ); }
+		if (HX_FIELD_EQ(inName,"_scrollStepX") ) { _scrollStepX=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_scrollStepY") ) { _scrollStepY=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_scrollRect1") ) { _scrollRect1=inValue.Cast<  ::openfl::geom::Rectangle >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_scrollRect2") ) { _scrollRect2=inValue.Cast<  ::openfl::geom::Rectangle >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"__paddingTop") ) { _hx___paddingTop=inValue.Cast< Float >(); return inValue; }
+		break;
+	case 13:
+		if (HX_FIELD_EQ(inName,"paddingBottom") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_paddingBottom(inValue.Cast< Float >()) ); }
+		if (HX_FIELD_EQ(inName,"scrollPolicyX") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_scrollPolicyX(inValue.Cast<  ::feathers::controls::ScrollPolicy >()) ); }
+		if (HX_FIELD_EQ(inName,"scrollPolicyY") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_scrollPolicyY(inValue.Cast<  ::feathers::controls::ScrollPolicy >()) ); }
+		if (HX_FIELD_EQ(inName,"__paddingLeft") ) { _hx___paddingLeft=inValue.Cast< Float >(); return inValue; }
+		break;
+	case 14:
+		if (HX_FIELD_EQ(inName,"backgroundSkin") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_backgroundSkin(inValue.Cast<  ::openfl::display::DisplayObject >()) ); }
+		if (HX_FIELD_EQ(inName,"showScrollBars") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_showScrollBars(inValue.Cast< bool >()) ); }
+		if (HX_FIELD_EQ(inName,"showScrollBarX") ) { showScrollBarX=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"showScrollBarY") ) { showScrollBarY=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_scrollPolicyX") ) { _scrollPolicyX=inValue.Cast<  ::feathers::controls::ScrollPolicy >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_scrollPolicyY") ) { _scrollPolicyY=inValue.Cast<  ::feathers::controls::ScrollPolicy >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"__paddingRight") ) { _hx___paddingRight=inValue.Cast< Float >(); return inValue; }
+		break;
+	case 15:
+		if (HX_FIELD_EQ(inName,"fixedScrollBars") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_fixedScrollBars(inValue.Cast< bool >()) ); }
+		if (HX_FIELD_EQ(inName,"scrollerFactory") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_scrollerFactory(inValue.Cast<  ::Dynamic >()) ); }
+		if (HX_FIELD_EQ(inName,"_hideScrollBarX") ) { _hideScrollBarX=inValue.Cast<  ::motion::actuators::SimpleActuator >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_hideScrollBarY") ) { _hideScrollBarY=inValue.Cast<  ::motion::actuators::SimpleActuator >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_prevMinScrollX") ) { _prevMinScrollX=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_prevMaxScrollX") ) { _prevMaxScrollX=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_prevMinScrollY") ) { _prevMinScrollY=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_prevMaxScrollY") ) { _prevMaxScrollY=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"__paddingBottom") ) { _hx___paddingBottom=inValue.Cast< Float >(); return inValue; }
+		break;
+	case 16:
+		if (HX_FIELD_EQ(inName,"_scrollBarXHover") ) { _scrollBarXHover=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_scrollBarYHover") ) { _scrollBarYHover=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_currentMaskSkin") ) { _currentMaskSkin=inValue.Cast<  ::openfl::display::DisplayObject >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"viewPortMaskSkin") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_viewPortMaskSkin(inValue.Cast<  ::openfl::display::DisplayObject >()) ); }
+		if (HX_FIELD_EQ(inName,"_scrollerFactory") ) { _scrollerFactory=inValue.Cast<  ::Dynamic >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"__backgroundSkin") ) { _hx___backgroundSkin=inValue.Cast<  ::openfl::display::DisplayObject >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"__showScrollBars") ) { _hx___showScrollBars=inValue.Cast< bool >(); return inValue; }
+		break;
+	case 17:
+		if (HX_FIELD_EQ(inName,"topViewPortOffset") ) { topViewPortOffset=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"scrollBarXFactory") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_scrollBarXFactory(inValue.Cast<  ::feathers::utils::DisplayObjectFactory >()) ); }
+		if (HX_FIELD_EQ(inName,"scrollBarYFactory") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_scrollBarYFactory(inValue.Cast<  ::feathers::utils::DisplayObjectFactory >()) ); }
+		if (HX_FIELD_EQ(inName,"_temporaryScrollX") ) { _temporaryScrollX=inValue.Cast<  ::Dynamic >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"restrictedScrollX") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_restrictedScrollX(inValue.Cast< Float >()) ); }
+		if (HX_FIELD_EQ(inName,"_temporaryScrollY") ) { _temporaryScrollY=inValue.Cast<  ::Dynamic >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"restrictedScrollY") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_restrictedScrollY(inValue.Cast< Float >()) ); }
+		if (HX_FIELD_EQ(inName,"hideScrollBarEase") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_hideScrollBarEase(inValue.Cast< ::Dynamic >()) ); }
+		if (HX_FIELD_EQ(inName,"__fixedScrollBars") ) { _hx___fixedScrollBars=inValue.Cast< bool >(); return inValue; }
+		break;
+	case 18:
+		if (HX_FIELD_EQ(inName,"_scrollerDraggingX") ) { _scrollerDraggingX=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_scrollerDraggingY") ) { _scrollerDraggingY=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"leftViewPortOffset") ) { leftViewPortOffset=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"autoHideScrollBars") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_autoHideScrollBars(inValue.Cast< bool >()) ); }
+		if (HX_FIELD_EQ(inName,"_scrollBarXFactory") ) { _scrollBarXFactory=inValue.Cast<  ::feathers::utils::DisplayObjectFactory >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_scrollBarYFactory") ) { _scrollBarYFactory=inValue.Cast<  ::feathers::utils::DisplayObjectFactory >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"scrollBarXPosition") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_scrollBarXPosition(inValue.Cast<  ::feathers::layout::RelativePosition >()) ); }
+		if (HX_FIELD_EQ(inName,"scrollBarYPosition") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_scrollBarYPosition(inValue.Cast<  ::feathers::layout::RelativePosition >()) ); }
+		if (HX_FIELD_EQ(inName,"_currentScrollRect") ) { _currentScrollRect=inValue.Cast<  ::openfl::geom::Rectangle >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"__viewPortMaskSkin") ) { _hx___viewPortMaskSkin=inValue.Cast<  ::openfl::display::DisplayObject >(); return inValue; }
+		break;
+	case 19:
+		if (HX_FIELD_EQ(inName,"rightViewPortOffset") ) { rightViewPortOffset=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"chromeMeasuredWidth") ) { chromeMeasuredWidth=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"scrollPixelSnapping") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_scrollPixelSnapping(inValue.Cast< bool >()) ); }
+		if (HX_FIELD_EQ(inName,"__hideScrollBarEase") ) { _hx___hideScrollBarEase=inValue.Cast< ::Dynamic >(); return inValue; }
+		break;
+	case 20:
+		if (HX_FIELD_EQ(inName,"bottomViewPortOffset") ) { bottomViewPortOffset=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"chromeMeasuredHeight") ) { chromeMeasuredHeight=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"__autoHideScrollBars") ) { _hx___autoHideScrollBars=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"__scrollBarXPosition") ) { _hx___scrollBarXPosition=inValue.Cast<  ::feathers::layout::RelativePosition >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"__scrollBarYPosition") ) { _hx___scrollBarYPosition=inValue.Cast<  ::feathers::layout::RelativePosition >(); return inValue; }
+		break;
+	case 21:
+		if (HX_FIELD_EQ(inName,"_oldScrollBarXFactory") ) { _oldScrollBarXFactory=inValue.Cast<  ::feathers::utils::DisplayObjectFactory >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_oldScrollBarYFactory") ) { _oldScrollBarYFactory=inValue.Cast<  ::feathers::utils::DisplayObjectFactory >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_scrollBarXRevealTime") ) { _scrollBarXRevealTime=inValue.Cast< int >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_scrollBarYRevealTime") ) { _scrollBarYRevealTime=inValue.Cast< int >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"hideScrollBarDuration") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_hideScrollBarDuration(inValue.Cast< Float >()) ); }
+		if (HX_FIELD_EQ(inName,"__scrollPixelSnapping") ) { _hx___scrollPixelSnapping=inValue.Cast< bool >(); return inValue; }
+		break;
+	case 22:
+		if (HX_FIELD_EQ(inName,"_currentBackgroundSkin") ) { _currentBackgroundSkin=inValue.Cast<  ::openfl::display::DisplayObject >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"chromeMeasuredMinWidth") ) { chromeMeasuredMinWidth=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"chromeMeasuredMaxWidth") ) { chromeMeasuredMaxWidth=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"disabledBackgroundSkin") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_disabledBackgroundSkin(inValue.Cast<  ::openfl::display::DisplayObject >()) ); }
+		if (HX_FIELD_EQ(inName,"_ignoreScrollerChanges") ) { _ignoreScrollerChanges=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_viewPortBoundsChanged") ) { _viewPortBoundsChanged=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_previousViewPortWidth") ) { _previousViewPortWidth=inValue.Cast< Float >(); return inValue; }
+		break;
+	case 23:
+		if (HX_FIELD_EQ(inName,"chromeMeasuredMinHeight") ) { chromeMeasuredMinHeight=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"chromeMeasuredMaxHeight") ) { chromeMeasuredMaxHeight=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_ignoreScrollBarXChange") ) { _ignoreScrollBarXChange=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_ignoreScrollBarYChange") ) { _ignoreScrollBarYChange=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_ignoreViewPortResizing") ) { _ignoreViewPortResizing=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_previousViewPortHeight") ) { _previousViewPortHeight=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"__hideScrollBarDuration") ) { _hx___hideScrollBarDuration=inValue.Cast< Float >(); return inValue; }
+		break;
+	case 24:
+		if (HX_FIELD_EQ(inName,"_currentViewPortMaskSkin") ) { _currentViewPortMaskSkin=inValue.Cast<  ::openfl::display::DisplayObject >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"__disabledBackgroundSkin") ) { _hx___disabledBackgroundSkin=inValue.Cast<  ::openfl::display::DisplayObject >(); return inValue; }
+		break;
+	case 25:
+		if (HX_FIELD_EQ(inName,"_fallbackViewPortMaskSkin") ) { _fallbackViewPortMaskSkin=inValue.Cast<  ::openfl::display::DisplayObject >(); return inValue; }
+		break;
+	case 26:
+		if (HX_FIELD_EQ(inName,"_settingScrollerDimensions") ) { _settingScrollerDimensions=inValue.Cast< bool >(); return inValue; }
+		break;
+	case 27:
+		if (HX_FIELD_EQ(inName,"_backgroundSkinMeasurements") ) { _backgroundSkinMeasurements=inValue.Cast<  ::feathers::layout::Measurements >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_temporaryRestrictedScrollX") ) { _temporaryRestrictedScrollX=inValue.Cast<  ::Dynamic >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_temporaryRestrictedScrollY") ) { _temporaryRestrictedScrollY=inValue.Cast<  ::Dynamic >(); return inValue; }
+		break;
+	case 28:
+		if (HX_FIELD_EQ(inName,"showScrollBarMinimumDuration") ) { if (inCallProp == ::hx::paccAlways) return ::hx::Val( set_showScrollBarMinimumDuration(inValue.Cast< Float >()) ); }
+		break;
+	case 30:
+		if (HX_FIELD_EQ(inName,"__showScrollBarMinimumDuration") ) { _hx___showScrollBarMinimumDuration=inValue.Cast< Float >(); return inValue; }
+	}
+	return super::__SetField(inName,inValue,inCallProp);
+}
+
+bool BaseScrollContainer_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,::hx::PropertyAccess inCallProp)
+{
+	switch(inName.length) {
+	case 24:
+		if (HX_FIELD_EQ(inName,"defaultScrollBarXFactory") ) { defaultScrollBarXFactory=ioValue.Cast<  ::feathers::utils::DisplayObjectFactory >(); return true; }
+		if (HX_FIELD_EQ(inName,"defaultScrollBarYFactory") ) { defaultScrollBarYFactory=ioValue.Cast<  ::feathers::utils::DisplayObjectFactory >(); return true; }
+		break;
+	case 34:
+		if (HX_FIELD_EQ(inName,"INVALIDATION_FLAG_SCROLLER_FACTORY") ) { INVALIDATION_FLAG_SCROLLER_FACTORY=ioValue.Cast<  ::feathers::core::InvalidationFlag >(); return true; }
+		break;
+	case 36:
+		if (HX_FIELD_EQ(inName,"INVALIDATION_FLAG_SCROLL_BAR_FACTORY") ) { INVALIDATION_FLAG_SCROLL_BAR_FACTORY=ioValue.Cast<  ::feathers::core::InvalidationFlag >(); return true; }
+	}
+	return false;
+}
+
+void BaseScrollContainer_obj::__GetFields(Array< ::String> &outFields)
+{
+	outFields->push(HX_("_viewPort",e5,6f,14,cf));
+	outFields->push(HX_("viewPort",86,78,7e,87));
+	outFields->push(HX_("scroller",ba,0d,55,8c));
+	outFields->push(HX_("_scrollerDraggingX",50,e8,4d,17));
+	outFields->push(HX_("_scrollerDraggingY",51,e8,4d,17));
+	outFields->push(HX_("_scrollBarXHover",0b,c9,ca,b0));
+	outFields->push(HX_("_scrollBarYHover",6a,25,26,17));
+	outFields->push(HX_("_currentBackgroundSkin",e5,c0,55,58));
+	outFields->push(HX_("_backgroundSkinMeasurements",41,46,9b,f8));
+	outFields->push(HX_("_currentMaskSkin",63,65,66,a9));
+	outFields->push(HX_("_currentViewPortMaskSkin",09,fa,b1,4f));
+	outFields->push(HX_("_fallbackViewPortMaskSkin",d0,29,84,ee));
+	outFields->push(HX_("topViewPortOffset",2e,22,81,2f));
+	outFields->push(HX_("rightViewPortOffset",b5,d5,8c,35));
+	outFields->push(HX_("bottomViewPortOffset",04,4d,09,29));
+	outFields->push(HX_("leftViewPortOffset",20,a7,9d,98));
+	outFields->push(HX_("chromeMeasuredWidth",06,83,cc,1b));
+	outFields->push(HX_("chromeMeasuredMinWidth",14,76,8e,f8));
+	outFields->push(HX_("chromeMeasuredMaxWidth",c2,5b,74,ab));
+	outFields->push(HX_("chromeMeasuredHeight",e7,9a,75,ed));
+	outFields->push(HX_("chromeMeasuredMinHeight",19,54,68,3a));
+	outFields->push(HX_("chromeMeasuredMaxHeight",ab,66,ab,10));
+	outFields->push(HX_("paddingTop",44,fd,05,3a));
+	outFields->push(HX_("paddingRight",4b,ec,a7,1a));
+	outFields->push(HX_("paddingBottom",9c,67,99,4f));
+	outFields->push(HX_("paddingLeft",78,4a,e6,85));
+	outFields->push(HX_("backgroundSkin",8b,65,6f,20));
+	outFields->push(HX_("disabledBackgroundSkin",27,5c,3a,d3));
+	outFields->push(HX_("maskSkin",89,69,35,ea));
+	outFields->push(HX_("viewPortMaskSkin",2f,94,fa,8c));
+	outFields->push(HX_("scrollBarX",d2,75,d0,fe));
+	outFields->push(HX_("scrollBarY",d3,75,d0,fe));
+	outFields->push(HX_("_ignoreScrollBarXChange",b3,7d,3b,0a));
+	outFields->push(HX_("_ignoreScrollBarYChange",74,f4,d0,33));
+	outFields->push(HX_("fixedScrollBars",81,4c,7d,24));
+	outFields->push(HX_("showScrollBars",4a,4d,f5,28));
+	outFields->push(HX_("autoHideScrollBars",1e,ed,f4,84));
+	outFields->push(HX_("showScrollBarX",2f,4d,f5,28));
+	outFields->push(HX_("showScrollBarY",30,4d,f5,28));
+	outFields->push(HX_("_oldScrollBarXFactory",50,12,35,b0));
+	outFields->push(HX_("_scrollBarXFactory",d9,b1,f8,bc));
+	outFields->push(HX_("scrollBarXFactory",18,0d,e3,e9));
+	outFields->push(HX_("_oldScrollBarYFactory",6f,84,67,e9));
+	outFields->push(HX_("_scrollBarYFactory",f8,23,2b,f6));
+	outFields->push(HX_("scrollBarYFactory",37,7f,15,23));
+	outFields->push(HX_("_temporaryScrollX",79,c4,5c,c1));
+	outFields->push(HX_("_temporaryRestrictedScrollX",9e,28,13,45));
+	outFields->push(HX_("scrollX",ab,33,d8,30));
+	outFields->push(HX_("restrictedScrollX",50,4a,40,98));
+	outFields->push(HX_("_temporaryScrollY",7a,c4,5c,c1));
+	outFields->push(HX_("_temporaryRestrictedScrollY",9f,28,13,45));
+	outFields->push(HX_("scrollY",ac,33,d8,30));
+	outFields->push(HX_("restrictedScrollY",51,4a,40,98));
+	outFields->push(HX_("minScrollX",39,80,8f,f6));
+	outFields->push(HX_("minScrollY",3a,80,8f,f6));
+	outFields->push(HX_("maxScrollX",67,ad,fc,9a));
+	outFields->push(HX_("maxScrollY",68,ad,fc,9a));
+	outFields->push(HX_("_scrollStepX",40,72,f5,33));
+	outFields->push(HX_("scrollStepX",3f,c4,eb,cd));
+	outFields->push(HX_("_scrollStepY",41,72,f5,33));
+	outFields->push(HX_("scrollStepY",40,c4,eb,cd));
+	outFields->push(HX_("_scrollPolicyX",da,a3,93,b8));
+	outFields->push(HX_("scrollPolicyX",99,b3,41,7a));
+	outFields->push(HX_("_scrollPolicyY",db,a3,93,b8));
+	outFields->push(HX_("scrollPolicyY",9a,b3,41,7a));
+	outFields->push(HX_("scrollBarXPosition",9b,f4,81,52));
+	outFields->push(HX_("scrollBarYPosition",9c,5d,73,25));
+	outFields->push(HX_("showScrollBarMinimumDuration",39,8e,3b,f7));
+	outFields->push(HX_("_scrollBarXRevealTime",0b,a0,ef,34));
+	outFields->push(HX_("_scrollBarYRevealTime",4c,0b,ce,b5));
+	outFields->push(HX_("_hideScrollBarX",d3,3d,c6,77));
+	outFields->push(HX_("_hideScrollBarY",d4,3d,c6,77));
+	outFields->push(HX_("hideScrollBarDuration",18,6a,9a,c2));
+	outFields->push(HX_("hideScrollBarEase",b2,34,1b,26));
+	outFields->push(HX_("scrollPixelSnapping",15,62,d3,0b));
+	outFields->push(HX_("_prevMinScrollX",ab,d9,38,c9));
+	outFields->push(HX_("_prevMaxScrollX",d9,06,a6,6d));
+	outFields->push(HX_("_prevMinScrollY",ac,d9,38,c9));
+	outFields->push(HX_("_prevMaxScrollY",da,06,a6,6d));
+	outFields->push(HX_("_currentScrollRect",2b,02,b2,b3));
+	outFields->push(HX_("_scrollRect1",41,29,a3,96));
+	outFields->push(HX_("_scrollRect2",42,29,a3,96));
+	outFields->push(HX_("_ignoreScrollerChanges",b8,42,c7,e7));
+	outFields->push(HX_("_settingScrollerDimensions",18,74,5d,2f));
+	outFields->push(HX_("_viewPortBoundsChanged",da,4f,f9,55));
+	outFields->push(HX_("_ignoreViewPortResizing",a8,2b,c8,fb));
+	outFields->push(HX_("_previousViewPortWidth",2a,9e,35,60));
+	outFields->push(HX_("_previousViewPortHeight",43,3f,04,85));
+	outFields->push(HX_("measureViewPort",04,be,b1,55));
+	outFields->push(HX_("_scrollMode",2f,2f,aa,d8));
+	outFields->push(HX_("scrollMode",10,62,20,06));
+	outFields->push(HX_("__paddingTop",64,78,99,72));
+	outFields->push(HX_("__paddingRight",6b,6f,68,3b));
+	outFields->push(HX_("__paddingBottom",7c,a0,4b,d7));
+	outFields->push(HX_("__paddingLeft",58,8b,5e,ce));
+	outFields->push(HX_("__backgroundSkin",ab,f0,ae,54));
+	outFields->push(HX_("__disabledBackgroundSkin",47,07,aa,50));
+	outFields->push(HX_("__maskSkin",a9,dc,6d,8d));
+	outFields->push(HX_("__viewPortMaskSkin",4f,27,8b,f8));
+	outFields->push(HX_("__fixedScrollBars",61,7d,d7,a7));
+	outFields->push(HX_("__showScrollBars",6a,d8,34,5d));
+	outFields->push(HX_("__autoHideScrollBars",3e,88,28,64));
+	outFields->push(HX_("__scrollBarXPosition",bb,8f,b5,31));
+	outFields->push(HX_("__scrollBarYPosition",bc,f8,a6,04));
+	outFields->push(HX_("__showScrollBarMinimumDuration",59,51,ec,ba));
+	outFields->push(HX_("__hideScrollBarDuration",f8,82,80,ae));
+	outFields->push(HX_("__hideScrollBarEase",92,5d,0b,d9));
+	outFields->push(HX_("__scrollPixelSnapping",f5,82,c7,79));
+	super::__GetFields(outFields);
+};
+
+#ifdef HXCPP_SCRIPTABLE
+static ::hx::StorageInfo BaseScrollContainer_obj_sMemberStorageInfo[] = {
+	{::hx::fsObject /* ::Dynamic */ ,(int)offsetof(BaseScrollContainer_obj,_viewPort),HX_("_viewPort",e5,6f,14,cf)},
+	{::hx::fsObject /*  ::feathers::utils::Scroller */ ,(int)offsetof(BaseScrollContainer_obj,scroller),HX_("scroller",ba,0d,55,8c)},
+	{::hx::fsBool,(int)offsetof(BaseScrollContainer_obj,_scrollerDraggingX),HX_("_scrollerDraggingX",50,e8,4d,17)},
+	{::hx::fsBool,(int)offsetof(BaseScrollContainer_obj,_scrollerDraggingY),HX_("_scrollerDraggingY",51,e8,4d,17)},
+	{::hx::fsBool,(int)offsetof(BaseScrollContainer_obj,_scrollBarXHover),HX_("_scrollBarXHover",0b,c9,ca,b0)},
+	{::hx::fsBool,(int)offsetof(BaseScrollContainer_obj,_scrollBarYHover),HX_("_scrollBarYHover",6a,25,26,17)},
+	{::hx::fsObject /*  ::openfl::display::DisplayObject */ ,(int)offsetof(BaseScrollContainer_obj,_currentBackgroundSkin),HX_("_currentBackgroundSkin",e5,c0,55,58)},
+	{::hx::fsObject /*  ::feathers::layout::Measurements */ ,(int)offsetof(BaseScrollContainer_obj,_backgroundSkinMeasurements),HX_("_backgroundSkinMeasurements",41,46,9b,f8)},
+	{::hx::fsObject /*  ::openfl::display::DisplayObject */ ,(int)offsetof(BaseScrollContainer_obj,_currentMaskSkin),HX_("_currentMaskSkin",63,65,66,a9)},
+	{::hx::fsObject /*  ::openfl::display::DisplayObject */ ,(int)offsetof(BaseScrollContainer_obj,_currentViewPortMaskSkin),HX_("_currentViewPortMaskSkin",09,fa,b1,4f)},
+	{::hx::fsObject /*  ::openfl::display::DisplayObject */ ,(int)offsetof(BaseScrollContainer_obj,_fallbackViewPortMaskSkin),HX_("_fallbackViewPortMaskSkin",d0,29,84,ee)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,topViewPortOffset),HX_("topViewPortOffset",2e,22,81,2f)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,rightViewPortOffset),HX_("rightViewPortOffset",b5,d5,8c,35)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,bottomViewPortOffset),HX_("bottomViewPortOffset",04,4d,09,29)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,leftViewPortOffset),HX_("leftViewPortOffset",20,a7,9d,98)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,chromeMeasuredWidth),HX_("chromeMeasuredWidth",06,83,cc,1b)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,chromeMeasuredMinWidth),HX_("chromeMeasuredMinWidth",14,76,8e,f8)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,chromeMeasuredMaxWidth),HX_("chromeMeasuredMaxWidth",c2,5b,74,ab)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,chromeMeasuredHeight),HX_("chromeMeasuredHeight",e7,9a,75,ed)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,chromeMeasuredMinHeight),HX_("chromeMeasuredMinHeight",19,54,68,3a)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,chromeMeasuredMaxHeight),HX_("chromeMeasuredMaxHeight",ab,66,ab,10)},
+	{::hx::fsObject /* ::Dynamic */ ,(int)offsetof(BaseScrollContainer_obj,scrollBarX),HX_("scrollBarX",d2,75,d0,fe)},
+	{::hx::fsObject /* ::Dynamic */ ,(int)offsetof(BaseScrollContainer_obj,scrollBarY),HX_("scrollBarY",d3,75,d0,fe)},
+	{::hx::fsBool,(int)offsetof(BaseScrollContainer_obj,_ignoreScrollBarXChange),HX_("_ignoreScrollBarXChange",b3,7d,3b,0a)},
+	{::hx::fsBool,(int)offsetof(BaseScrollContainer_obj,_ignoreScrollBarYChange),HX_("_ignoreScrollBarYChange",74,f4,d0,33)},
+	{::hx::fsBool,(int)offsetof(BaseScrollContainer_obj,showScrollBarX),HX_("showScrollBarX",2f,4d,f5,28)},
+	{::hx::fsBool,(int)offsetof(BaseScrollContainer_obj,showScrollBarY),HX_("showScrollBarY",30,4d,f5,28)},
+	{::hx::fsObject /*  ::feathers::utils::DisplayObjectFactory */ ,(int)offsetof(BaseScrollContainer_obj,_oldScrollBarXFactory),HX_("_oldScrollBarXFactory",50,12,35,b0)},
+	{::hx::fsObject /*  ::feathers::utils::DisplayObjectFactory */ ,(int)offsetof(BaseScrollContainer_obj,_scrollBarXFactory),HX_("_scrollBarXFactory",d9,b1,f8,bc)},
+	{::hx::fsObject /*  ::feathers::utils::DisplayObjectFactory */ ,(int)offsetof(BaseScrollContainer_obj,_oldScrollBarYFactory),HX_("_oldScrollBarYFactory",6f,84,67,e9)},
+	{::hx::fsObject /*  ::feathers::utils::DisplayObjectFactory */ ,(int)offsetof(BaseScrollContainer_obj,_scrollBarYFactory),HX_("_scrollBarYFactory",f8,23,2b,f6)},
+	{::hx::fsObject /*  ::Dynamic */ ,(int)offsetof(BaseScrollContainer_obj,_scrollerFactory),HX_("_scrollerFactory",b1,04,c6,56)},
+	{::hx::fsObject /*  ::Dynamic */ ,(int)offsetof(BaseScrollContainer_obj,_temporaryScrollX),HX_("_temporaryScrollX",79,c4,5c,c1)},
+	{::hx::fsObject /*  ::Dynamic */ ,(int)offsetof(BaseScrollContainer_obj,_temporaryRestrictedScrollX),HX_("_temporaryRestrictedScrollX",9e,28,13,45)},
+	{::hx::fsObject /*  ::Dynamic */ ,(int)offsetof(BaseScrollContainer_obj,_temporaryScrollY),HX_("_temporaryScrollY",7a,c4,5c,c1)},
+	{::hx::fsObject /*  ::Dynamic */ ,(int)offsetof(BaseScrollContainer_obj,_temporaryRestrictedScrollY),HX_("_temporaryRestrictedScrollY",9f,28,13,45)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,_scrollStepX),HX_("_scrollStepX",40,72,f5,33)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,_scrollStepY),HX_("_scrollStepY",41,72,f5,33)},
+	{::hx::fsObject /*  ::feathers::controls::ScrollPolicy */ ,(int)offsetof(BaseScrollContainer_obj,_scrollPolicyX),HX_("_scrollPolicyX",da,a3,93,b8)},
+	{::hx::fsObject /*  ::feathers::controls::ScrollPolicy */ ,(int)offsetof(BaseScrollContainer_obj,_scrollPolicyY),HX_("_scrollPolicyY",db,a3,93,b8)},
+	{::hx::fsInt,(int)offsetof(BaseScrollContainer_obj,_scrollBarXRevealTime),HX_("_scrollBarXRevealTime",0b,a0,ef,34)},
+	{::hx::fsInt,(int)offsetof(BaseScrollContainer_obj,_scrollBarYRevealTime),HX_("_scrollBarYRevealTime",4c,0b,ce,b5)},
+	{::hx::fsObject /*  ::motion::actuators::SimpleActuator */ ,(int)offsetof(BaseScrollContainer_obj,_hideScrollBarX),HX_("_hideScrollBarX",d3,3d,c6,77)},
+	{::hx::fsObject /*  ::motion::actuators::SimpleActuator */ ,(int)offsetof(BaseScrollContainer_obj,_hideScrollBarY),HX_("_hideScrollBarY",d4,3d,c6,77)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,_prevMinScrollX),HX_("_prevMinScrollX",ab,d9,38,c9)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,_prevMaxScrollX),HX_("_prevMaxScrollX",d9,06,a6,6d)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,_prevMinScrollY),HX_("_prevMinScrollY",ac,d9,38,c9)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,_prevMaxScrollY),HX_("_prevMaxScrollY",da,06,a6,6d)},
+	{::hx::fsObject /*  ::openfl::geom::Rectangle */ ,(int)offsetof(BaseScrollContainer_obj,_currentScrollRect),HX_("_currentScrollRect",2b,02,b2,b3)},
+	{::hx::fsObject /*  ::openfl::geom::Rectangle */ ,(int)offsetof(BaseScrollContainer_obj,_scrollRect1),HX_("_scrollRect1",41,29,a3,96)},
+	{::hx::fsObject /*  ::openfl::geom::Rectangle */ ,(int)offsetof(BaseScrollContainer_obj,_scrollRect2),HX_("_scrollRect2",42,29,a3,96)},
+	{::hx::fsBool,(int)offsetof(BaseScrollContainer_obj,_ignoreScrollerChanges),HX_("_ignoreScrollerChanges",b8,42,c7,e7)},
+	{::hx::fsBool,(int)offsetof(BaseScrollContainer_obj,_settingScrollerDimensions),HX_("_settingScrollerDimensions",18,74,5d,2f)},
+	{::hx::fsBool,(int)offsetof(BaseScrollContainer_obj,_viewPortBoundsChanged),HX_("_viewPortBoundsChanged",da,4f,f9,55)},
+	{::hx::fsBool,(int)offsetof(BaseScrollContainer_obj,_ignoreViewPortResizing),HX_("_ignoreViewPortResizing",a8,2b,c8,fb)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,_previousViewPortWidth),HX_("_previousViewPortWidth",2a,9e,35,60)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,_previousViewPortHeight),HX_("_previousViewPortHeight",43,3f,04,85)},
+	{::hx::fsObject /*  ::feathers::controls::ScrollMode */ ,(int)offsetof(BaseScrollContainer_obj,_scrollMode),HX_("_scrollMode",2f,2f,aa,d8)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,_hx___paddingTop),HX_("__paddingTop",64,78,99,72)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,_hx___paddingRight),HX_("__paddingRight",6b,6f,68,3b)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,_hx___paddingBottom),HX_("__paddingBottom",7c,a0,4b,d7)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,_hx___paddingLeft),HX_("__paddingLeft",58,8b,5e,ce)},
+	{::hx::fsObject /*  ::openfl::display::DisplayObject */ ,(int)offsetof(BaseScrollContainer_obj,_hx___backgroundSkin),HX_("__backgroundSkin",ab,f0,ae,54)},
+	{::hx::fsObject /*  ::openfl::display::DisplayObject */ ,(int)offsetof(BaseScrollContainer_obj,_hx___disabledBackgroundSkin),HX_("__disabledBackgroundSkin",47,07,aa,50)},
+	{::hx::fsObject /*  ::openfl::display::DisplayObject */ ,(int)offsetof(BaseScrollContainer_obj,_hx___maskSkin),HX_("__maskSkin",a9,dc,6d,8d)},
+	{::hx::fsObject /*  ::openfl::display::DisplayObject */ ,(int)offsetof(BaseScrollContainer_obj,_hx___viewPortMaskSkin),HX_("__viewPortMaskSkin",4f,27,8b,f8)},
+	{::hx::fsBool,(int)offsetof(BaseScrollContainer_obj,_hx___fixedScrollBars),HX_("__fixedScrollBars",61,7d,d7,a7)},
+	{::hx::fsBool,(int)offsetof(BaseScrollContainer_obj,_hx___showScrollBars),HX_("__showScrollBars",6a,d8,34,5d)},
+	{::hx::fsBool,(int)offsetof(BaseScrollContainer_obj,_hx___autoHideScrollBars),HX_("__autoHideScrollBars",3e,88,28,64)},
+	{::hx::fsObject /*  ::feathers::layout::RelativePosition */ ,(int)offsetof(BaseScrollContainer_obj,_hx___scrollBarXPosition),HX_("__scrollBarXPosition",bb,8f,b5,31)},
+	{::hx::fsObject /*  ::feathers::layout::RelativePosition */ ,(int)offsetof(BaseScrollContainer_obj,_hx___scrollBarYPosition),HX_("__scrollBarYPosition",bc,f8,a6,04)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,_hx___showScrollBarMinimumDuration),HX_("__showScrollBarMinimumDuration",59,51,ec,ba)},
+	{::hx::fsFloat,(int)offsetof(BaseScrollContainer_obj,_hx___hideScrollBarDuration),HX_("__hideScrollBarDuration",f8,82,80,ae)},
+	{::hx::fsObject /* ::Dynamic */ ,(int)offsetof(BaseScrollContainer_obj,_hx___hideScrollBarEase),HX_("__hideScrollBarEase",92,5d,0b,d9)},
+	{::hx::fsBool,(int)offsetof(BaseScrollContainer_obj,_hx___scrollPixelSnapping),HX_("__scrollPixelSnapping",f5,82,c7,79)},
+	{ ::hx::fsUnknown, 0, null()}
+};
+static ::hx::StaticInfo BaseScrollContainer_obj_sStaticStorageInfo[] = {
+	{::hx::fsObject /*  ::feathers::core::InvalidationFlag */ ,(void *) &BaseScrollContainer_obj::INVALIDATION_FLAG_SCROLLER_FACTORY,HX_("INVALIDATION_FLAG_SCROLLER_FACTORY",37,2b,e6,36)},
+	{::hx::fsObject /*  ::feathers::core::InvalidationFlag */ ,(void *) &BaseScrollContainer_obj::INVALIDATION_FLAG_SCROLL_BAR_FACTORY,HX_("INVALIDATION_FLAG_SCROLL_BAR_FACTORY",3e,06,b0,07)},
+	{::hx::fsObject /*  ::feathers::utils::DisplayObjectFactory */ ,(void *) &BaseScrollContainer_obj::defaultScrollBarXFactory,HX_("defaultScrollBarXFactory",17,0b,29,b3)},
+	{::hx::fsObject /*  ::feathers::utils::DisplayObjectFactory */ ,(void *) &BaseScrollContainer_obj::defaultScrollBarYFactory,HX_("defaultScrollBarYFactory",36,7d,5b,ec)},
+	{ ::hx::fsUnknown, 0, null()}
+};
+#endif
+
+static ::String BaseScrollContainer_obj_sMemberFields[] = {
+	HX_("_viewPort",e5,6f,14,cf),
+	HX_("get_viewPort",8f,2c,98,3c),
+	HX_("set_viewPort",03,50,91,51),
+	HX_("scroller",ba,0d,55,8c),
+	HX_("_scrollerDraggingX",50,e8,4d,17),
+	HX_("_scrollerDraggingY",51,e8,4d,17),
+	HX_("_scrollBarXHover",0b,c9,ca,b0),
+	HX_("_scrollBarYHover",6a,25,26,17),
+	HX_("_currentBackgroundSkin",e5,c0,55,58),
+	HX_("_backgroundSkinMeasurements",41,46,9b,f8),
+	HX_("_currentMaskSkin",63,65,66,a9),
+	HX_("_currentViewPortMaskSkin",09,fa,b1,4f),
+	HX_("_fallbackViewPortMaskSkin",d0,29,84,ee),
+	HX_("topViewPortOffset",2e,22,81,2f),
+	HX_("rightViewPortOffset",b5,d5,8c,35),
+	HX_("bottomViewPortOffset",04,4d,09,29),
+	HX_("leftViewPortOffset",20,a7,9d,98),
+	HX_("chromeMeasuredWidth",06,83,cc,1b),
+	HX_("chromeMeasuredMinWidth",14,76,8e,f8),
+	HX_("chromeMeasuredMaxWidth",c2,5b,74,ab),
+	HX_("chromeMeasuredHeight",e7,9a,75,ed),
+	HX_("chromeMeasuredMinHeight",19,54,68,3a),
+	HX_("chromeMeasuredMaxHeight",ab,66,ab,10),
+	HX_("get_tabEnabled",f5,7e,fe,b5),
+	HX_("scrollBarX",d2,75,d0,fe),
+	HX_("scrollBarY",d3,75,d0,fe),
+	HX_("_ignoreScrollBarXChange",b3,7d,3b,0a),
+	HX_("_ignoreScrollBarYChange",74,f4,d0,33),
+	HX_("showScrollBarX",2f,4d,f5,28),
+	HX_("showScrollBarY",30,4d,f5,28),
+	HX_("_oldScrollBarXFactory",50,12,35,b0),
+	HX_("_scrollBarXFactory",d9,b1,f8,bc),
+	HX_("get_scrollBarXFactory",ef,0f,91,68),
+	HX_("set_scrollBarXFactory",fb,dd,99,bc),
+	HX_("_oldScrollBarYFactory",6f,84,67,e9),
+	HX_("_scrollBarYFactory",f8,23,2b,f6),
+	HX_("get_scrollBarYFactory",0e,82,c3,a1),
+	HX_("set_scrollBarYFactory",1a,50,cc,f5),
+	HX_("_scrollerFactory",b1,04,c6,56),
+	HX_("get_scrollerFactory",47,91,f1,f6),
+	HX_("set_scrollerFactory",53,84,8e,33),
+	HX_("_temporaryScrollX",79,c4,5c,c1),
+	HX_("_temporaryRestrictedScrollX",9e,28,13,45),
+	HX_("get_scrollX",c2,93,d2,b6),
+	HX_("set_scrollX",ce,9a,3f,c1),
+	HX_("get_restrictedScrollX",27,4d,ee,16),
+	HX_("set_restrictedScrollX",33,1b,f7,6a),
+	HX_("_temporaryScrollY",7a,c4,5c,c1),
+	HX_("_temporaryRestrictedScrollY",9f,28,13,45),
+	HX_("get_scrollY",c3,93,d2,b6),
+	HX_("set_scrollY",cf,9a,3f,c1),
+	HX_("get_restrictedScrollY",28,4d,ee,16),
+	HX_("set_restrictedScrollY",34,1b,f7,6a),
+	HX_("get_minScrollX",82,08,85,6c),
+	HX_("get_minScrollY",83,08,85,6c),
+	HX_("get_maxScrollX",b0,35,f2,10),
+	HX_("get_maxScrollY",b1,35,f2,10),
+	HX_("_scrollStepX",40,72,f5,33),
+	HX_("get_scrollStepX",d6,7b,cd,8e),
+	HX_("set_scrollStepX",e2,f8,98,8a),
+	HX_("_scrollStepY",41,72,f5,33),
+	HX_("get_scrollStepY",d7,7b,cd,8e),
+	HX_("set_scrollStepY",e3,f8,98,8a),
+	HX_("_scrollPolicyX",da,a3,93,b8),
+	HX_("get_scrollPolicyX",f0,be,b1,80),
+	HX_("set_scrollPolicyX",fc,96,1f,a4),
+	HX_("_scrollPolicyY",db,a3,93,b8),
+	HX_("get_scrollPolicyY",f1,be,b1,80),
+	HX_("set_scrollPolicyY",fd,96,1f,a4),
+	HX_("_scrollBarXRevealTime",0b,a0,ef,34),
+	HX_("_scrollBarYRevealTime",4c,0b,ce,b5),
+	HX_("_hideScrollBarX",d3,3d,c6,77),
+	HX_("_hideScrollBarY",d4,3d,c6,77),
+	HX_("_prevMinScrollX",ab,d9,38,c9),
+	HX_("_prevMaxScrollX",d9,06,a6,6d),
+	HX_("_prevMinScrollY",ac,d9,38,c9),
+	HX_("_prevMaxScrollY",da,06,a6,6d),
+	HX_("_currentScrollRect",2b,02,b2,b3),
+	HX_("_scrollRect1",41,29,a3,96),
+	HX_("_scrollRect2",42,29,a3,96),
+	HX_("_ignoreScrollerChanges",b8,42,c7,e7),
+	HX_("_settingScrollerDimensions",18,74,5d,2f),
+	HX_("_viewPortBoundsChanged",da,4f,f9,55),
+	HX_("_ignoreViewPortResizing",a8,2b,c8,fb),
+	HX_("_previousViewPortWidth",2a,9e,35,60),
+	HX_("_previousViewPortHeight",43,3f,04,85),
+	HX_("get_measureViewPort",1b,8d,bc,e0),
+	HX_("_scrollMode",2f,2f,aa,d8),
+	HX_("get_scrollMode",59,ea,15,7c),
+	HX_("set_scrollMode",cd,d2,35,9c),
+	HX_("setPadding",4f,7e,5c,23),
+	HX_("getViewPortVisibleBounds",ab,13,24,f3),
+	HX_("update",09,86,05,87),
+	HX_("applyTemporaryScrollPositions",da,16,b7,73),
+	HX_("needsMeasurement",9f,bb,c2,39),
+	HX_("needsScrollMeasurement",d2,e8,0a,41),
+	HX_("createScroller",d6,8c,8f,de),
+	HX_("createScrollBars",09,f4,fd,33),
+	HX_("refreshEnabled",e6,13,46,f3),
+	HX_("restrictScrollAfterRefreshViewPort",ce,65,48,cd),
+	HX_("refreshViewPort",81,e1,d6,84),
+	HX_("resetViewPortOffsets",8b,94,4d,e5),
+	HX_("calculateViewPortOffsets",d4,ea,5f,26),
+	HX_("calculateViewPortOffsetsForFixedScrollBarX",51,33,fe,54),
+	HX_("calculateViewPortOffsetsForFixedScrollBarY",52,33,fe,54),
+	HX_("refreshViewPortBoundsForMeasurement",e9,64,87,e5),
+	HX_("refreshViewPortBoundsForLayout",dd,b8,a7,47),
+	HX_("refreshScrollerValues",77,64,22,59),
+	HX_("refreshScrollBarValues",ad,64,b7,cc),
+	HX_("measure",5e,fb,e9,3c),
+	HX_("refreshBackgroundSkin",c6,3c,91,2d),
+	HX_("getCurrentBackgroundSkin",2e,6b,dc,9d),
+	HX_("addCurrentBackgroundSkin",c3,bb,57,cf),
+	HX_("removeCurrentBackgroundSkin",c0,fc,70,a2),
+	HX_("refreshMaskSkin",84,d2,8d,e7),
+	HX_("getCurrentMaskSkin",ec,c2,4c,71),
+	HX_("addCurrentMaskSkin",c1,c5,fe,0c),
+	HX_("removeCurrentMaskSkin",fe,fa,64,b5),
+	HX_("refreshViewPortMaskSkin",2a,f0,ac,87),
+	HX_("getCurrentViewPortMaskSkin",92,88,ee,03),
+	HX_("addCurrentViewPortMaskSkin",67,e8,4e,07),
+	HX_("removeCurrentViewPortMaskSkin",a4,22,f8,c3),
+	HX_("layoutChildren",09,3e,82,44),
+	HX_("layoutBackgroundSkin",d5,3d,2a,eb),
+	HX_("layoutMaskSkin",53,8e,4d,be),
+	HX_("layoutViewPortMaskSkin",f9,92,53,9e),
+	HX_("layoutScrollBars",37,e1,d2,24),
+	HX_("refreshScrollRect",8c,b9,67,5c),
+	HX_("revealScrollBarX",3f,8b,6d,f8),
+	HX_("revealScrollBarY",40,8b,6d,f8),
+	HX_("hideScrollBarX",34,f5,65,2e),
+	HX_("hideScrollBarY",35,f5,65,2e),
+	HX_("checkForRevealScrollBars",9b,0c,4d,62),
+	HX_("scrollWithKeyboard",7a,e8,03,0b),
+	HX_("baseScrollContainer_addedToStageHandler",8b,40,8a,f5),
+	HX_("baseScrollContainer_removedFromStageHandler",da,6f,64,28),
+	HX_("baseScrollContainer_keyDownHandler",c5,d5,d2,43),
+	HX_("baseScrollContainer_scroller_scrollStartHandler",be,f6,9b,ad),
+	HX_("baseScrollContainer_scroller_scrollHandler",54,18,02,5b),
+	HX_("baseScrollContainer_scroller_scrollCompleteHandler",9b,52,ca,db),
+	HX_("reclaimMouse",7c,96,87,68),
+	HX_("reclaimTouch",16,98,55,70),
+	HX_("baseScrollContainer_viewPort_mouseDownHandler",60,14,5a,56),
+	HX_("baseScrollContainer_viewPort_touchBeginHandler",63,2d,ff,bb),
+	HX_("scrollBarX_changeHandler",cd,85,38,66),
+	HX_("scrollBarY_changeHandler",8e,25,34,fb),
+	HX_("scrollBarX_rollOverHandler",ac,e8,a9,7b),
+	HX_("scrollBarX_rollOutHandler",c6,c1,6c,a4),
+	HX_("scrollBarY_rollOverHandler",ad,ba,9d,fe),
+	HX_("scrollBarY_rollOutHandler",e5,ea,9c,6b),
+	HX_("scrollBarX_scrollStartHandler",c2,50,79,a2),
+	HX_("scrollBarX_scrollCompleteHandler",17,13,e6,0e),
+	HX_("scrollBarY_scrollStartHandler",61,f5,dd,08),
+	HX_("scrollBarY_scrollCompleteHandler",d8,db,18,8f),
+	HX_("hideScrollBarX_onComplete",63,11,8f,90),
+	HX_("hideScrollBarY_onComplete",02,7f,4e,d2),
+	HX_("viewPort_resizeHandler",7d,6b,b5,82),
+	HX_("__paddingTop",64,78,99,72),
+	HX_("get_paddingTop",8d,85,fb,af),
+	HX_("set_paddingTop",01,6e,1b,d0),
+	HX_("clearStyle_paddingTop",7f,38,31,33),
+	HX_("__paddingRight",6b,6f,68,3b),
+	HX_("get_paddingRight",d4,d8,46,1f),
+	HX_("set_paddingRight",48,c6,88,75),
+	HX_("clearStyle_paddingRight",46,ac,84,21),
+	HX_("__paddingBottom",7c,a0,4b,d7),
+	HX_("get_paddingBottom",f3,72,09,56),
+	HX_("set_paddingBottom",ff,4a,77,79),
+	HX_("clearStyle_paddingBottom",41,a3,e4,49),
+	HX_("__paddingLeft",58,8b,5e,ce),
+	HX_("get_paddingLeft",0f,02,c8,46),
+	HX_("set_paddingLeft",1b,7f,93,42),
+	HX_("clearStyle_paddingLeft",dd,e2,8e,92),
+	HX_("__backgroundSkin",ab,f0,ae,54),
+	HX_("get_backgroundSkin",54,46,09,bc),
+	HX_("set_backgroundSkin",c8,78,b8,98),
+	HX_("clearStyle_backgroundSkin",46,5a,f8,27),
+	HX_("__disabledBackgroundSkin",47,07,aa,50),
+	HX_("get_disabledBackgroundSkin",f0,ad,3f,0b),
+	HX_("set_disabledBackgroundSkin",64,74,d4,6a),
+	HX_("clearStyle_disabledBackgroundSkin",e2,03,2f,d1),
+	HX_("__maskSkin",a9,dc,6d,8d),
+	HX_("get_maskSkin",92,1d,4f,9f),
+	HX_("set_maskSkin",06,41,48,b4),
+	HX_("clearStyle_maskSkin",04,d0,9d,6b),
+	HX_("__viewPortMaskSkin",4f,27,8b,f8),
+	HX_("get_viewPortMaskSkin",38,f9,64,ab),
+	HX_("set_viewPortMaskSkin",ac,b0,1c,78),
+	HX_("clearStyle_viewPortMaskSkin",aa,6d,36,40),
+	HX_("__fixedScrollBars",61,7d,d7,a7),
+	HX_("get_fixedScrollBars",98,1b,88,af),
+	HX_("set_fixedScrollBars",a4,0e,25,ec),
+	HX_("clearStyle_fixedScrollBars",66,7b,ca,b4),
+	HX_("__showScrollBars",6a,d8,34,5d),
+	HX_("get_showScrollBars",13,2e,8f,c4),
+	HX_("set_showScrollBars",87,60,3e,a1),
+	HX_("clearStyle_showScrollBars",05,42,7e,30),
+	HX_("__autoHideScrollBars",3e,88,28,64),
+	HX_("get_autoHideScrollBars",67,66,89,de),
+	HX_("set_autoHideScrollBars",db,e2,34,12),
+	HX_("clearStyle_autoHideScrollBars",59,5b,f6,61),
+	HX_("__scrollBarXPosition",bb,8f,b5,31),
+	HX_("get_scrollBarXPosition",e4,6d,16,ac),
+	HX_("set_scrollBarXPosition",58,ea,c1,df),
+	HX_("clearStyle_scrollBarXPosition",d6,62,83,2f),
+	HX_("__scrollBarYPosition",bc,f8,a6,04),
+	HX_("get_scrollBarYPosition",e5,d6,07,7f),
+	HX_("set_scrollBarYPosition",59,53,b3,b2),
+	HX_("clearStyle_scrollBarYPosition",d7,cb,74,02),
+	HX_("__showScrollBarMinimumDuration",59,51,ec,ba),
+	HX_("get_showScrollBarMinimumDuration",c2,dc,ed,71),
+	HX_("set_showScrollBarMinimumDuration",36,f2,14,2a),
+	HX_("clearStyle_showScrollBarMinimumDuration",34,34,d5,c4),
+	HX_("__hideScrollBarDuration",f8,82,80,ae),
+	HX_("get_hideScrollBarDuration",6f,24,98,c8),
+	HX_("set_hideScrollBarDuration",7b,e8,ee,34),
+	HX_("clearStyle_hideScrollBarDuration",bd,52,b1,18),
+	HX_("__hideScrollBarEase",92,5d,0b,d9),
+	HX_("get_hideScrollBarEase",89,37,c9,a4),
+	HX_("set_hideScrollBarEase",95,05,d2,f8),
+	HX_("clearStyle_hideScrollBarEase",d7,a6,3d,47),
+	HX_("__scrollPixelSnapping",f5,82,c7,79),
+	HX_("get_scrollPixelSnapping",ac,08,29,14),
+	HX_("set_scrollPixelSnapping",b8,71,8a,16),
+	HX_("clearStyle_scrollPixelSnapping",7a,67,12,90),
+	::String(null()) };
+
+static void BaseScrollContainer_obj_sMarkStatics(HX_MARK_PARAMS) {
+	HX_MARK_MEMBER_NAME(BaseScrollContainer_obj::INVALIDATION_FLAG_SCROLLER_FACTORY,"INVALIDATION_FLAG_SCROLLER_FACTORY");
+	HX_MARK_MEMBER_NAME(BaseScrollContainer_obj::INVALIDATION_FLAG_SCROLL_BAR_FACTORY,"INVALIDATION_FLAG_SCROLL_BAR_FACTORY");
+	HX_MARK_MEMBER_NAME(BaseScrollContainer_obj::defaultScrollBarXFactory,"defaultScrollBarXFactory");
+	HX_MARK_MEMBER_NAME(BaseScrollContainer_obj::defaultScrollBarYFactory,"defaultScrollBarYFactory");
+};
+
+#ifdef HXCPP_VISIT_ALLOCS
+static void BaseScrollContainer_obj_sVisitStatics(HX_VISIT_PARAMS) {
+	HX_VISIT_MEMBER_NAME(BaseScrollContainer_obj::INVALIDATION_FLAG_SCROLLER_FACTORY,"INVALIDATION_FLAG_SCROLLER_FACTORY");
+	HX_VISIT_MEMBER_NAME(BaseScrollContainer_obj::INVALIDATION_FLAG_SCROLL_BAR_FACTORY,"INVALIDATION_FLAG_SCROLL_BAR_FACTORY");
+	HX_VISIT_MEMBER_NAME(BaseScrollContainer_obj::defaultScrollBarXFactory,"defaultScrollBarXFactory");
+	HX_VISIT_MEMBER_NAME(BaseScrollContainer_obj::defaultScrollBarYFactory,"defaultScrollBarYFactory");
+};
+
+#endif
+
+::hx::Class BaseScrollContainer_obj::__mClass;
+
+static ::String BaseScrollContainer_obj_sStaticFields[] = {
+	HX_("INVALIDATION_FLAG_SCROLLER_FACTORY",37,2b,e6,36),
+	HX_("INVALIDATION_FLAG_SCROLL_BAR_FACTORY",3e,06,b0,07),
+	HX_("defaultScrollBarXFactory",17,0b,29,b3),
+	HX_("defaultScrollBarYFactory",36,7d,5b,ec),
+	::String(null())
+};
+
+void BaseScrollContainer_obj::__register()
+{
+	BaseScrollContainer_obj _hx_dummy;
+	BaseScrollContainer_obj::_hx_vtable = *(void **)&_hx_dummy;
+	::hx::Static(__mClass) = new ::hx::Class_obj();
+	__mClass->mName = HX_("feathers.controls.supportClasses.BaseScrollContainer",26,91,0b,bd);
+	__mClass->mSuper = &super::__SGetClass();
+	__mClass->mConstructEmpty = &__CreateEmpty;
+	__mClass->mConstructArgs = &__Create;
+	__mClass->mGetStaticField = &BaseScrollContainer_obj::__GetStatic;
+	__mClass->mSetStaticField = &BaseScrollContainer_obj::__SetStatic;
+	__mClass->mMarkFunc = BaseScrollContainer_obj_sMarkStatics;
+	__mClass->mStatics = ::hx::Class_obj::dupFunctions(BaseScrollContainer_obj_sStaticFields);
+	__mClass->mMembers = ::hx::Class_obj::dupFunctions(BaseScrollContainer_obj_sMemberFields);
+	__mClass->mCanCast = ::hx::TCanCast< BaseScrollContainer_obj >;
+#ifdef HXCPP_VISIT_ALLOCS
+	__mClass->mVisitFunc = BaseScrollContainer_obj_sVisitStatics;
+#endif
+#ifdef HXCPP_SCRIPTABLE
+	__mClass->mMemberStorageInfo = BaseScrollContainer_obj_sMemberStorageInfo;
+#endif
+#ifdef HXCPP_SCRIPTABLE
+	__mClass->mStaticStorageInfo = BaseScrollContainer_obj_sStaticStorageInfo;
+#endif
+	::hx::_hx_RegisterClass(__mClass->mName, __mClass);
+}
+
+void BaseScrollContainer_obj::__boot()
+{
+{
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_64_boot)
+HXDLIN(  64)		INVALIDATION_FLAG_SCROLLER_FACTORY = ::feathers::core::InvalidationFlag_obj::CUSTOM(HX_("scrollerFactory",30,c2,e6,6b));
+            	}
+{
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_65_boot)
+HXDLIN(  65)		INVALIDATION_FLAG_SCROLL_BAR_FACTORY = ::feathers::core::InvalidationFlag_obj::CUSTOM(HX_("scrollBarFactory",a4,11,7a,90));
+            	}
+{
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_67_boot)
+HXDLIN(  67)		defaultScrollBarXFactory = ::feathers::utils::DisplayObjectFactory_obj::withClass(::hx::ClassOf< ::feathers::controls::HScrollBar >(),null());
+            	}
+{
+            	HX_STACKFRAME(&_hx_pos_4200ed2106c74172_68_boot)
+HXDLIN(  68)		defaultScrollBarYFactory = ::feathers::utils::DisplayObjectFactory_obj::withClass(::hx::ClassOf< ::feathers::controls::VScrollBar >(),null());
+            	}
+}
+
+} // end namespace feathers
+} // end namespace controls
+} // end namespace supportClasses
